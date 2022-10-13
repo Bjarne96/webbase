@@ -1,12 +1,12 @@
 ---
 order: 10
-headline: Ort
+headline: Ort / Wo?
 type: text
 ---
 **Adresse:**<br />
-Jaffestraße 8<br />
-21109 Hamburg<br />
+Teststraße 1<br />
+20000 Hamburg<br />
 **Telefon:**<br />
-040 / 33 49 23 66<br />
+040 / 123456789<br />
 **Email:**<br />
-moin@wildwuchs-brauwerk.de
+test@webbase.de

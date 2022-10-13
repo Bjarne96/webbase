@@ -1,5 +1,5 @@
 ---
-value: Abschicken
+value: Anfragen
 type: submit
 order: 999
 ---

@@ -1,7 +1,7 @@
 ---
 order: 0
-href: https://shop.wildwuchs-brauwerk.de/
-value: SHOP
+href: https://google.com/
+value: Shop
 external: true
 navigation: true
 footer: false

@@ -1,0 +1,8 @@
+{% set img_name = slide.data.img_name %}
+{% set img_res = slide.data.img_res %}
+{% set textPath = "../data/woods/" + slide.data.page.fileSlug + ".md" %}
+{% if img_name|length %}
+    <img alt="{{ img_name }}" src="{{ img_res }}"/> {% markdown %}
+    {%- include textPath -%}
+    {% endmarkdown %}
+{% endif %}

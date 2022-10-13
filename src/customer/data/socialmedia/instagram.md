@@ -1,5 +1,5 @@
 ---
-href: https://www.instagram.com/wildwuchs_brauwerk
+href: https://www.instagram.com/
 name: Instagram
 order: 0
 ---

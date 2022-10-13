@@ -1,8 +1,8 @@
 ---
-label: Anzahl an Leuten
+label: Alter
 required: true
 name: leute
 pattern: \d
 type: number
-order: 8
+order: 100
 ---

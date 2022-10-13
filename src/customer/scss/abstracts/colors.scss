@@ -1,9 +1,18 @@
 :root {
+
+    /*     LIGHT     */
     --primary: #ECF9FF;
     --secondary: #1E526C;
     --tertiary: #D5EBF5;
     --light: #FFFFFF;
     --dark: #374955;
+
+    /*     DARK     */
+    --dk-primary: #FFFFFF;
+    --dk-secondary: #1E526C;
+    --dk-tertiary: #1a465c;
+    --dk-dark: #00273f;
+    --dk-light: #FFFFFF;
 
     /*     BODY     */
     --color: var(--secondary);
@@ -43,14 +52,10 @@
     --link-color: var(--secondary);
 
     @media (prefers-color-scheme: dark) {
-        --dk-primary: #FFFFFF;
-        --dk-secondary: #1E526C;
-        --dk-tertiary: #1a465c;
-        --dk-dark: #00273f;
-        --dk-light: #FFFFFF;
 
         /*     BODY     */
         --color: var(--dk-primary);
+        --dk-color: var(--dk-primary);
         --bg-pri-color: var(--dk-tertiary);
         --bg-sec-color: var(--dk-secondary);
 

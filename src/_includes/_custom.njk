@@ -16,6 +16,10 @@ layout: '_base.njk'
             {% include 'components/headline.njk' %}
         {% elif type == "slider" %}
             {% include 'components/slider.njk' %}
+        {% elif type == "welcome-content" %}
+            {% include 'components/welcome-content.njk' %}
+        {% elif type == "colorpallet-content" %}
+            {% include 'components/colorpallet-content.njk' %}
         {% elif type == "custom" %}
             {% set path = "../customer/templates/" + value + ".njk" %}
             {% include path %}

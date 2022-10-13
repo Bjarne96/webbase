@@ -1,7 +1,7 @@
 ---
-label: Wunschzeit
+label: Time
 required: true
 name: time
 type: timeperiod
-order: 10
+order: 80
 ---

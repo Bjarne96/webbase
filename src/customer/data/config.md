@@ -1,13 +1,13 @@
 ---
 tags: config
 # NAVIGATION
-navigation_visit_value: BESUCHE UNS
-navigation_visit_href: '/besuchen'
+navigation_visit_value: Visit Us
+navigation_visit_href: '/visit'
 navigation_logo_src: '../assets/logo.webp'
 # FOOTER
-footer_createdby: WILDWUCHS BRAUWERK HAMBURG
+footer_createdby: Master Template
 footer_transition_top: wave-top
-footer_transition_bot:
+footer_transition_bot: wave-bot
 # BUTTONS
 arrow_left: circle-chevron-left-solid
 arrow_right: circle-chevron-right-solid

@@ -15,16 +15,21 @@ $slideshow_transition_time: .2s;
     .slider-btn-icon {
         grid-row: 2;
         padding: $gaps;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .slider-btn-icon-left {
         grid-column: 1;
         margin-right: auto;
+        margin-left: 0;
     }
 
     .slider-btn-icon-right {
         grid-column: 3;
         margin-left: auto;
+        margin-right: 0;
+
     }
 }
 

@@ -1,11 +1,15 @@
 ---
 order: 20
-headline: Öffnungszeiten
+headline: Öffnungszeiten / Wann?
 type: text
 ---
 **Werksverkauf:**<br />
-Fr 10-16 Uhr<br />
-**Schankraum:**<br />
-Fr ab 16 Uhr<br />
-Sa ab 13 Uhr<br />
-So 13-18 Uhr<br />
+Mo Geschlossen<br />
+Di 10 Uhr<br />
+Mi 10 Uhr<br />
+Do 10 Uhr<br />
+Fr 10 Uhr<br />
+**Zweite Variante:**<br />
+Fr ab 12 Uhr<br />
+Sa ab 12 Uhr<br />
+So 12-18 Uhr<br />

@@ -1,19 +1,17 @@
 ---
-label: Service
+label: Gender
 required: true
-name: service
-pattern: \D{1,100}
+name: gender
+pattern:
 type: select
 id: hashtarget
 values:
-    - "brauerei"
-    - "tasting"
-    - "braukurs"
-    - "event"
+    - "Männlich"
+    - "Weiblich"
+    - "Divers"
 options:
-    - "Brauerei"
-    - "Tasting und Brauereiführung"
-    - "Braukurs"
-    - "Event"
-order: 7
+    - "m"
+    - "w"
+    - "d"
+order: 50
 ---

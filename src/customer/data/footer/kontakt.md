@@ -3,11 +3,11 @@ order: 3
 value: KONTAKT
 children:
     - child:
-        href: tel:04033392366
-        value: 040 33 39 23 66
+        href: tel:0123456789
+        value: 0123456789
         external: false
     - child:
-        href: mailto:moin@wildwuchs-brauwerk.de
-        value: moin@wildwuchs-brauwerk.de
+        href: mailto:moin@webbasetest.de
+        value: moin@webbasetest.de
         external: false
 ---
