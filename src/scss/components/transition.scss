@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+
+/*     WAVES     */
+
+.wave-wraper {
+    overflow-y: hidden;
+    display: block;
+    width: 100vw;
+
+    svg {
+        max-height: calc($gaps * 2);
+        width: 100vw;
+    }
+}
+
+.wave-top {
+    -ms-transform: rotateY(180deg) translateY(5px);
+    -webkit-transform: rotateY(180deg) translateY(5px);
+    -moz-transform: rotateY(180deg) translateY(5px);
+    -o-transform: rotateY(180deg) translateY(5px);
+    transform: rotateY(180deg) translateY(5px);
+}
+
+.wave-bot {
+    -ms-transform: rotate(180deg) rotateY(180deg) translateY(5px);
+    -webkit-transform: rotate(180deg) rotateY(180deg) translateY(5px);
+    -moz-transform: rotate(180deg) rotateY(180deg) translateY(5px);
+    -o-transform: rotate(180deg) rotateY(180deg) translateY(5px);
+    transform: rotate(180deg) rotateY(180deg) translateY(5px);
+}

@@ -1,0 +1,56 @@
+@use '../abstracts/' as *;
+$slideshow_transition_time: .2s;
+
+.slider-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .slider {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3;
+        margin: auto;
+    }
+
+    .slider-btn-icon {
+        grid-row: 2;
+        padding: $gaps;
+    }
+
+    .slider-btn-icon-left {
+        grid-column: 1;
+        margin-right: auto;
+    }
+
+    .slider-btn-icon-right {
+        grid-column: 3;
+        margin-left: auto;
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wraper {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+// Fixes position, when content isnt the same size
+.slide-frame {
+    margin: auto;
+}
+
+.slide {
+    will-change: transform;
+    transition: transform $slideshow_transition_time ease-out;
+    transition-delay: $slideshow_transition_time;
+    overflow: hidden;
+    width: 100vw;
+}

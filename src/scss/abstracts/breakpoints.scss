@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use '../../customer/scss/abstracts/breakpoints.scss' as *;
+
+$dev-breakpoints: (
+    zero: 0px,
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    extralarge: 1300px,
+    containerBr: 632px,
+    navigationBr: 1150px,
+    footerBr: 700px,
+);
+
+$breakpoints: map.merge($dev-breakpoints, $cu-breakpoints);
+
+@mixin maxmq($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin minmq($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin rangemq($key1, $key2) {
+    $range-start: map.get($breakpoints, $key1);
+    $range-end: map.get($breakpoints, $key2);
+
+    @media (min-width: $range-start) and (max-width: $range-end) {
+        @content;
+    }
+}

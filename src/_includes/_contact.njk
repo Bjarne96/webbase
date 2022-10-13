@@ -1,0 +1,60 @@
+---
+layout: '_blog.njk'
+permalink: /kontakt/index.html
+title: Kontakt
+headline: Bitte füllen Sie das Formular für Ihre Anfrage aus.
+script: 'contact'
+---
+
+<div class="contact-wraper">
+    <h1>{{ headline }}</h1>
+    <form id="form" name="contact" action="/gesendet" method="POST" data-netlify="true">
+        {%- for field in collections.fields|sort(attribute="data.order") -%}
+            {% set type = field.data.type %}
+            {% set value = field.data.value %}
+            {% if type== "headline" %}
+                <h2>{{ value }}</h2>
+            {% elif type== "submit" %}
+                <div>
+                    <button class="btn btn-primary" type="submit">{{ value }}</button>
+                </div>
+            {% else %}
+                {% set inputclass = "default-input" %}
+                {% set label = field.data.label %}
+                {% set pattern = field.data.pattern %}
+                {% set name = field.data.name %}
+                {% set required = field.data.required %}
+                {# type: select #}
+                {% set id = field.data.id %}
+                {% set options = field.data.options %}
+                {% set values = field.data.values %}
+                <div class="input-container">
+                    <label>{{ label }}:
+                        {% if required %}
+                            {% set inputclass = inputclass + " required" %}
+                            <span class="reddot">*</span>
+                        {% endif %}
+                        <br/>
+                        {% if type == "text" or type == "number" or type == "date" or type == "time" or type == "email" %}
+                            <input type="{{ type }}" name="{{ name }}" placeholder=" " pattern="{{ pattern }}" class="{{ inputclass }}"/>
+                        {% elif type == "select" %}
+                            <select id="{{ id }}" name="service" class="{{ inputclass }}">
+                                {% for option in options %}
+                                    <option value="{{ values[loop.index0] }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                        {% elif type == "timeperiod" %}
+                            <div class="timecontainer">
+                                <input type="time" name="time-at" placeholder=" " class="{{ inputclass }}"/>
+                                <span>&nbsp;-&nbsp;</span>
+                                <input type="time" name="time-until" placeholder=" " class="{{ inputclass }}"/>
+                            </div>
+                        {% elif type == "message" %}
+                            <textarea name="{{ type }}" class="{{ inputclass }}"></textarea>
+                        {% endif %}
+                    </label>
+                </div>
+            {% endif %}
+        {%- endfor -%}
+    </form>
+</div>

@@ -1,0 +1,23 @@
+---
+layout: '_blog.njk'
+---
+
+<div class="visit">
+    {%- for element in collections.visit|sort(attribute="data.order") -%}
+        <div class="visit-con">
+            {% set headline = element.data.headline %}
+            {% set type = element.data.type %}
+            {% set textPath = ".." + element.data.page.filePathStem + ".md" %}
+            {% if headline|length %}
+                <h1>{{ headline }}</h1>
+            {% endif %}
+            {% if type == "text" %}
+                {% markdown %}
+                {%- include textPath -%}
+                {% endmarkdown %}
+            {% elif type == "maps" %}
+                Maps
+            {% endif %}
+        </div>
+    {%- endfor -%}
+</div>

@@ -1,0 +1,9 @@
+{% set value = collections.config[0].data.navigation_visit_value %}
+{% if value|length %}
+    {% set href = collections.config[0].data.navigation_visit_href %}
+    {% if href and href|length %}
+        <a class="visit-us-btn " href="{{ href }}">
+            <div class="btn nav-btn">{{ value }}</div>
+        </a>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,73 @@
+@use '../abstracts/breakpoints.scss' as *;
+
+:root {
+
+    /*     HEADLINE1     */
+    --fs-h1: 1.8rem;
+    --fw-h1: 700;
+    --ls-h1: 2.5px;
+
+    /*     HEADLINE2     */
+    --fs-h2: 1.6rem;
+    --fw-h2: 500;
+    --ls-h2: 0px;
+
+    /*     PARAGRAPHS     */
+    --fs-p: .9rem;
+    --lh-p: 1.4rem;
+    --ls-p: .0rem;
+
+    /*     NAVIGATION     */
+    --fs-nav-lv1: 1.2rem;
+    --fw-nav-lv1: 400;
+    --fs-nav-lv2: 1.1rem;
+    --fw-nav-lv2: 300;
+
+    /*     FOOTER     */
+    --fs-foo-lv1: 1.2rem;
+    --fw-foo-lv1: 400;
+    --fs-foo-lv2: 1rem;
+    --fw-foo-lv2: 300;
+
+    /*     BUTTONS     */
+    --fs-btn: 1rem;
+    --fw-btn-pri: 600;
+    --fw-btn-sec: 500;
+
+    /*     RESPONSIVE     */
+    @include maxmq (small) {
+        /*     HEADLINES     */
+        --fs-h1: 1.6rem;
+        --fs-h2: 1.2rem;
+    }
+
+    @include rangemq (small, large) {
+        /*     HEADLINES     */
+        --fs-h1: 2rem;
+        --fs-h2: 1.4rem;
+        /*     PARAGRAPHS     */
+        --fs-p: 1rem;
+        --lh-p: 1.6rem;
+        --ls-p: .0rem;
+    }
+
+    @include rangemq (large, extralarge) {
+        /*     HEADLINES     */
+        --fs-h1: 2rem;
+        --fs-h2: 1.4rem;
+        /*     PARAGRAPHS     */
+        --fs-p: 1rem;
+        --lh-p: 1.6rem;
+        --ls-p: .0rem;
+    }
+
+    @include minmq (extralarge) {
+        /*     HEADLINES     */
+        --fs-h1: 2.2rem;
+        --fs-h2: 1.4rem;
+        /*     PARAGRAPHS     */
+        --fs-p: 1rem;
+        --lh-p: 1.6rem;
+        --ls-p: .0rem;
+    }
+}

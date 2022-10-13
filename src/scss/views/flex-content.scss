@@ -1,0 +1,139 @@
+@use '../abstracts/' as *;
+$max-img-wd: 600px;
+$img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
+
+/*     CONTAINER     */
+
+.grid-container {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include maxmq(large) {
+        padding: calc($gaps * 1) 0;
+    }
+
+    @include minmq(large) {
+        padding: calc($gaps * 2) 0;
+    }
+
+    /*     IMAGES     */
+    .img-con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 0;
+        border-radius: $border_radius;
+        width: calc(100% - $gaps * 2);
+
+        @include maxmq(large) {
+            height: $img-height-gold; //Image Framesize dependet on height
+            margin: 0 $gaps;
+
+        }
+
+        @include minmq(large) {
+            margin: 0 $gaps;
+        }
+
+        img {
+            // Image placement
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: $border_radius;
+            display: block;
+        }
+    }
+
+    @include minmq(containerBr) {
+        div {
+            max-width: $max-img-wd;
+        }
+
+        .img-con {
+            height: calc($max-img-wd / 1.618);
+        }
+    }
+
+    /*     TEXT     */
+    .text-con {
+        @include maxmq(containerBr) {
+            padding-left: $gaps;
+            padding-right: $gaps;
+        }
+
+        @include maxmq(extralarge) {
+            >* {
+                margin-top: $gaps;
+                display: block;
+            }
+
+            >p {
+                margin-top: $gaps * .5;
+            }
+        }
+
+        @include minmq(extralarge) {
+            margin: $gaps;
+
+            >*+* {
+                margin-top: $gaps;
+                display: block;
+            }
+
+            >p {
+                margin-top: $gaps * .5;
+            }
+        }
+    }
+
+    @include minmq(extralarge) {
+        flex-direction: row;
+    }
+}
+
+.row-reverse {
+    @include minmq(extralarge) {
+        flex-direction: row-reverse;
+    }
+}
+
+/*     GP - IMAGES      */
+
+.img-gp-con {
+    background-color: var(--light);
+    border-radius: $border_radius;
+
+    @include minmq(small) {
+        height: auto !important;
+    }
+
+
+    img {
+        max-width: 400px;
+        max-height: 300px;
+    }
+}
+
+/*     About us Style Fix    */
+#überuns-img-wraper {
+    @include maxmq(small) {
+        display: flex;
+        justify-content: left;
+    }
+
+}
+
+#überuns-img {
+    width: auto;
+}

@@ -1,0 +1,25 @@
+@use '../abstracts/' as *;
+
+/*     CONTAINER     */
+
+.blog-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+
+    @include maxmq(small) {
+        margin: $topbar_height 0;
+    }
+
+    @include minmq(small) {
+        margin: calc($topbar_height + calc($gaps)) 0;
+    }
+
+    .article-content {
+        background-color: var(--bg-sec-color);
+        max-width: 800px;
+        padding: $gaps;
+        margin: 0 $gaps;
+    }
+}

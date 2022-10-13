@@ -1,0 +1,83 @@
+:root {
+    --primary: #ECF9FF;
+    --secondary: #1E526C;
+    --tertiary: #D5EBF5;
+    --light: #FFFFFF;
+    --dark: #374955;
+
+    /*     BODY     */
+    --color: var(--secondary);
+    --bg-pri-color: var(--primary);
+    --bg-sec-color: var(--tertiary);
+
+    /*     NAVIGATION     */
+    --nav-color: var(--light);
+    --nav-bg-color: var(--secondary);
+
+    /*     FOOTER     */
+    --foo-color: var(--light);
+    --foo-bg-color: var(--secondary);
+
+    /*     BUTTON PRIMARY     */
+    --btn-pri-color: var(--light);
+    --btn-pri-bg-color: var(--secondary);
+
+    /*     BUTTON SECONDARY     */
+    --btn-sec-color: var(--light);
+    --btn-sec-bg-color: transparent;
+    --btn-sec-bo-color: var(--light);
+
+    /*     BUTTON ARROW PRIMARY     */
+    --btn-arr-pri-bg-color: var(--primary);
+    --btn-arr-pri-bo-color: var(--secondary);
+
+    /*     BUTTON ARROW SECONDARY     */
+    --btn-arr-sec-bg-color: var(--secondary);
+    --btn-arr-sec-bo-color: var(--primary);
+
+    /*     BUTTON ARROW WELCOME     */
+    --btn-arr-wel-bg-color: transparent;
+    --btn-arr-wel-bo-color: var(--primary);
+
+    /*     LINK     */
+    --link-color: var(--secondary);
+
+    @media (prefers-color-scheme: dark) {
+        --dk-primary: #FFFFFF;
+        --dk-secondary: #1E526C;
+        --dk-tertiary: #1a465c;
+        --dk-dark: #00273f;
+        --dk-light: #FFFFFF;
+
+        /*     BODY     */
+        --color: var(--dk-primary);
+        --bg-pri-color: var(--dk-tertiary);
+        --bg-sec-color: var(--dk-secondary);
+
+        /*     NAVIGATION     */
+        --nav-color: var(--dk-light);
+        --nav-bg-color: var(--dk-dark);
+        --nav-btn-sec-color: var(--dk-secondary);
+        --nav-btn-sec-bg-color: var(--dk-primary);
+        --nav-btn-sec-bo-color: var(--dk-secondary);
+
+        /*     FOOTER     */
+        --foo-color: var(--dk-light);
+        --foo-bg-color: var(--dk-dark);
+
+        /*     BUTTON PRIMARY     */
+        --btn-pri-color: var(--dk-secondary);
+        --btn-pri-bg-color: var(--dk-primary);
+
+        /*     BUTTON ARROW PRIMARY     */
+        --btn-arr-pri-bg-color: var(--dk-secondary);
+        --btn-arr-pri-bo-color: var(--dk-primary);
+
+        /*     BUTTON ARROW SECONDARY     */
+        --btn-arr-sec-bg-color: var(--dk-primary);
+        --btn-arr-sec-bo-color: var(--dk-secondary);
+
+        /*     LINK     */
+        --link-color: var(--dk-primary);
+    }
+}

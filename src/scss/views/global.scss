@@ -1,0 +1,92 @@
+@use '../abstracts/' as *;
+
+/*     BODY      */
+
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: var(--font-family);
+    background-color: var(--bg-pri-color);
+    color: var(--color);
+}
+
+/*     TEXT      */
+
+p {
+    margin: 0;
+    font-size: var(--fs-p);
+    line-height: var(--lh-p);
+    letter-spacing: var(--ls-p);
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+
+    a {
+        color: var(--link-color);
+        text-decoration: underline;
+    }
+}
+
+span {
+    font-size: var(--fs-p);
+    line-height: var(--lh-p);
+    letter-spacing: var(--ls-p);
+}
+
+/*    UTILITY STYLES   */
+
+strong {
+    font-weight: 500;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.fat-text {
+    font-weight: 500;
+}
+
+.bg-cl-pri {
+    background-color: var(--bg-pri-color);
+}
+
+.bg-cl-sec {
+    background-color: var(--bg-sec-color);
+}
+
+.cl-pri {
+    color: var(--bg-pri-color);
+}
+
+.cl-sec {
+    color: var(--bg-sec-color);
+}
+
+.cl-footer {
+    color: var(--foo-bg-color);
+}
+
+/*    REMOVE DEFAULTS   */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}

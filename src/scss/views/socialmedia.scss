@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+
+.social-media-wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    svg {
+        width: $topbar_height * .5;
+        height: $topbar_height * .5;
+        margin: $gaps * .2 0;
+        margin-right: $gaps;
+        cursor: pointer;
+    }
+}

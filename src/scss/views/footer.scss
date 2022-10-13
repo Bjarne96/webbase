@@ -1,0 +1,113 @@
+@use '../abstracts/' as *;
+
+$footer-child-minwd : 260px;
+
+.footer-wraper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    .footer-btn-container {
+        background-color: var(--foo-bg-color);
+        width: 100%;
+        padding-top: $gaps;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include maxmq(medium) {
+            padding-top: $gaps * .5;
+        }
+
+        @include rangemq(medium, footerBr) {
+            padding-top: $gaps *2;
+        }
+
+        @include minmq(footerBr) {
+            padding-top: $gaps *3;
+        }
+
+        @include minmq(extralarge) {
+            padding-top: $gaps * 4;
+        }
+
+        .btn-icon {
+            margin-top: $gaps * 2;
+            margin: auto;
+        }
+    }
+
+    .footer-created-by {
+        padding: 0 $gaps $gaps $gaps;
+        text-align: center;
+        color: var(--foo-color);
+        background-color: var(--foo-bg-color);
+        line-height: var(--lh-p);
+        letter-spacing: var(--ls-p);
+    }
+}
+
+.footer-children-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--foo-color);
+    background-color: var(--foo-bg-color);
+}
+
+.footer-children {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: var(--foo-color);
+    background-color: var(--foo-bg-color);
+
+    @include maxmq(medium) {
+        padding: 0px;
+        padding-left: $gaps * .5;
+    }
+
+    @include rangemq(medium, footerBr) {
+        padding: $gaps *2;
+    }
+
+    @include minmq(footerBr) {
+        padding: $gaps *3;
+    }
+
+    @include minmq(extralarge) {
+        width: min-content;
+        //Children Width + Padding each
+        min-width: calc(calc($footer-child-minwd + calc($gaps * 2)) * 4);
+        padding-left: $gaps * 4;
+        padding-right: 0px;
+    }
+
+    a {
+        color: var(--light);
+    }
+
+    .footer-child {
+        padding: $gaps * .5;
+        min-width: $footer-child-minwd;
+
+        h3 {
+            font-size: var(--fs-foo-lv1);
+            font-weight: var(--fw-foo-lv1);
+        }
+
+        li {
+            margin-top: $gaps * .25;
+            font-size: var(--fs-foo-lv2);
+            font-weight: var(--fw-foo-lv2);
+        }
+    }
+}
+
+.footer-wave {
+    // color: var(--foo-bg-color) !important;
+    background-color: transparent !important;
+}

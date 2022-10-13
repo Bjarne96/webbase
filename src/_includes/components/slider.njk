@@ -1,0 +1,41 @@
+{% set template = row.data.template %}
+{% set left = row.data.left %}
+{% set right = row.data.right %}
+{% set delay = row.data.delay %}
+{% set auto_slide_timing = row.data.auto_slide_timing %}
+{% set max_height = row.data.max_height %}
+{% set max_width = row.data.max_width %}
+{% set max_height_string = "" %}
+{% if max_height|length %}
+    {% set max_height_string = "max-height:" + max_height + ";" %}
+{% endif %}
+{% set max_width_string = "" %}
+{% if max_width|length %}
+    {% set max_width_string = "max-width:" + max_width + ";" %}
+{% endif %}
+{% set path = "../../customer/templates/" + template + ".njk" %}
+<div class="slider-container">
+    {% if left|length and left == "arrow-left" %}
+        <div id="{{ template }}-{{ left }}" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
+            {% set svg = collections.config[0].data.arrow_left %}
+            {% include 'components/svg.njk' %}
+        </div>
+    {% endif %}
+    <div id="{{ template }}-slider" class="slider" style="{{ max_height_string }}{{ max_width_string }}" data-slides=".{{ template }}-slide" data-left="#{{ template }}-{{ left }}" data-right="#{{ template }}-{{ right }}" data-delay="{{ delay }}" data-auto_slide_timing="{{ auto_slide_timing }}">
+        <div class="slider-wraper">
+            {%- for slide in collections[template]|sort(attribute="data.order") -%}
+                <div class="slide-frame">
+                    <div class="slide {{ template }}-slide" style="{{ max_height_string }}{{ max_width_string }}">
+                        {% include path %}
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    {% if right|length and right == "arrow-right" %}
+        <div id="{{ template }}-{{ right }}" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
+            {% set svg = collections.config[0].data.arrow_right %}
+            {% include 'components/svg.njk' %}
+        </div>
+    {% endif %}
+</div>

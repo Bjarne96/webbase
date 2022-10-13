@@ -1,0 +1,19 @@
+{% if transition|length %}
+    {% set bgcl = row.data.bgcl %}
+    {% set transitionPath = 'components/'+ transition +'.njk' %}
+    {% set svgbgClass = "" %}
+    {# BACKGROUND COLOR #}
+    {% if bgcl|length %}
+        {% if bgcl == "sec" %}
+            {% set svgbgClass = "cl-sec" %}
+        {% elif bgcl == "pri" %}
+            {% set svgbgClass = "cl-pri" %}
+        {% endif %}
+    {% endif %}
+    {# TRANSITION #}
+    <div class="{{ svgbgClass }}">
+        {% include transitionPath %}
+    </div>
+    {# RESET TRANSITION VARIABLE #}
+    {% set transition = '' %}
+{% endif %}

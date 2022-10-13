@@ -1,0 +1,110 @@
+@use '../abstracts/' as *;
+
+.flex {
+    display: flex !important;
+}
+
+#modal-wraper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-pri-color);
+    border-radius: $border_radius;
+    opacity: 1 !important;
+    margin: var(--modal-gap-size);
+    position: fixed;
+    max-height: calc(100vh - calc($topbar_height + calc(var(--modal-gap-size) * 4)));
+
+
+    .modal-btn-close {
+        position: absolute;
+        top: var(--modal-gap-close-size);
+        right: var(--modal-gap-close-size);
+    }
+
+    @include maxmq(small) {
+        padding: var(--modal-gap-size);
+    }
+
+    @include minmq(small) {
+        padding: var(--modal-gap-size);
+        margin: var(--modal-gap-size);
+    }
+
+    h3 {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+
+    .modal-container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+
+    }
+
+    .modal-column {
+        display: block;
+        max-width: 300px;
+
+        >*+* {
+            display: inline-block;
+            margin-top: var(--modal-gap-size);
+        }
+
+        span+span {
+            display: block;
+
+            @media (min-height: 650px) {
+                margin-top: var(--modal-gap-size);
+            }
+        }
+    }
+
+    .modal-column+.modal-column {
+        @include maxmq(small) {
+            margin-top: var(--modal-gap-size);
+        }
+
+        @include minmq(small) {
+            margin-left: var(--modal-gap-size);
+        }
+    }
+
+    .modal-row {
+        display: flex;
+
+        @include maxmq(small) {
+            flex-direction: column;
+        }
+
+        @include minmq(small) {
+            flex-direction: row;
+        }
+    }
+
+    .modal-row+.modal-row {
+        @include maxmq(small) {
+            margin-top: var(--modal-gap-size);
+        }
+
+        @include minmq(small) {
+            margin-top: var(--modal-gap-size);
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{% set top = collections.config[0].data.footer_transition_top %}
+{% set bot = collections.config[0].data.footer_transition_bot %}
+<div class="footer-wraper">
+    {% if top|length %}
+        {% set transitionPath = 'components/'+top+'.njk' %}
+        <div class="cl-footer">
+            {% include transitionPath %}
+        </div>
+    {% endif %}
+    <div class="footer-btn-container">
+        <div class="navigate btn-icon btn-icon-primary" data-target-id="body-wraper">
+            {% set svg = collections.config[0].data.arrow_top %}
+            {% include 'components/svg.njk' %}
+        </div>
+    </div>
+    <div class="footer-children-container">
+        <div class="footer-children">
+            {%- for element in collections.footer|sort(attribute="data.order") -%}
+                {% set value = element.data.value %}
+                {% set children = element.data.children %}
+                {% set socialmedia = element.data.socialmedia %}
+                <div class="footer-child">
+                    <h3>{{ value }}</h3>
+                    {% if socialmedia %}
+                        {% include 'components/socialmedia.njk' %}
+                    {% else %}
+                        <ul>
+                            {% for c in children %}
+                                {% set chref = c.child["href"] %}
+                                {% set cvalue = c.child["value"] %}
+                                {% set cid = c.child["id"] %}
+                                {% set cexternal = c.child["external"] %}
+                                {% if cid and cid|length %}
+                                    <li>
+                                        <a class="navigate" data-target-id="{{ cid }}" href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% elif cexternal %}
+                                    <li>
+                                        <a target="_blank" href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            {%- for element in collections.navigation|sort(attribute="data.order") -%}
+                {% set value = element.data.value %}
+                {% set footer = element.data.footer %}
+                {% set children = element.data.children %}
+                {% if footer %}
+                    <div class="footer-child">
+                        <h3>{{ value }}</h3>
+                        <ul>
+                            {% for c in children %}
+                                {% set chref = c.child["href"] %}
+                                {% set cvalue = c.child["value"] %}
+                                {% set cid = c.child["id"] %}
+                                {% set cexternal = c.child["external"] %}
+                                {% if cid and cid|length %}
+                                    <li>
+                                        <a class="navigate" data-target-id="{{ cid }}" href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% elif cexternal %}
+                                    <li>
+                                        <a target="_blank" href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ chref }}">{{ cvalue }}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="footer-created-by">
+        All rights reserved © 2022.
+        {% if collections.config[0].data.footer_createdby|length %}
+            Created with
+            <strong>Webbase</strong>
+            and ♥{% set value = collections.config[0].data.footer_createdby %} for
+            <strong>{{ value }}</strong>
+        {% else %}
+            Created with
+            <strong>Webbase</strong>.
+        {% endif %}
+    </div>
+    {% if bot|length %}
+        {% set transitionPath = 'components/'+bot+'.njk' %}
+        <div class="cl-footer">
+            {% include transitionPath %}
+        </div>
+    {% endif %}
+</div>

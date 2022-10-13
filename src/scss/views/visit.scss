@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.visit {
+    display: flex;
+    flex-direction: column;
+    gap: $gaps;
+    margin: $gaps;
+    margin: auto;
+    min-height: 90vh;
+
+    .visit-con {
+        background-color: var(--secondary);
+        padding: $gaps;
+        border-radius: $border_radius;
+        min-width: 320px;
+        height: 320px;
+        margin: auto;
+    }
+
+    h1 {
+        margin-bottom: $gaps;
+    }
+
+    @include minmq(extralarge) {
+        flex-direction: row;
+    }
+
+}

@@ -1,0 +1,68 @@
+@use '../abstracts/' as *;
+
+/*     BUTTON     */
+
+.btn {
+    text-align: center;
+    cursor: pointer;
+    padding: .6em 1.2em;
+    border-radius: $border_radius;
+    width: fit-content;
+    font-size: var(--fs-btn);
+}
+
+.btn-primary {
+    background-color: var(--btn-pri-bg-color);
+    color: var(--btn-pri-color);
+    font-weight: var(--fw-btn-pri);
+    border-width: 0px !important;
+
+    * {
+        color: var(--btn-pri-color);
+        font-weight: var(--fw-btn-pri);
+    }
+}
+
+.nav-btn {
+    font-weight: var(--fw-btn-sec);
+    border: 1px solid var(--btn-sec-bo-color);
+    background-color: var(--btn-sec-bg-color);
+    color: var(--btn-sec-color);
+
+    * {
+        color: var(--btn-sec-color);
+        font-weight: var(--fw-btn-sec);
+    }
+}
+
+/*     ICON-BUTTONS     */
+
+.btn-icon {
+    cursor: pointer;
+    z-index: 2;
+    opacity: .8;
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+
+    &-close {
+        @extend .btn-icon;
+        width: var(--btn-icon-close-size);
+        height: var(--btn-icon-close-size);
+    }
+}
+
+.btn-icon:hover {
+    opacity: 1;
+}
+
+.btn-icon-primary {
+    path {
+        fill: var(--btn-arr-pri-bo-color);
+    }
+}
+
+.btn-icon-secondary {
+    path {
+        fill: var(--btn-arr-sec-bo-color);
+    }
+}

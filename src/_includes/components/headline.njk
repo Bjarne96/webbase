@@ -1,0 +1,12 @@
+{% set h1 = row.data.h1 %}
+{% set id = row.data.id %}
+{% set subtype = row.data.subtype %}
+{% if id|length %}
+    {% set idString = 'id="' + id + '"' %}
+{% endif %}
+<div {{ idString | safe }} class="hl-wraper">
+    {% if subtype == "line" %}
+        <div class="hl-line"></div>
+    {% endif %}
+    <h1>{{ h1 }}</h1>
+</div>

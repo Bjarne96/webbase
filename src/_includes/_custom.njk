@@ -1,0 +1,28 @@
+---
+layout: '_base.njk'
+---
+
+<div class="grid-container">
+    {% for row in collections[collection]|sort(attribute="data.order") %}
+        {% set type = row.data.type %}
+        {% set value = row.data.value %}
+        {% set transition = row.data.transition_top %}
+        {% if transition|length %}
+            {% include 'components/transition.njk' %}
+        {% endif %}
+        {% if type == "flex-content" %}
+            {% include 'components/flex-content.njk' %}
+        {% elif type == "headline" %}
+            {% include 'components/headline.njk' %}
+        {% elif type == "slider" %}
+            {% include 'components/slider.njk' %}
+        {% elif type == "custom" %}
+            {% set path = "../customer/templates/" + value + ".njk" %}
+            {% include path %}
+        {% endif %}
+        {% set transition = row.data.transition_bot %}
+        {% if transition|length %}
+            {% include 'components/transition.njk' %}
+        {% endif %}
+    {% endfor %}
+</div>

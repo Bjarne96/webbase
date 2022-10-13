@@ -1,0 +1,53 @@
+{# VARIABLES #}
+{% set id = row.data.id %}
+{% set h2 = row.data.h2 %}
+{% set textPath = "../../" + row.data.page.filePathStem + ".md" %}
+{% set textExtra = row.data.textExtra %}
+{% set markdownsrc = row.data.page.inputPath %}
+{% set btnText = row.data.btnText %}
+{% set btnUrl = row.data.btnUrl %}
+{% set btnModal = row.data.btnModal %}
+{% set image = row.data.image %}
+{% set bgcl = row.data.bgcl %}
+{% set greenproject = row.data.greenproject %}
+{# CLASSES #}
+{% set bgclClass = "row-reverse" %}
+{% set imgContainerClass = "img-con" %}
+{# GREENPROJECT #}
+{% if greenproject %}
+    {% set imgContainerClass = imgContainerClass + " img-gp-con" %}
+{% endif %}
+{# BACKGROUND COLOR #}
+{% if bgcl|length %}
+    {% if bgcl == "sec" %}
+        {% set bgclClass = "bg-cl-sec" %}
+    {% elif bgcl == "pri" %}
+        {% set bgclClass = "bg-cl-pri" %}
+    {% endif %}
+{% endif %}
+{# FLEX CONTENT CONTAINER #}
+<div id="{{ id }}" class="flex-content {{ bgclClass }}">
+    <div class="{{ imgContainerClass }}">
+        <img alt="{{ h2 }}" src="{{ image }}-500.webp" srcset="{{ image }}-500.webp 500w, {{ image }}-800.webp 800w"/>
+    </div>
+    <div class="text-con">
+        <h2>{{ h2 }}</h2>
+        {% markdown %}
+        {%- include textPath -%}
+        {% endmarkdown %}
+        {% if textExtra|length %}
+            <p class="italic-text">{{ textExtra | safe }}</p>
+        {% endif %}
+        {% if btnUrl and btnUrl|length %}
+            <a target="_blank" href="{{ btnUrl }}">
+                <div class="btn btn-primary">
+                    {{ btnText }}
+                </div>
+            </a>
+        {% elif btnModal|length %}
+            <div data-modal-id="{{ btnModal }}" class="modal-btn btn btn-primary">
+                {{ btnText }}
+            </div>
+        {% endif %}
+    </div>
+</div>

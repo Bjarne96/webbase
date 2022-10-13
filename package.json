@@ -1,0 +1,55 @@
+{
+    "name": "wildwuchs",
+    "version": "1.0.0",
+    "description": "Wildwuchs Brauwerk",
+    "main": "public/index.html",
+    "scripts": {
+        "build:sass": "sass  --no-source-map src/scss/styles.scss:public/css/styles.css",
+        "build:js": "webpack",
+        "build:11ty": "eleventy",
+        "build": "npm-run-all --parallel build:*",
+        "watch:js": "onchange \"src/js/**/*\" -- npm run build:js",
+        "watch:sass": "sass  --no-source-map --watch src/scss/styles.scss:public/css/styles.css",
+        "watch:eleventy": "eleventy --watch --port=3000",
+        "serve": "browser-sync start --server public --files public",
+        "watch": "npm-run-all --parallel watch:*",
+        "start": "npm-run-all build --parallel watch serve",
+        "postbuild": "postcss public/css/styles.css -u autoprefixer cssnano -r --no-map"
+    },
+    "dependencies": {
+        "@babel/core": "^7.17.10",
+        "@babel/preset-env": "^7.17.10",
+        "autoprefixer": "^10.4.2",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.2.5",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "browser-sync": "^2.27.10",
+        "cssnano": "^5.0.17",
+        "markdown-it": "^12.3.2",
+        "npm": "^8.10.0",
+        "npm-run-all": "^4.1.5",
+        "onchange": "^7.1.0",
+        "postcss-cli": "^9.1.0",
+        "regenerator-runtime": "^0.11.1",
+        "sass": "^1.49.8",
+        "webpack": "^5.72.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Bjarne96/Wildwuchs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Bjarne96/Wildwuchs/issues"
+    },
+    "homepage": "https://wildwuchs-brauwerk.netlify.app",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.2",
+        "node-fetch": "^3.2.10",
+        "webpack-cli": "^4.9.2"
+    }
+}

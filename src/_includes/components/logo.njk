@@ -1,0 +1,6 @@
+{% if collections.config[0].data.navigation_logo_src|length %}
+    {% set src = collections.config[0].data.navigation_logo_src %}
+    <a class="logo" href="/">
+        <img class="logo-img" alt="logo" src="{{ src }}"/>
+    </a>
+{% endif %}

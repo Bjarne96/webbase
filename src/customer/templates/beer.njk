@@ -1,0 +1,36 @@
+{% set beer_name = slide.data.beer_name %}
+{% set img_res = slide.data.img_res %}
+{% set shop_url = slide.data.shop_url %}
+{% set spec_1 = slide.data.spec_1 %}
+{% set spec_2 = slide.data.spec_2 %}
+{% set spec_3 = slide.data.spec_3 %}
+{% set spec_4 = slide.data.spec_4 %}
+{% set textPath = "../data/beer/" + slide.data.page.fileSlug + ".md" %}
+{% if beer_name|length %}
+    <img alt="{{ beer_name }}" src="./assets/biere/{{ img_res }}-500.webp" srcset="./assets/biere/{{ img_res }}-500.webp 500w, ./assets/biere/{{ img_res }}-750.webp 750w"/>
+    <h2>{{ beer_name }}</h2>
+    {% markdown %}
+    {%- include textPath -%}
+    {% endmarkdown %}
+    <div class="beer-slide-specs">
+        <div class="beer-slide-specs-names italic-text">
+            <p>Stammwürze</p>
+            <p>Alkoholgehalt</p>
+            <p>Bittereinheiten</p>
+            <p>Lager-/Trinktemperatur</p>
+        </div>
+        <div class="beer-slide-specs-values italic-text fat-text">
+            <p>{{ spec_1 }}&nbsp;%</p>
+            <p>{{ spec_2 }}&nbsp;%</p>
+            <p>{{ spec_3 }}</p>
+            <p>{{ spec_4 }}&nbsp;°C</p>
+        </div>
+    </div>
+    <div class="beer-slide-btn">
+        <a target="_blank" href="https://shop.wildwuchs-brauwerk.de/{{ shop_url }}">
+            <div class="btn btn-primary">
+                Zum Shop
+            </div>
+        </a>
+    </div>
+{% endif %}

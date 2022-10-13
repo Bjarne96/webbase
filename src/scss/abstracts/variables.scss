@@ -1,0 +1,42 @@
+@use 'breakpoints.scss' as *;
+
+$topbar_height: 65px;
+$gaps: 2rem;
+
+:root {
+    --gaps: 2rem;
+    /*     BTN ICONS     */
+    --btn-icon-size: 3rem;
+
+    @include rangemq(small, medium) {
+        --btn-icon-size: 4rem;
+    }
+
+    @include rangemq(medium, extralarge) {
+        --btn-icon-size: 4.5rem;
+    }
+
+    @include minmq(extralarge) {
+        --btn-icon-size: 4.5rem;
+    }
+
+    --btn-icon-close-size: calc(var(--btn-icon-size) * 0.5);
+
+    /*    MODAL GAPS     */
+
+    --modal-gap-size: var(--gaps);
+
+    @include rangemq(small, medium) {
+        --modal-gap-size: calc(var(--gaps) * 1.25);
+    }
+
+    @include rangemq(medium, extralarge) {
+        --modal-gap-size: calc(var(--gaps) * 1.5);
+    }
+
+    @include minmq(extralarge) {
+        --modal-gap-size: calc(var(--gaps) * 2);
+    }
+
+    --modal-gap-close-size: calc(var(--modal-gap-size) * .25);
+}

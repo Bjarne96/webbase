@@ -1,0 +1,61 @@
+<div class="navigation-wraper">
+    <div class="topbar topbar-up">
+        {% include 'components/logo.njk' %}
+        {% include 'components/visit.njk' %}
+        {% include 'components/menu.njk' %}
+    </div>
+    <div class="navigation" data-visible="false" aria-hidden="true">
+        {% include 'components/logo.njk' %}
+        <nav>
+            <ul>
+                {%- for element in collections.navigation|sort(attribute="data.order") -%}
+                    {% set navigation = element.data.navigation %}
+                    {% if navigation %}
+                        {% set href = element.data.href %}
+                        {% set value = element.data.value %}
+                        {% set visit = element.data.visit %}
+                        {% set modal = element.data.modal %}
+                        {% set id = element.data.id %}
+                        {% set external = element.data.external %}
+                        {% set children = element.data.children %}
+                        {% if id and id|length %}
+                            <li>
+                                <a class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
+                            </li>
+                        {% elif children and children|length %}
+                            <li class="submenu navigate">
+                                <div data-target-toggle-submenu="{{ loop.index }}" class="submenu-toggle">
+                                    {{ value }}
+                                    <div class="dropdown-icon-container">
+                                        <svg viewBox="0 0 16 16" data-target-toggle-submenu="{{ loop.index }}" fill="currentColor" class="dropdown-icon dropdown-icon-{{ loop.index }}">
+                                            <path data-target-toggle-submenu="{{ loop.index }}" d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <ul class="submenu-list submenu-list-{{ loop.index }}" data-visible="false">
+                                    {% for c in children %}
+                                        {% set child = c.child %}
+                                        {% set chref = child["href"] %}
+                                        {% set cvalue = child["value"] %}
+                                        {% set cid = child["id"] %}
+                                        <li data-target-id="{{ cid }}">
+                                            <a href="{{ chref }}">{{ cvalue }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% elif external %}
+                            <li>
+                                <a target="_blank" href="{{ href }}">{{ value }}</a>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                {%- endfor -%}
+            </ul>
+        </nav>
+        {% include 'components/visit.njk' %}
+        <div class="nav-social-media-wraper">
+            {% include 'components/socialmedia.njk' %}
+        </div>
+    </div>
+</div>

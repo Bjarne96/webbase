@@ -1,0 +1,10 @@
+{% if svg %}
+    {% set path = "../../svgs/" + svg + ".svg"  %}
+    {% svg %}
+    {%- include path -%}
+    {% endsvg %}
+{% else %}
+    <script>
+        console.error("Error in svg.njk");
+    </script>
+{% endif %}

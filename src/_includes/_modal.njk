@@ -1,0 +1,45 @@
+<div id="modal-wraper" data-visible="false" aria-hidden="true">
+    {%- for element in collections.modal|sort(attribute="data.order") -%}
+        {% set id = element.data.id %}
+        {% set headline = element.data.headline %}
+        {% set contents = element.data.contents %}
+        <div id="{{ id }}" class="modal" data-visible="false" aria-hidden="true">
+            <div data-modal-id="#{{ id }}" class="modal-btn modal-btn-close btn-icon-close btn-icon-primary">
+                {% set svg = collections.config[0].data.close %}
+                {% include 'components/svg.njk' %}
+            </div>
+            <div class="modal-container">
+                <div class="modal-row">
+                    <h1>{{ headline }}</h1>
+                </div>
+                <div class="modal-row">
+                    {% for c in contents %}
+                        {% set id = c.content.id %}
+                        {% set hl = c.content.hl %}
+                        {% set text = c.content.text %}
+                        {% set btnText = c.content.btnText %}
+                        {% set url = c.content.url %}
+                        {% set external = c.content.external %}
+                        <div class="modal-column">
+                            {% if hl and hl|length %}
+                                <h2>{{ hl }}</h2>
+                            {% endif %}
+                            <p>{{ text | safe }}</p>
+                            {% if btnText %}
+                                {% if external %}
+                                    <a target="_blank" href="{{ url }}">
+                                        <div data-modal-id="#{{ id }}" class="modal-btn btn btn-primary">{{ btnText }}</div>
+                                    </a>
+                                {% else %}
+                                    <a href="{{ url }}">
+                                        <div data-modal-id="#{{ id }}" class="modal-btn btn btn-primary">{{ btnText }}</div>
+                                    </a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
