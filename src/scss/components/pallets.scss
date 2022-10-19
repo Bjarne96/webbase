@@ -2,13 +2,12 @@
 
 .color-pallet {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #262626;
 
     >div {
         display: flex;
-        // align-items: center;
         justify-content: center;
         flex-direction: row;
         padding: calc(var(--gaps) * 2);
@@ -16,22 +15,18 @@
     }
 
     .color-box {
-        width: 200px;
+        width: calc(100% - calc(calc(var(--gaps) * 1) * 2));
         height: 200px;
         border: 1px solid white;
-        padding: calc(var(--gaps) * .5);
+        padding: calc(var(--gaps) * 1);
     }
 
     .color-con {
         display: flex;
         flex-direction: column;
-        margin: calc(var(--gaps) * .5);
+        margin: calc(var(--gaps) * 1);
         padding: calc(var(--gaps) * .5);
     }
-}
-
-.light-colors {
-    background-color: #262626;
 
     .bg-pri-color {
         .color-box {
@@ -72,108 +67,6 @@
 
         .color-headline {
             color: var(--nav-color);
-        }
-    }
-
-    .dark-box {
-        .color-box {
-            background-color: var(--dark);
-        }
-
-        .color-text {
-            color: var(--color);
-        }
-
-        .color-headline {
-            color: var(--color);
-        }
-    }
-
-    .light-box {
-        .color-box {
-            background-color: var(--light);
-        }
-
-        .color-text {
-            color: var(--color);
-        }
-
-        .color-headline {
-            color: var(--color);
-        }
-    }
-}
-
-.dark-colors {
-    background-color: #cccccc;
-
-    .bg-pri-color {
-        .color-box {
-            background-color: var(--dk-primary);
-        }
-
-        .color-text {
-            color: var(--dk-color);
-        }
-
-        .color-headline {
-            color: var(--dk-color);
-        }
-    }
-
-    .bg-sec-color {
-        .color-box {
-            background-color: var(--dk-secondary);
-        }
-
-        .color-text {
-            color: var(--dk-color);
-        }
-
-        .color-headline {
-            color: var(--dk-color);
-        }
-    }
-
-    .nav-bg-color {
-        .color-box {
-            background-color: var(--dk-tertiary);
-        }
-
-        .color-text {
-            color: var(--dk-color);
-        }
-
-        .color-headline {
-            color: var(--dk-color);
-        }
-    }
-
-    .dark-box {
-        .color-box {
-            background-color: var(--dk-dark);
-        }
-
-        .color-text {
-            color: var(--dk-color);
-        }
-
-        .color-headline {
-            color: var(--dk-color);
-        }
-    }
-
-    .light-box {
-        .color-box {
-            background-color: var(--dk-light);
-        }
-
-        .color-text {
-            color: var(--dk-color);
-        }
-
-        .color-headline {
-            color: var(--dk-color);
         }
     }
 }

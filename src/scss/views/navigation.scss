@@ -5,7 +5,7 @@ $nav_sp_hor: clamp(2rem, 4.5vw, $topbar_height);
 $topnav_spacing: calc($nav_sp_hor * .5);
 $nav_sp_bar: 1.5rem;
 $sub_sp_bar: 1.2rem;
-$drop-shadow: drop-shadow(0px 3px 5px var(--dark));
+$drop-shadow: drop-shadow(0px 3px 5px black);
 
 .navigation-wraper * {
     background-color: var(--nav-bg-color);

@@ -1,0 +1,49 @@
+:root {
+    --light: #FFFFFF;
+
+    /*     LIGHT     */
+    --primary: #ECF9FF;
+    --secondary: #D5EBF5;
+    --tertiary: #1E526C;
+    --text: var(--tertiary);
+
+    @media (prefers-color-scheme: dark) {
+        /*     DARK     */
+        --primary: #1E526C;
+        --secondary: #1A465C;
+        --tertiary: #00273f;
+        --text: var(--light);
+    }
+
+
+    /*     BODY     */
+    --color: var(--text);
+    --bg-pri-color: var(--primary);
+    --bg-sec-color: var(--secondary);
+
+    /*     NAVIGATION     */
+    --nav-color: var(--light);
+    --nav-bg-color: var(--tertiary);
+
+    /*     FOOTER     */
+    --foo-color: var(--light);
+    --foo-bg-color: var(--tertiary);
+
+    /*     BUTTON PRIMARY     */
+    --btn-pri-color: var(--light);
+    --btn-pri-bg-color: var(--tertiary);
+
+    /*     BUTTON SECONDARY     */
+    --btn-sec-color: var(--light);
+    --btn-sec-bg-color: transparent;
+    --btn-sec-bo-color: var(--light);
+
+    /*     BUTTON ARROW PRIMARY     */
+    --btn-icon-pri-color: var(--light);
+
+    /*     BUTTON ARROW SECONDARY     */
+    --btn-icon-sec-color: var(--tertiary);
+
+    /*     LINK     */
+    --link-color: var(--tertiary);
+}
