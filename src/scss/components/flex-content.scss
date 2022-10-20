@@ -65,38 +65,6 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
         }
     }
 
-    /*     TEXT     */
-    .text-con {
-        @include maxmq(containerBr) {
-            padding-left: $gaps;
-            padding-right: $gaps;
-        }
-
-        @include maxmq(extralarge) {
-            >* {
-                margin-top: $gaps;
-                display: block;
-            }
-
-            >p {
-                margin-top: $gaps * .5;
-            }
-        }
-
-        @include minmq(extralarge) {
-            margin: $gaps;
-
-            >*+* {
-                margin-top: $gaps;
-                display: block;
-            }
-
-            >p {
-                margin-top: $gaps * .5;
-            }
-        }
-    }
-
     @include minmq(extralarge) {
         flex-direction: row;
     }

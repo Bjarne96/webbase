@@ -1,0 +1,8 @@
+{% set textPath = "../../" + row.data.page.filePathStem + ".md" %}
+<div class="wt">
+    <div class="wt-content">
+        {% markdown %}
+        {%- include textPath -%}
+        {% endmarkdown %}
+    </div>
+</div>

@@ -12,12 +12,16 @@ layout: '_base.njk'
         {% endif %}
         {% if type == "flex-content" %}
             {% include 'components/flex-content.njk' %}
+        {% elif type == "parallax-content" %}
+            {% include 'components/parallax-content.njk' %}
         {% elif type == "headline" %}
             {% include 'components/headline.njk' %}
         {% elif type == "slider" %}
             {% include 'components/slider.njk' %}
         {% elif type == "welcome-content" %}
             {% include 'components/welcome-content.njk' %}
+        {% elif type == "welcome-text" %}
+            {% include 'components/welcome-text.njk' %}
         {% elif type == "colorpallet-content" %}
             {% include 'components/colorpallet-content.njk' %}
         {% elif type == "custom" %}

@@ -1,0 +1,30 @@
+<div class="flex-text">
+    <h2>{{ h2 }}</h2>
+    {% markdown %}
+    {%- include textPath -%}
+    {% endmarkdown %}
+    {% if textExtra|length %}
+        <p class="italic-text">{{ textExtra | safe }}</p>
+    {% endif %}
+    {% if btnTarget|length %}
+        <div data-target-id="{{ btnTarget }}" class="navigate btn btn-primary">
+            {{ btnText }}
+        </div>
+    {% elif btnUrl|length and external == false %}
+        <a href="{{ btnUrl }}">
+            <div class="btn btn-primary">
+                {{ btnText }}
+            </div>
+        </a>
+    {% elif btnUrl|length %}
+        <a target="_blank" href="{{ btnUrl }}">
+            <div class="btn btn-primary">
+                {{ btnText }}
+            </div>
+        </a>
+    {% elif btnModal|length %}
+        <div data-modal-id="{{ btnModal }}" class="modal-btn btn btn-primary">
+            {{ btnText }}
+        </div>
+    {% endif %}
+</div>

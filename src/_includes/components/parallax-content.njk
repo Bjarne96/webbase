@@ -3,20 +3,16 @@
 {% set h2 = row.data.h2 %}
 {% set textPath = "../../" + row.data.page.filePathStem + ".md" %}
 {% set textExtra = row.data.textExtra %}
-{% set markdownsrc = row.data.page.inputPath %}
 {% set btnText = row.data.btnText %}
 {% set btnUrl = row.data.btnUrl %}
 {% set btnModal = row.data.btnModal %}
 {% set image = row.data.image %}
 {% set bgcl = row.data.bgcl %}
-{% set greenproject = row.data.greenproject %}
+{% set external = row.data.external %}
+{% set btnTarget = row.data.btnTarget %}
 {# CLASSES #}
-{% set bgclClass = "row-reverse" %}
-{% set imgContainerClass = "img-con" %}
-{# GREENPROJECT #}
-{% if greenproject %}
-    {% set imgContainerClass = imgContainerClass + " img-gp-con" %}
-{% endif %}
+{% set reverseClass = "parallax-reverse" %}
+{% set bgclClass = "parallax-reverse" %}
 {# BACKGROUND COLOR #}
 {% if bgcl|length %}
     {% if bgcl == "sec" %}
@@ -26,11 +22,18 @@
     {% endif %}
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
-<div id="{{ id }}" class="flex-content {{ bgclClass }}">
-    <div class="{{ imgContainerClass }}">
-        <img alt="{{ h2 }}" src="{{ image }}"/>
+<div id="{{ id }}" class="parallax {{ bgclClass }}">
+    <div class="parallax-headline">
+        {{ h2 }}
     </div>
-    <div class="text-con">
-        {% include 'components/flex-text.njk' %}
+    <div class="parallax-content {{ reverseClass }}">
+        <div class="parallax-spacer"></div>
+        <div class="parallax-img">
+            <img alt="{{ h2 }}" src="{{ image }}"/>
+        </div>
+        <div class="parallax-text">
+            {% set h2 = '' %}
+            {% include 'components/flex-text.njk' %}
+        </div>
     </div>
 </div>

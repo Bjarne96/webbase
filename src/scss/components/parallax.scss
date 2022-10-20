@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+
+.parallax {
+    .parallax-headline {
+        width: 100%;
+        padding: 0 var(--xxl-headline-gap);
+        font-size: var(--fs-xxl);
+        font-weight: var(--fw-xxl);
+        line-height: var(--ls-xxl);
+        margin: calc(var(--xxl-headline-gap) * 2) 0;
+    }
+
+    .parallax-content {
+        display: flex;
+        flex-direction: row;
+        flex-basis: auto;
+        border-bottom: 1px solid var(--color);
+
+
+        .parallax-spacer {
+            width: 33vw;
+        }
+
+        .parallax-text {
+            border-top: 1px solid var(--color);
+            max-width: calc(600px - var(--xxl-headline-gap));
+            padding: 0 var(--xxl-headline-gap);
+            display: flex;
+            justify-content: center;
+            width: 33vw;
+            // align-items: left;
+        }
+
+        .parallax-img {
+            max-height: 601px;
+            border-top: 1px solid var(--color);
+            height: calc(33vw + 1px);
+
+            img {
+
+                max-width: 600px;
+                max-height: 600px;
+                width: 33vw;
+                height: 33vw;
+            }
+        }
+
+        .parallax-reverse {
+            flex-direction: row-reverse;
+        }
+    }
+}

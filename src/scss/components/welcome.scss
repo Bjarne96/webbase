@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+
+.wt {
+    height: 100%;
+    width: calc(100% - var(--xxl-headline-gap));
+    height: 80vh;
+    padding: 0 var(--xxl-headline-gap);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-size: var(--fs-xxl);
+        font-weight: var(--fw-xxl);
+        line-height: var(--ls-xxl);
+    }
+}

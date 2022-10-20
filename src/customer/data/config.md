@@ -1,13 +1,13 @@
 ---
 tags: config
 # NAVIGATION
-navigation_visit_value: Visit Us
-navigation_visit_href: '/visit'
-navigation_logo_src: '../assets/logo.webp'
+navigation_visit_value: 
+navigation_visit_href: 
+navigation_logo_src: '../assets/logo.png'
 # FOOTER
-footer_createdby: Master Template
-footer_transition_top: wave-top
-footer_transition_bot: wave-bot
+footer_createdby: Tiefschlafen
+footer_transition_top: 
+footer_transition_bot: 
 # BUTTONS
 arrow_left: circle-chevron-left-solid
 arrow_right: circle-chevron-right-solid

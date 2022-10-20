@@ -1,4 +1,5 @@
 {% set template = row.data.template %}
+{% set collection = row.data.collection %}
 {% set left = row.data.left %}
 {% set right = row.data.right %}
 {% set delay = row.data.delay %}
@@ -14,6 +15,9 @@
     {% set max_width_string = "max-width:" + max_width + ";" %}
 {% endif %}
 {% set path = "../../customer/templates/" + template + ".njk" %}
+{% if template == "image" %}
+    {% set path = "components/" + template + "-slide.njk" %}
+{% endif %}
 <div class="slider-container">
     {% if left|length and left == "arrow-left" %}
         <div id="{{ template }}-{{ left }}" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
@@ -23,7 +27,7 @@
     {% endif %}
     <div id="{{ template }}-slider" class="slider" style="{{ max_height_string }}{{ max_width_string }}" data-slides=".{{ template }}-slide" data-left="#{{ template }}-{{ left }}" data-right="#{{ template }}-{{ right }}" data-delay="{{ delay }}" data-auto_slide_timing="{{ auto_slide_timing }}">
         <div class="slider-wraper">
-            {%- for slide in collections[template]|sort(attribute="data.order") -%}
+            {%- for slide in collections[collection]|sort(attribute="data.order") -%}
                 <div class="slide-frame">
                     <div class="slide {{ template }}-slide" style="{{ max_height_string }}{{ max_width_string }}">
                         {% include path %}

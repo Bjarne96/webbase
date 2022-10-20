@@ -1,6 +1,7 @@
 ---
 type: slider
-template: woods
+template: image
+collection: woods
 max_height: 750px
 Xmax_widthX: 750px
 left: arrow-left

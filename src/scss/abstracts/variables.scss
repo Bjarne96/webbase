@@ -39,4 +39,6 @@ $gaps: 2rem;
     }
 
     --modal-gap-close-size: calc(var(--modal-gap-size) * .25);
+
+    --xxl-headline-gap: calc(var(--gaps) * 2);
 }

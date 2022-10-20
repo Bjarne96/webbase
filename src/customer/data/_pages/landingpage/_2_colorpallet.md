@@ -1,4 +1,4 @@
 ---
-type: colorpallet-content
+type: 
 order: 20
 ---

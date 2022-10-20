@@ -1,0 +1,40 @@
+@use '../abstracts/' as *;
+
+/*     TEXT     */
+
+.flex-text {
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+
+    @include maxmq(containerBr) {
+        padding-left: $gaps;
+        padding-right: $gaps;
+    }
+
+    @include maxmq(extralarge) {
+        >* {
+            margin-top: $gaps;
+            display: block;
+        }
+
+        >p {
+            margin-top: $gaps * .5;
+        }
+    }
+
+    @include minmq(extralarge) {
+        margin: $gaps;
+
+        >*+* {
+            margin-top: $gaps;
+            display: block;
+        }
+
+        >p {
+            margin-top: $gaps * .5;
+        }
+    }
+}
