@@ -1,7 +1,7 @@
 {# VARIABLES #}
 {% set id = row.data.id %}
 {% set h2 = row.data.h2 %}
-{% set textPath = "../../" + row.data.page.filePathStem + ".md" %}
+{% set textPath = "../" + row.data.page.filePathStem + ".md" %}
 {% set textExtra = row.data.textExtra %}
 {% set markdownsrc = row.data.page.inputPath %}
 {% set btnText = row.data.btnText %}
@@ -31,6 +31,6 @@
         <img alt="{{ h2 }}" src="{{ image }}"/>
     </div>
     <div class="text-con">
-        {% include 'components/flex-text.njk' %}
+        {% include 'flex-text.njk' %}
     </div>
 </div>

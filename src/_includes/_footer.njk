@@ -2,7 +2,7 @@
 {% set bot = collections.config[0].data.footer_transition_bot %}
 <div class="footer-wraper">
     {% if top|length %}
-        {% set transitionPath = 'components/'+top+'.njk' %}
+        {% set transitionPath = ''+top+'.njk' %}
         <div class="cl-footer">
             {% include transitionPath %}
         </div>
@@ -10,7 +10,7 @@
     <div class="footer-btn-container">
         <div class="navigate btn-icon btn-icon-primary" data-target-id="body-wraper">
             {% set svg = collections.config[0].data.arrow_top %}
-            {% include 'components/svg.njk' %}
+            {% include 'svg.njk' %}
         </div>
     </div>
     <div class="footer-children-container">
@@ -22,7 +22,7 @@
                 <div class="footer-child">
                     <h3>{{ value }}</h3>
                     {% if socialmedia %}
-                        {% include 'components/socialmedia.njk' %}
+                        {% include 'socialmedia.njk' %}
                     {% else %}
                         <ul>
                             {% for c in children %}
@@ -91,7 +91,7 @@
         {% endif %}
     </div>
     {% if bot|length %}
-        {% set transitionPath = 'components/'+bot+'.njk' %}
+        {% set transitionPath = ''+bot+'.njk' %}
         <div class="cl-footer">
             {% include transitionPath %}
         </div>

@@ -1,11 +1,11 @@
 <div class="navigation-wraper">
     <div class="topbar topbar-up">
-        {% include 'components/logo.njk' %}
-        {% include 'components/visit.njk' %}
-        {% include 'components/menu.njk' %}
+        {% include 'logo.njk' %}
+        {% include 'visit.njk' %}
+        {% include 'menu.njk' %}
     </div>
     <div class="navigation" data-visible="false" aria-hidden="true">
-        {% include 'components/logo.njk' %}
+        {% include 'logo.njk' %}
         <nav>
             <ul>
                 {%- for element in collections.navigation|sort(attribute="data.order") -%}
@@ -53,9 +53,9 @@
                 {%- endfor -%}
             </ul>
         </nav>
-        {% include 'components/visit.njk' %}
+        {% include 'visit.njk' %}
         <div class="nav-social-media-wraper">
-            {% include 'components/socialmedia.njk' %}
+            {% include 'socialmedia.njk' %}
         </div>
     </div>
 </div>

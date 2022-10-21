@@ -14,15 +14,15 @@
 {% if max_width|length %}
     {% set max_width_string = "max-width:" + max_width + ";" %}
 {% endif %}
-{% set path = "../../customer/templates/" + template + ".njk" %}
+{% set path = "../customer/templates/" + template + ".njk" %}
 {% if template == "image" or  template == "product" %}
-    {% set path = "components/" + template + "-slide.njk" %}
+    {% set path = template + "-slide.njk" %}
 {% endif %}
 <div class="slider-container">
     {% if left|length and left == "arrow-left" %}
         <div id="{{ template }}-{{ left }}" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
             {% set svg = collections.config[0].data.arrow_left %}
-            {% include 'components/svg.njk' %}
+            {% include 'svg.njk' %}
         </div>
     {% endif %}
     <div id="{{ template }}-slider" class="slider" style="{{ max_height_string }}{{ max_width_string }}" data-slides=".{{ template }}-slide" data-left="#{{ template }}-{{ left }}" data-right="#{{ template }}-{{ right }}" data-delay="{{ delay }}" data-auto_slide_timing="{{ auto_slide_timing }}">
@@ -39,7 +39,7 @@
     {% if right|length and right == "arrow-right" %}
         <div id="{{ template }}-{{ right }}" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
             {% set svg = collections.config[0].data.arrow_right %}
-            {% include 'components/svg.njk' %}
+            {% include 'svg.njk' %}
         </div>
     {% endif %}
 </div>
