@@ -1,11 +1,12 @@
 ---
 tags: config
-# NAVIGATION
+# NAVIGATION Visit Button
 navigation_visit_value: 
 navigation_visit_href: 
-navigation_logo_src: '../assets/logo.png'
+# NAVIGATION Logo
+navigation_logo_type: 'svg'
 # FOOTER
-footer_createdby: Tiefschlafen
+footer_created_for: Tiefschlafen
 footer_transition_top: 
 footer_transition_bot: 
 # BUTTONS

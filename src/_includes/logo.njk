@@ -1,6 +1,14 @@
-{% if collections.config[0].data.navigation_logo_src|length %}
-    {% set src = collections.config[0].data.navigation_logo_src %}
-    <a class="logo" href="/">
-        <img class="logo-img" alt="logo" src="{{ src }}"/>
-    </a>
+{% set type = collections.config[0].data.navigation_logo_type %}
+{% if type|length %}
+    {% if type == "svg" %}
+        {% set svg = "logo" %}
+        <a class="logo" href="/">
+            {% include "svg.njk" %}
+        </a>
+    {% elif type == "png" or type == "jpg" %}
+        {% set src = collections.config[0].data.navigation_logo_type %}
+        <a class="logo" href="/">
+            <img class="logo-img" alt="logo" src="../assets/logo.{{ type }}"/>
+        </a>
+    {% endif %}
 {% endif %}

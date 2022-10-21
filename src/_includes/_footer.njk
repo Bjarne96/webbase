@@ -83,8 +83,8 @@
     </div>
     <div class="footer-created-by">
         All rights reserved © 2022.
-        {% if collections.config[0].data.footer_createdby|length %}
-            Created with ♥{% set value = collections.config[0].data.footer_createdby %} for
+        {% if collections.config[0].data.footer_created_for|length %}
+            Created with ♥{% set value = collections.config[0].data.footer_created_for %} for
             <strong>{{ value }}</strong>.
         {% else %}
             Created with ♥.
