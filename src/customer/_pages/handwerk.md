@@ -1,6 +1,6 @@
 ---
 title: Tiefschlafen Handwerk
-layout: '_article.njk'
+layout: 'article.njk'
 permalink: /handwerk/index.html
 ---
 

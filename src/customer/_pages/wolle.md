@@ -1,6 +1,6 @@
 ---
 title: Tiefschlafen Schurwolle
-layout: '_article.njk'
+layout: 'article.njk'
 permalink: /wolle/index.html
 ---
 
