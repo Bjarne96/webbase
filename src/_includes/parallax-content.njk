@@ -29,7 +29,7 @@
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
 <div id="{{ id }}" class="parallax {{ bgclClass }}">
-    <div class="{{ headlineClass }}">
+    <div class="parallax-js {{ headlineClass }}" data-rate="2" data-direction="vertical">
         {{ h2 }}
     </div>
     <div class="{{ contentClass }}">
@@ -43,3 +43,4 @@
         </div>
     </div>
 </div>
+<div class="parallax-vertical-spacer"></div>

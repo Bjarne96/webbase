@@ -11,6 +11,15 @@ body {
     color: var(--color);
 }
 
+/*     Hide Parallax Content      */
+.body-wraper {
+    .grid-container>* {
+        z-index: 1;
+        background-color: var(--bg-pri-color);
+        position: relative;
+    }
+}
+
 /*     TEXT      */
 
 p {

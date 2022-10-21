@@ -1,4 +1,4 @@
 ---
-type: x
+type: testx
 order: 20
 ---
