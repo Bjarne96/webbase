@@ -5,7 +5,6 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
 /*     CONTAINER     */
 
 .grid-container {
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }

@@ -1,9 +1,9 @@
 ---
 type: slider
-template: image
-collection: woods
-max_height: 750px
-Xmax_widthX: 750px
+template: product
+collection: products
+xmax_height: 750px
+xmax_width: 750px
 left: arrow-left
 right: arrow-right
 delay: 0

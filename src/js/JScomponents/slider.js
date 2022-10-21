@@ -69,11 +69,11 @@ function Slider(
         });
     };
     // Finds the progressbar in each container
-    let progressBarEls = container.map((slide) => {
-        return Array.from(slide.children[0].children).find(
-            (child) => child.className == "progress-bar"
-        );
-    });
+    // let progressBarEls = container.map((slide) => {
+    //     return Array.from(slide.children[0].children).find(
+    //         (child) => child.className == "progress-bar"
+    //     );
+    // });
     // Set slides to sliders index
     let setProgressbar = () => {
         progressBarEls.forEach((bar, i) => {

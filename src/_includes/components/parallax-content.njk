@@ -10,9 +10,11 @@
 {% set bgcl = row.data.bgcl %}
 {% set external = row.data.external %}
 {% set btnTarget = row.data.btnTarget %}
+{% set reverse = row.data.reverse %}
 {# CLASSES #}
-{% set reverseClass = "parallax-reverse" %}
-{% set bgclClass = "parallax-reverse" %}
+{% set contentClass = "parallax-content" %}
+{% set headlineClass = "parallax-headline" %}
+{% set bgclClass = "" %}
 {# BACKGROUND COLOR #}
 {% if bgcl|length %}
     {% if bgcl == "sec" %}
@@ -21,12 +23,16 @@
         {% set bgclClass = "bg-cl-pri" %}
     {% endif %}
 {% endif %}
+{% if reverse == true %}
+    {% set contentClass = contentClass + "  parallax-reverse-content" %}
+    {% set headlineClass = headlineClass + " parallax-reverse-headline" %}
+{% endif %}
 {# FLEX CONTENT CONTAINER #}
 <div id="{{ id }}" class="parallax {{ bgclClass }}">
-    <div class="parallax-headline">
+    <div class="{{ headlineClass }}">
         {{ h2 }}
     </div>
-    <div class="parallax-content {{ reverseClass }}">
+    <div class="{{ contentClass }}">
         <div class="parallax-spacer"></div>
         <div class="parallax-img">
             <img alt="{{ h2 }}" src="{{ image }}"/>

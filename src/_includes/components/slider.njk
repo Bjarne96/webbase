@@ -15,7 +15,7 @@
     {% set max_width_string = "max-width:" + max_width + ";" %}
 {% endif %}
 {% set path = "../../customer/templates/" + template + ".njk" %}
-{% if template == "image" %}
+{% if template == "image" or  template == "product" %}
     {% set path = "components/" + template + "-slide.njk" %}
 {% endif %}
 <div class="slider-container">

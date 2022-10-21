@@ -2,7 +2,7 @@
 
 .parallax {
     .parallax-headline {
-        width: 100%;
+        // width: 100%;
         padding: 0 var(--xxl-headline-gap);
         font-size: var(--fs-xxl);
         font-weight: var(--fw-xxl);
@@ -45,8 +45,14 @@
             }
         }
 
-        .parallax-reverse {
-            flex-direction: row-reverse;
-        }
+
+    }
+
+    .parallax-reverse-headline {
+        text-align: right;
+    }
+
+    .parallax-reverse-content {
+        flex-direction: row-reverse;
     }
 }

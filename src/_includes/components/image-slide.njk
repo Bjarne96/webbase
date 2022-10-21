@@ -1,7 +1,6 @@
 {% set img_name = slide.data.img_name %}
 {% set img_res = slide.data.img_res %}
 {% set textPath = "../data/" template +"/"+ slide.data.page.fileSlug + ".md" %}
-{{ textPath }}
 {% if img_name|length %}
     <img alt="{{ img_name }}" src="{{ img_res }}"/>
 {% endif %}

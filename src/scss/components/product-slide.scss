@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+$siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
+
+.comp-product-slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    width: calc(100vw - calc($siteGaps * 2));
+    padding: $siteGaps;
+
+    img {
+        max-width: 400px;
+        max-height: 400px;
+        height: 33vw;
+        width: 33vw;
+        margin: 0 auto;
+    }
+
+    .product-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+}
