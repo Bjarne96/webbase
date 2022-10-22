@@ -1,11 +1,11 @@
 export function hydrateParallax() {
-    window.addEventListener('scroll', function(e) {
-
-        const target = document.querySelectorAll('.parallax-js');
+    const target = document.querySelectorAll('.parallax-js');
+    const doParallax = function () {
         const pageYOffset = window.pageYOffset;
         var index = 0, length = target.length;
         for (index; index < length; index++) {
-            let offsetTop = target[index].parentNode.offsetTop;
+            let delay = 50;
+            let offsetTop = target[index].parentNode.offsetTop + delay;
             let offsetBot = target[index].parentNode.offsetTop + target[index].parentNode.offsetHeight;
             var pos = (pageYOffset - offsetTop) * target[index].dataset.rate;
             // Drinnen
@@ -19,7 +19,6 @@ export function hydrateParallax() {
                 }
             }
         }
-    
-    
-    });
+    }
+    window.addEventListener('scroll', () => doParallax() );
 }

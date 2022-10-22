@@ -23,7 +23,7 @@ export function Navigation() {
     // Signals that these depend on HTML & CSS sizes and need to be carefully maintained
     let $navigationBr = 1150;
     let $topbar_height = 65;
-    let $defaultOffset = 16;
+    let $defaultOffset = 0;
     let sidebarOn = false;
     let newScrollPosition = 0;
     let lastScrollPosition = 0;

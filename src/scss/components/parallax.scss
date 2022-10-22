@@ -9,7 +9,6 @@
         visibility: visible;
         position: relative;
         z-index: -1;
-        // width: 100%;
         padding: 0 var(--xxl-headline-gap);
         font-size: var(--fs-xxl);
         font-weight: var(--fw-xxl);
@@ -24,7 +23,6 @@
         flex-basis: auto;
         border-bottom: 1px solid var(--color);
 
-
         .parallax-spacer {
             width: 33vw;
         }
@@ -36,7 +34,6 @@
             display: flex;
             justify-content: center;
             width: 33vw;
-            // align-items: left;
         }
 
         .parallax-img {
@@ -45,15 +42,12 @@
             height: calc(33vw + 1px);
 
             img {
-
                 max-width: 600px;
                 max-height: 600px;
                 width: 33vw;
                 height: 33vw;
             }
         }
-
-
     }
 
     .parallax-reverse-headline {
