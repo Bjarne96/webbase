@@ -1,8 +1,20 @@
-{% set textPath = "../" + row.data.page.filePathStem + ".md" %}
+{# {% set textPath = "../" + row.data.page.filePathStem + ".md" %} #}
+{% set texts = row.data.texts %}
+{% set next_section = row.data.next_section %}
 <div class="wt">
-    <div class="wt-content">
-        {% markdown %}
-        {%- include textPath -%}
-        {% endmarkdown %}
+    <div class="wt-content js-parallax" data-rate="1.5" data-direction="vertical">
+        {% for text in texts %}
+            <p class="animate-rotateX" style="animation-delay: {{ loop.index + (0.2 * loop.index) }}s;">
+                {{ text }}
+            </p>
+        {% endfor %}
     </div>
+    {% if next_section|length %}
+        <div class="btn-container">
+            <div style="animation-delay: {{ texts.length + 1.2 }}s;" class="animate-fade navigate btn-icon btn-icon-secondary" data-target-id="{{ next_section }}">
+                {% set svg = collections.config[0].data.arrow_bot %}
+                {% include 'svg.njk' %}
+            </div>
+        </div>
+    {% endif %}
 </div>

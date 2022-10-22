@@ -6,7 +6,6 @@
     background-color: var(--bg-pri-color);
 
     .parallax-headline {
-        visibility: visible;
         position: relative;
         z-index: -1;
         padding: 0 var(--xxl-headline-gap);
@@ -37,9 +36,9 @@
         }
 
         .parallax-img {
-            max-height: 601px;
+            max-height: 600px;
             border-top: 1px solid var(--color);
-            height: calc(33vw + 1px);
+            height: 33vw;
 
             img {
                 max-width: 600px;

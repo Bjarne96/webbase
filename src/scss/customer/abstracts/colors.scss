@@ -2,16 +2,18 @@
     --light: #FFFFFF;
 
     /*     LIGHT     */
-    --primary: #ECF9FF;
-    --secondary: #D5EBF5;
-    --tertiary: #1E526C;
+    --primary: #d3baa1;
+    --secondary: #e5ba8e;
+    --tertiary: #253946;
+    --quaternary: #253946;
     --text: var(--tertiary);
 
     @media (prefers-color-scheme: dark) {
         /*     DARK     */
-        --primary: #1E526C;
-        --secondary: #1A465C;
-        --tertiary: #00273f;
+        --primary: #566e3d;
+        --secondary: #89a26d;
+        --tertiary: #477f8f;
+        --quaternary: #886547;
         --text: var(--light);
     }
 
@@ -31,7 +33,7 @@
 
     /*     BUTTON PRIMARY     */
     --btn-pri-color: var(--light);
-    --btn-pri-bg-color: var(--tertiary);
+    --btn-pri-bg-color: var(--quaternary);
 
     /*     BUTTON SECONDARY     */
     --btn-sec-color: var(--light);
@@ -39,10 +41,13 @@
     --btn-sec-bo-color: var(--light);
 
     /*     BUTTON ARROW PRIMARY     */
-    --btn-icon-pri-color: var(--light);
+    --btn-icon-pri-color: var(--text);
 
     /*     BUTTON ARROW SECONDARY     */
     --btn-icon-sec-color: var(--tertiary);
+
+    /*     BUTTON ARROW LIGHT     */
+    --btn-icon-light-color: var(--light);
 
     /*     LINK     */
     --link-color: var(--tertiary);
