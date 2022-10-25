@@ -24,6 +24,8 @@ layout: '_base.njk'
             {% include 'welcome-text.njk' %}
         {% elif type == "colorpallet-content" %}
             {% include 'colorpallet-content.njk' %}
+        {% elif type == "test" %}
+            {% include 'test.njk' %}
         {% elif type == "custom" %}
             {% set path = "../customer/templates/" + value + ".njk" %}
             {% include path %}

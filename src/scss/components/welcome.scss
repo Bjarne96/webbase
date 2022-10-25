@@ -2,7 +2,6 @@
 
 
 .wt {
-    height: 100%;
     width: calc(100% - calc(var(--xxl-headline-gap) * 2));
     height: 100vh;
     padding: 0 var(--xxl-headline-gap);
@@ -15,7 +14,7 @@
         position: relative;
         z-index: -1;
 
-        p {
+        .wt-item {
             font-size: var(--fs-xxl);
             font-weight: var(--fw-xxl);
             line-height: var(--ls-xxl);
@@ -27,8 +26,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin: auto;
-        margin-top: 0;
+        margin-bottom: var(--xxl-headline-gap);
     }
 }
 

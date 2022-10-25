@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.test-parallax {
+    // z-index: 1;
+    // position: relative;
+    // background-color: var(--bg-pri-color);
+
+
+}
+
+.test-parallax-headline {
+    // position: relative;
+    // z-index: -1;
+    border: 1px solid red;
+    font-size: var(--fs-xxl);
+    font-weight: var(--fw-xxl);
+    line-height: var(--ls-xxl);
+    margin: calc(var(--xxl-headline-gap) * 2) 0;
+}

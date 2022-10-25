@@ -1,12 +1,11 @@
-{# {% set textPath = "../" + row.data.page.filePathStem + ".md" %} #}
 {% set texts = row.data.texts %}
 {% set next_section = row.data.next_section %}
 <div class="wt">
-    <div class="wt-content js-parallax" data-rate="1.5" data-direction="vertical">
+    <div class="wt-content">
         {% for text in texts %}
-            <p class="animate-rotateX" style="animation-delay: {{ loop.index + (0.2 * loop.index) }}s;">
+            <div class="wt-item animate-rotateX" style="animation-delay: {{ loop.index + (0.2 * loop.index) }}s;">
                 {{ text }}
-            </p>
+            </div>
         {% endfor %}
     </div>
     {% if next_section|length %}
