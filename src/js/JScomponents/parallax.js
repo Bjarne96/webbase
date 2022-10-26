@@ -1,4 +1,9 @@
 export function hydrateParallax() {
+    const mobile = 768;
+    if(window.innerWidth < mobile) {
+        console.info("Disabled Parallax Effect on Mobile.")
+        return;
+    }
     const target = document.querySelectorAll('.parallax-js');
     const doParallax = function () {
         const pageYOffset = window.pageYOffset;
