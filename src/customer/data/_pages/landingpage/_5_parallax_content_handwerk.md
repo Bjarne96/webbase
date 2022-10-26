@@ -1,7 +1,7 @@
 ---
 type: parallax-content
 include_toc: true
-order: 60
+order: 50
 id : handwerk
 h2 : Handwerk
 image : ./assets/handwerk.png

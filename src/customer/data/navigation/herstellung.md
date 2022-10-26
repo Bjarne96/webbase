@@ -1,6 +1,6 @@
 ---
-order: 40
-value: Herstellung
+order: 1
+value: Home
 navigation: true
 footer: true
 children:

@@ -8,5 +8,5 @@ left: arrow-left
 right: arrow-right
 delay: 0
 auto_slide_timing: 0
-order: 70
+order: 60
 ---
