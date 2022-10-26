@@ -1,5 +1,5 @@
 ---
-order: 4
+order: 40
 value: Herstellung
 navigation: true
 footer: true
