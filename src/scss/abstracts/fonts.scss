@@ -44,12 +44,15 @@
         /*     HEADLINES     */
         --fs-h1: 1.6rem;
         --fs-h2: 1.2rem;
+        --fs-xxl: 2.2rem;
     }
 
     @include rangemq (small, large) {
         /*     HEADLINES     */
         --fs-h1: 2rem;
         --fs-h2: 1.4rem;
+        --fs-xxl: 3.5rem;
+
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
         --lh-p: 1.6rem;
@@ -60,6 +63,8 @@
         /*     HEADLINES     */
         --fs-h1: 2rem;
         --fs-h2: 1.4rem;
+        --fs-xxl: 3.5rem;
+
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
         --lh-p: 1.6rem;
@@ -70,6 +75,8 @@
         /*     HEADLINES     */
         --fs-h1: 2.2rem;
         --fs-h2: 1.4rem;
+        --fs-xxl: 4rem;
+
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
         --lh-p: 1.6rem;

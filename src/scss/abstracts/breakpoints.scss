@@ -7,9 +7,8 @@ $dev-breakpoints: (
     medium: 768px,
     large: 992px,
     extralarge: 1300px,
-    containerBr: 632px,
-    navigationBr: 1150px,
-    footerBr: 700px,
+    flexcontentBr: 632px,
+    parallaxcontentBr: 1500px,
 );
 
 $breakpoints: map.merge($dev-breakpoints, $cu-breakpoints);

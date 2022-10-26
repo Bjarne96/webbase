@@ -9,7 +9,8 @@ export function hydrateParallax() {
         const pageYOffset = window.pageYOffset;
         var index = 0, length = target.length;
         for (index; index < length; index++) {
-            let delay = 50;
+            let $topbar = 0;
+            let delay = 0 + $topbar;
             let offsetTop = target[index].parentNode.offsetTop + delay;
             let offsetBot = target[index].parentNode.offsetTop + target[index].parentNode.offsetHeight;
             var pos = (pageYOffset - offsetTop) * target[index].dataset.rate;

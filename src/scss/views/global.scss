@@ -57,11 +57,11 @@ strong {
 }
 
 .bg-cl-pri {
-    background-color: var(--bg-pri-color);
+    background-color: var(--bg-pri-color) !important;
 }
 
 .bg-cl-sec {
-    background-color: var(--bg-sec-color);
+    background-color: var(--bg-sec-color) !important;
 }
 
 .cl-pri {

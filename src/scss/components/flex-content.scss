@@ -23,6 +23,18 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
         padding: calc($gaps * 2) 0;
     }
 
+    .text-con {
+        @include maxmq(flexcontentBr) {
+            padding-left: $gaps;
+            padding-right: $gaps;
+        }
+
+        //Test if this works
+        @include minmq(extralarge) {
+            margin: $gaps;
+        }
+    }
+
     /*     IMAGES     */
     .img-con {
         display: flex;
@@ -54,7 +66,7 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
         }
     }
 
-    @include minmq(containerBr) {
+    @include minmq(flexcontentBr) {
         div {
             max-width: $max-img-wd;
         }

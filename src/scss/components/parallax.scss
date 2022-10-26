@@ -1,9 +1,18 @@
 @use '../abstracts/' as *;
 
+$third: 500px;
+
 .parallax {
     z-index: 1;
     position: relative;
     background-color: var(--bg-pri-color);
+
+    @include maxmq(medium) {
+        >* {
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+    }
 
     .parallax-headline {
         position: relative;
@@ -13,6 +22,26 @@
         font-weight: var(--fw-xxl);
         line-height: var(--ls-xxl);
         margin: calc(var(--xxl-headline-gap) * 2) 0;
+        max-width: $third;
+        width: calc(33% - calc(var(--xxl-headline-gap) * 2));
+        text-align: left;
+
+        @include rangemq(zero, medium) {
+            margin: var(--xxl-headline-gap) 0;
+            margin-top: calc(var(--xxl-headline-gap) * 2);
+            width: calc(100% - calc(var(--xxl-headline-gap) * 2))
+        }
+
+
+        @include rangemq(medium, large) {
+            width: calc(50% - calc(var(--xxl-headline-gap)));
+            padding-right: 0;
+        }
+
+        @include minmq(parallaxcontentBr) {
+            margin-left: calc(calc(100vw - calc($third * 3)) * .5);
+            max-width: calc($third - calc(var(--xxl-headline-gap) * 2));
+        }
     }
 
     .parallax-content {
@@ -20,40 +49,138 @@
         display: flex;
         flex-direction: row;
         flex-basis: auto;
-        border-bottom: 1px solid var(--color);
+        max-width: calc($third * 3);
+
+        @include maxmq(medium) {
+            >* {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+        }
+
+        @include minmq(medium) {
+            border-bottom: 1px solid var(--color);
+        }
+
+        @include maxmq(medium) {
+            flex-direction: column;
+        }
+
+        @include minmq(parallaxcontentBr) {
+            margin: 0 auto;
+        }
+
 
         .parallax-spacer {
-            width: 33vw;
+
+            max-width: $third;
+
+            @include maxmq(large) {
+                width: 0%;
+            }
+
+            @include minmq(large) {
+                margin-left: auto;
+            }
         }
 
         .parallax-text {
-            border-top: 1px solid var(--color);
-            max-width: calc(600px - var(--xxl-headline-gap));
+            max-width: $third;
             padding: 0 var(--xxl-headline-gap);
             display: flex;
             justify-content: center;
-            width: 33vw;
+            width: calc(33% - calc(var(--xxl-headline-gap) * 2));
+
+            @include maxmq(medium) {
+                padding: var(--xxl-headline-gap);
+                width: calc(100% - calc(var(--xxl-headline-gap) * 2));
+            }
+
+            @include minmq(medium) {
+                border-top: 1px solid var(--color);
+            }
+
+            @include rangemq(medium, large) {
+                padding: var(--xxl-headline-gap);
+                width: calc(50% - calc(var(--xxl-headline-gap) * 2));
+            }
         }
 
         .parallax-img {
-            max-height: 600px;
-            border-top: 1px solid var(--color);
-            height: 33vw;
+            max-height: $third;
+            width: 33%;
+
+            @include maxmq(medium) {
+                width: calc(100% - calc(var(--xxl-headline-gap) * 2));
+                margin: 0 var(--xxl-headline-gap);
+                max-width: $third;
+            }
+
+            @include minmq(medium) {
+                border-top: 1px solid var(--color);
+            }
+
+            @include rangemq(medium, large) {
+                width: 50%;
+            }
 
             img {
-                max-width: 600px;
-                max-height: 600px;
-                width: 33vw;
-                height: 33vw;
+                max-width: $third;
+                max-height: $third;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                height: 100%;
+                border-radius: $border_radius;
+                display: block;
             }
         }
     }
 
     .parallax-reverse-headline {
-        text-align: right;
+        margin-left: auto;
+
+        @include minmq(medium) {
+            text-align: left;
+        }
+
+        @include rangemq(medium, large) {
+            width: 50%;
+            padding-left: 0;
+        }
+
+        @include minmq(parallaxcontentBr) {
+            margin-right: calc(calc(100vw - calc($third * 3)) * .5);
+            max-width: calc($third - calc(var(--xxl-headline-gap) * 2));
+        }
     }
 
     .parallax-reverse-content {
-        flex-direction: row-reverse;
+
+        @include maxmq(medium) {
+            flex-direction: column;
+        }
+
+        @include minmq(medium) {
+            flex-direction: row-reverse;
+        }
     }
 }
+
+// .parallax-vertical-line-top {
+//     @include minmq(medium) {
+//         background-color: var(--color) !important;
+//         height: 1px;
+//     }
+
+//     width: 100%;
+// }
+
+// .parallax-vertical-line-bot {
+//     @include minmq(medium) {
+//         background-color: var(--color) !important;
+//         height: 1px;
+//     }
+
+//     width: 100%;
+// }

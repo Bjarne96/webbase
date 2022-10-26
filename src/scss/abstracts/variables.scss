@@ -22,23 +22,29 @@ $gaps: 2rem;
 
     --btn-icon-close-size: calc(var(--btn-icon-size) * 0.5);
 
-    /*    MODAL GAPS     */
+    /*    GAPS     */
 
     --modal-gap-size: var(--gaps);
+    --modal-gap-close-size: calc(var(--modal-gap-size) * .25);
+
+    // --xxl-headline-gap: calc(var(--gaps) * 2);
+
+    @include rangemq(zero, small) {
+        --xxl-headline-gap: calc(var(--gaps) * 1);
+    }
 
     @include rangemq(small, medium) {
         --modal-gap-size: calc(var(--gaps) * 1.25);
+        --xxl-headline-gap: calc(var(--gaps) * 1);
     }
 
     @include rangemq(medium, extralarge) {
         --modal-gap-size: calc(var(--gaps) * 1.5);
+        --xxl-headline-gap: calc(var(--gaps) * 1);
     }
 
     @include minmq(extralarge) {
         --modal-gap-size: calc(var(--gaps) * 2);
+        --xxl-headline-gap: calc(var(--gaps) * 1.5);
     }
-
-    --modal-gap-close-size: calc(var(--modal-gap-size) * .25);
-
-    --xxl-headline-gap: calc(var(--gaps) * 2);
 }

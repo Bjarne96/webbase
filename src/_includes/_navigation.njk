@@ -22,10 +22,6 @@
                             <li>
                                 <a class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
                             </li>
-                        {% elif value and value|length %}
-                            <li>
-                                <a class="navigate" href="{{ href }}">{{ value }}</a>
-                            </li>
                         {% elif children and children|length %}
                             <li class="submenu navigate">
                                 <div data-target-toggle-submenu="{{ loop.index }}" class="submenu-toggle">
@@ -51,6 +47,10 @@
                         {% elif external %}
                             <li>
                                 <a target="_blank" href="{{ href }}">{{ value }}</a>
+                            </li>
+                        {% elif value and value|length %}
+                            <li>
+                                <a class="navigate" href="{{ href }}">{{ value }}</a>
                             </li>
                         {% endif %}
                     {% endif %}

@@ -262,7 +262,7 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
         display: none;
     }
 
-    .logo-img {
+    .logo {
         margin-left: $topnav_spacing;
     }
 
@@ -275,6 +275,7 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: auto;
         background-color: transparent;
         border: none;
         cursor: pointer;
