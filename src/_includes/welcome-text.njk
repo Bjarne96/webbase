@@ -11,7 +11,7 @@
     {% if next_section|length %}
         <div class="btn-container">
             <div style="animation-delay: {{ texts.length + 1.2 }}s;" class="animate-fade navigate btn-icon btn-icon-secondary" data-target-id="{{ next_section }}">
-                {% set svg = collections.config[0].data.arrow_bot %}
+                {% set svg = collections.config[0].data.arrow_down %}
                 {% include 'svg.njk' %}
             </div>
         </div>

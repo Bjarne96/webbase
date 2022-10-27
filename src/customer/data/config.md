@@ -10,9 +10,9 @@ footer_created_for: Tiefschlafen
 footer_transition_top: 
 footer_transition_bot: 
 # BUTTONS
-arrow_left: circle-chevron-left-solid
-arrow_right: circle-chevron-right-solid
-arrow_bot: circle-chevron-down-solid
-arrow_top: circle-chevron-up-solid
+arrow_left: arrow-left-slim-long
+arrow_right: arrow-right-slim-long
+arrow_down: arrow-down-slim-long
+arrow_up: arrow-up-slim-long
 close: xmark-solid
 ---
