@@ -1,15 +1,14 @@
 ---
-type: parallax-content
+type: flex-content
 include_toc: true
-id : wolle
-order: 40
-h2 : Schurwolle
+order: 30
+id : decken_und_kissen
+h2 : Decken & Kissen
+image : ./assets/decke.png
 btnText : Mehr Erfahren
-btnUrl : /wolle
-external: false
-image : ./assets/wolle.png
-bgcl: "sec"
-reverse: true
-
+btnTarget : produkt
+imageFormat : "1" # 1:1 or 1:1.6
+reverse: false
 ---
+
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
