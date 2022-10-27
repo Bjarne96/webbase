@@ -4,6 +4,7 @@ headline : Kissen
 img_res : assets/produkt_kissen.png
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen
+price : 40€
 specs:
     - "Größe: 40x40cm"
     - "Stoff: Leinen"

@@ -3,16 +3,18 @@
 {% set img_res = slide.data.img_res %}
 {% set btnUrl = slide.data.btnUrl %}
 {% set specs = slide.data.specs %}
+{% set price = slide.data.price %}
 {% set textPath = "../" + slide.data.page.filePathStem + ".md" %}
 <div class="comp-product-slide">
-    <div class="product-specs">
+    <img alt="{{ headline }}" src="{{ img_res }}"/>
+    <div class="product-content">
         <h1>{{ headline }}</h1>
-        {% for spec in specs %}
-            <p>{{ spec }}</p>
-        {% endfor %}
-    </div>
-    <img alt="{{ headline }}" src="{{ img_res }}">
-        <div class="product-content">
-            {% include "flex-text.njk" %}
+        <div class="product-specs">
+            {% for spec in specs %}
+                <p class="italic-text">{{ spec }}</p>
+            {% endfor %}
         </div>
+        {% include "flex-text.njk" %}
+        <h2 class="product-price">{{ price }}</h2>
     </div>
+</div>

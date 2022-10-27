@@ -6,13 +6,13 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     width: calc(100vw - calc($siteGaps * 2));
     padding: $siteGaps;
 
     img {
-        max-width: 400px;
-        max-height: 400px;
+        max-width: 600px;
+        max-height: 600px;
         height: 33vw;
         width: 33vw;
         margin: 0 auto;
@@ -22,5 +22,15 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
         display: flex;
         flex-direction: column;
         max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .product-specs {
+        margin: var(--gaps) 0;
+    }
+
+    .product-price {
+        margin: var(--gaps) 0;
+        font-size: calc(var(--fs-p) * 2);
     }
 }

@@ -4,6 +4,7 @@ headline : Decke
 img_res : assets/produkt_decke.png
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen
+price : 199€
 specs:
     - "Größe: 200x200cm"
     - "Stoff: Leinen"
