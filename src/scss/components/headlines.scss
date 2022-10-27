@@ -44,6 +44,7 @@
 }
 
 h1 {
+    color: var(--headline-color) !important;
     font-size: var(--fs-h1);
     font-weight: var(--fw-h1);
     letter-spacing: var(--ls-h1);
@@ -51,6 +52,7 @@ h1 {
 }
 
 h2 {
+    color: var(--headline-color) !important;
     font-size: var(--fs-h2);
     font-weight: var(--fw-h2);
     letter-spacing: var(--ls-h2);

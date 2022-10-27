@@ -5,6 +5,7 @@
 {% set textExtra = row.data.textExtra %}
 {% set btnText = row.data.btnText %}
 {% set btnUrl = row.data.btnUrl %}
+{% set btnTarget = row.data.btnTarget %}
 {% set btnModal = row.data.btnModal %}
 {% set image = row.data.image %}
 {% set bgcl = row.data.bgcl %}
@@ -29,9 +30,9 @@
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
 <div id="{{ id }}" class="parallax {{ bgclClass }}">
-    <div class="parallax-js {{ headlineClass }}" data-rate="1.5" data-direction="vertical">
+    <h2 class="parallax-js {{ headlineClass }}" data-rate="1.5" data-direction="vertical">
         {{ h2 | safe }}
-    </div>
+    </h2>
     <div class="{{ contentClass }}">
         <div class="parallax-spacer"></div>
         <div class="parallax-img">

@@ -1,44 +1,53 @@
 :root {
+    //--senary: #;--septenary: #;
+
     --light: #FFFFFF;
 
-    /*     LIGHT     */
-    --primary: #d3baa1;
-    --secondary: #e5ba8e;
-    --tertiary: #253946;
-    --quaternary: #253946;
-    --text: var(--tertiary);
+    /*     LIGHT SCHEME     */
+    --primary: #e8cfaa;
+    --secondary: #e8cfaa;
+    --tertiary: #30545b;
+    --quaternary: #454342;
+    --quinary: #454342;
 
+    --text: var(--quaternary);
+
+    /*     DARK SCHEME     */
     @media (prefers-color-scheme: dark) {
-        /*     DARK     */
-        --primary: #566e3d;
-        --secondary: #89a26d;
-        --tertiary: #477f8f;
-        --quaternary: #886547;
+        --primary: #ffcb9a;
+        --secondary: #c59566;
+        --tertiary: #005b49;
+        --quaternary: #005b49;
+        --quinary: #454342;
+
         --text: var(--light);
     }
 
+    /*     NAVIGATION     */
+    --nav-color: var(--light);
+    --nav-bg-color: var(--tertiary);
+
+    /*     TEXT     */
+    --text-color: var(--text);
+    --headline-color: var(--quinary);
+
+    /*     BUTTON PRIMARY     */
+    --btn-pri-color: var(--light);
+    --btn-pri-bg-color: var(--tertiary);
+
+    /*     BUTTON SECONDARY     */
+    --btn-sec-color: var(--light);
+    --btn-sec-bg-color: transparent;
+    --btn-sec-bo-color: var(--light);
 
     /*     BODY     */
     --color: var(--text);
     --bg-pri-color: var(--primary);
     --bg-sec-color: var(--secondary);
 
-    /*     NAVIGATION     */
-    --nav-color: var(--light);
-    --nav-bg-color: var(--tertiary);
-
     /*     FOOTER     */
     --foo-color: var(--light);
     --foo-bg-color: var(--tertiary);
-
-    /*     BUTTON PRIMARY     */
-    --btn-pri-color: var(--light);
-    --btn-pri-bg-color: var(--quaternary);
-
-    /*     BUTTON SECONDARY     */
-    --btn-sec-color: var(--light);
-    --btn-sec-bg-color: transparent;
-    --btn-sec-bo-color: var(--light);
 
     /*     BUTTON ARROW PRIMARY     */
     --btn-icon-pri-color: var(--text);

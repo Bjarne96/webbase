@@ -3,19 +3,14 @@
 :root {
 
     /*     HEADLINE1     */
-    --fs-h1: 1.8rem;
-    --fw-h1: 700;
-    --ls-h1: 2.5px;
+    --fs-h1: 5rem;
+    --fw-h1: 400;
+    --ls-h1: 125%;
 
     /*     HEADLINE2     */
-    --fs-h2: 1.6rem;
-    --fw-h2: 500;
-    --ls-h2: 0px;
-
-    /*     HEADLINE XXL     */
-    --fs-xxl: 5rem;
-    --fw-xxl: 400;
-    --ls-xxl: 125%;
+    --fs-h2: 5rem;
+    --fw-h2: 400;
+    --ls-h2: 125%;
 
     /*     PARAGRAPHS     */
     --fs-p: .9rem;
@@ -42,16 +37,14 @@
     /*     RESPONSIVE     */
     @include maxmq (small) {
         /*     HEADLINES     */
-        --fs-h1: 1.6rem;
-        --fs-h2: 1.2rem;
-        --fs-xxl: 2.2rem;
+        --fs-h1: 2.2rem;
+        --fs-h2: 2.2rem;
     }
 
     @include rangemq (small, large) {
         /*     HEADLINES     */
-        --fs-h1: 2rem;
-        --fs-h2: 1.4rem;
-        --fs-xxl: 3.5rem;
+        --fs-h1: 3.0rem;
+        --fs-h2: 2.5rem;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
@@ -61,9 +54,8 @@
 
     @include rangemq (large, extralarge) {
         /*     HEADLINES     */
-        --fs-h1: 2rem;
-        --fs-h2: 1.4rem;
-        --fs-xxl: 3.5rem;
+        --fs-h1: 3.5rem;
+        --fs-h2: 2.5rem;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
@@ -73,9 +65,8 @@
 
     @include minmq (extralarge) {
         /*     HEADLINES     */
-        --fs-h1: 2.2rem;
-        --fs-h2: 1.4rem;
-        --fs-xxl: 4rem;
+        --fs-h1: 4rem;
+        --fs-h2: 3.0rem;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
