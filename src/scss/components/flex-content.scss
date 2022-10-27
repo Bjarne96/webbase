@@ -1,6 +1,5 @@
 @use '../abstracts/' as *;
 $max-img-wd: 600px;
-$img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
 
 /*     CONTAINER     */
 
@@ -14,6 +13,8 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: calc(100% - $gaps * 2);
+    margin: 0 auto;
 
     @include maxmq(large) {
         padding: calc($gaps * 1) 0;
@@ -24,12 +25,6 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
     }
 
     .text-con {
-        @include maxmq(flexcontentBr) {
-            padding-left: $gaps;
-            padding-right: $gaps;
-        }
-
-        //Test if this works
         @include minmq(extralarge) {
             margin: $gaps;
         }
@@ -43,17 +38,8 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
         overflow: hidden;
         z-index: 0;
         border-radius: $border_radius;
-        width: calc(100% - $gaps * 2);
-
-        @include maxmq(large) {
-            height: $img-height-gold; //Image Framesize dependet on height
-            margin: 0 $gaps;
-
-        }
-
-        @include minmq(large) {
-            margin: 0 $gaps;
-        }
+        width: 100%;
+        margin: 0 $gaps $gaps $gaps;
 
         img {
             // Image placement
@@ -70,13 +56,13 @@ $img-height-gold: calc(calc(1vw / 1.618) * 100 - calc($gaps * 2));
         div {
             max-width: $max-img-wd;
         }
-
-        .img-con {
-            height: calc($max-img-wd / 1.618);
-        }
     }
 
     @include minmq(extralarge) {
+        .img-con {
+            margin: 0 $gaps;
+        }
+
         flex-direction: row;
     }
 }
