@@ -5,6 +5,10 @@ import { hydrateParallax } from "./JScomponents/parallax";
 import { hydrateSlider } from "./JScomponents/slider";
 import { fixBrowserIssues } from "./JScomponents/fix";
 
+window.onload = () => {
+    init();
+};
+
 const init = async () => {
     await hydrate();
     fixBrowserIssues();
@@ -21,5 +25,3 @@ const hydrate = async () => {
     // Hydrate Slider
     await hydrateSlider();
 };
-
-init();
