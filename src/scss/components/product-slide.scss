@@ -6,7 +6,7 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 70vh;
+    min-height: 70vh;
     width: calc(100vw - calc($siteGaps * 2));
     padding: $siteGaps;
 
@@ -21,16 +21,37 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
     .product-content {
         display: flex;
         flex-direction: column;
-        max-width: 300px;
+        max-width: 500px;
         margin: 0 auto;
+
+        >*+* {
+            margin-top: var(--gaps);
+        }
+
+        .product-row {
+            flex-direction: row;
+            display: flex;
+            align-items: center;
+
+            >*+* {
+                margin-left: var(--gaps);
+            }
+        }
     }
 
-    .product-specs {
-        margin: var(--gaps) 0;
+    .btn-icon {
+        width: calc(var(--btn-icon-size) * .4);
+        height: calc(var(--btn-icon-size) * .4);
+        padding: 0px;
+        margin: 0px;
     }
 
-    .product-price {
-        margin: var(--gaps) 0;
-        font-size: calc(var(--fs-p) * 2);
+    @include rangemq(zero, extralarge) {
+        flex-direction: column;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
     }
 }

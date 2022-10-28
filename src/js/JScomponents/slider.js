@@ -111,9 +111,8 @@ function Slider(
     }
     // Adds the before button
     if (prev_btn_selector) {
-        document
-            .querySelector(prev_btn_selector)
-            .addEventListener("click", () => {
+        selectAll(prev_btn_selector).forEach(btn => {
+           btn.addEventListener("click", () => {
                 // Reduces the action to switch the slide by given timing
                 if (!this.inTransition) {
                     this.inTransition = true;
@@ -124,12 +123,12 @@ function Slider(
                     }, 300);
                 }
             });
+        });
     }
     // Adds the next button
     if (next_btn_selector) {
-        document
-            .querySelector(next_btn_selector)
-            .addEventListener("click", () => {
+        selectAll(next_btn_selector).forEach(btn => {
+            btn.addEventListener("click", () => {
                 // Reduces the action to switch the slide by given timing
                 if (!this.inTransition) {
                     this.inTransition = true;
@@ -140,5 +139,6 @@ function Slider(
                     }, 300);
                 }
             });
+        });
     }
 }

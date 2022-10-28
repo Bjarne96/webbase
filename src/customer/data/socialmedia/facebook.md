@@ -1,5 +1,5 @@
 ---
 href: https://www.facebook.com/
-name: Facebook
+name: facebook
 order: 1
 ---

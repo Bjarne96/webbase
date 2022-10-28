@@ -1,5 +1,5 @@
 ---
 href: https://www.instagram.com/
-name: Instagram
+name: instagram
 order: 0
 ---

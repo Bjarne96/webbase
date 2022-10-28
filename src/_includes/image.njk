@@ -3,7 +3,6 @@
 {% set image_format = image.image_format %}
 {% if image_format|length and image_alt|length and image_src|length %}
     {% set image_style = "height: calc(calc(1vw / "+ image_format +") * 100);max-height: calc(600px  / "+ image_format +");" %}
-    {# TODO: Refactor .img-con style #}
     <div style="{{ image_style }}" class="img-con">
         <img alt="{{ image_alt }}" src="{{ image_src }}"/>
     </div>
