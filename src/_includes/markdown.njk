@@ -5,7 +5,7 @@ extracts its content into a paragraph.
 <p> </p>
 
 #}
-{% set markdown_path = ".." + text_markdown.page.filePathStem + ".md" %}
+{% set markdown_path = ".." + markdown.page.filePathStem + ".md" %}
 {% if markdown_path|length %}
     {% markdown %}
     {%- include markdown_path -%}
@@ -13,7 +13,7 @@ extracts its content into a paragraph.
 {% else %}
     {{ markdown_path }}
     <script>
-        console.error("Error in text_markdown.njk");
+        console.error("Error in markdown.njk");
     </script>
     {% include 'dump.njk' %}
 {% endif %}

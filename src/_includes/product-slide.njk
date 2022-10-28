@@ -5,7 +5,7 @@
 {% set flex_text = slide %}
 {% set headline = slide %}
 {% set image = slide %}
-{% set text_markdown = slide %}
+{% set markdown = slide %}
 {% set button = slide %}
 {# Components - INCLUDE END #}
 <div class="comp-product-slide">
@@ -17,7 +17,7 @@
                 <p class="italic-text">{{ spec }}</p>
             {% endfor %}
         </div>
-        {% include "text_markdown.njk" %}
+        {% include "markdown.njk" %}
         {% include "button.njk" %}
         <h2 class="product-price">{{ price }}</h2>
     </div>
