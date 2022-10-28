@@ -1,7 +1,8 @@
 ---
 order: 20
-headline : Kissen
-img_res : assets/produkt_kissen.png
+h2 : Kissen
+image_src : assets/produkt_kissen.png
+image_alt : Eine wirklich schönes Schurwollkissen.
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen
 price : 40€

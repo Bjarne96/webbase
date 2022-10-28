@@ -4,7 +4,9 @@ include_toc: true
 order: 50
 id : handwerk
 h2 : Handwerk
-image : ./assets/handwerk.png
+image_src : ./assets/handwerk.png
+image_alt : Ein tolles Handwerk.
+image_format : "1"
 btnText : Mehr Erfahren
 btnUrl : /handwerk
 reverse: false

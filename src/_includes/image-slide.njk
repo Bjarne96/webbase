@@ -1,9 +1,7 @@
 {% set img_name = slide.data.img_name %}
 {% set img_res = slide.data.img_res %}
-{% set text_markdown = "../customer/data/" template +"/"+ slide.data.page.fileSlug + ".md" %}
 {% if img_name|length %}
     <img alt="{{ img_name }}" src="{{ img_res }}"/>
 {% endif %}
-{% markdown %}
-{%- include text_markdown -%}
-{% endmarkdown %}
+{# TODO: Set markdown variable here to make this work#}
+{%- include 'text_markdown.njk' -%}

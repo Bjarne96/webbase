@@ -5,8 +5,15 @@ extracts its content into a paragraph.
 <p> </p>
 
 #}
-{% if text_markdown %}
+{% set markdown_path = ".." + text_markdown.page.filePathStem + ".md" %}
+{% if markdown_path|length %}
     {% markdown %}
-    {%- include text_markdown -%}
+    {%- include markdown_path -%}
     {% endmarkdown %}
+{% else %}
+    {{ markdown_path }}
+    <script>
+        console.error("Error in text_markdown.njk");
+    </script>
+    {% include 'dump.njk' %}
 {% endif %}

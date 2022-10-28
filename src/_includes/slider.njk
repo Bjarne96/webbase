@@ -1,11 +1,11 @@
-{% set template = row.data.template %}
-{% set collection = row.data.collection %}
-{% set left = row.data.left %}
-{% set right = row.data.right %}
-{% set delay = row.data.delay %}
-{% set auto_slide_timing = row.data.auto_slide_timing %}
-{% set max_height = row.data.max_height %}
-{% set max_width = row.data.max_width %}
+{% set template = slider.template %}
+{% set collection = slider.collection %}
+{% set left = slider.left %}
+{% set right = slider.right %}
+{% set delay = slider.delay %}
+{% set auto_slide_timing = slider.auto_slide_timing %}
+{% set max_height = slider.max_height %}
+{% set max_width = slider.max_width %}
 {% set max_height_string = "" %}
 {% if max_height|length %}
     {% set max_height_string = "max-height:" + max_height + ";" %}
@@ -30,6 +30,7 @@
             {%- for slide in collections[collection]|sort(attribute="data.order") -%}
                 <div class="slide-frame">
                     <div class="slide {{ template }}-slide" style="{{ max_height_string }}{{ max_width_string }}">
+                        {% set slide = slide.data %}
                         {% include path %}
                     </div>
                 </div>

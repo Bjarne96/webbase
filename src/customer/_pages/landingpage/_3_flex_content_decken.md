@@ -4,10 +4,11 @@ include_toc: true
 order: 30
 id : decken_und_kissen
 h2 : Decken & Kissen
-image : ./assets/decke.png
+image_src : ./assets/decke.png
 btnText : Mehr Erfahren
-btnTarget : produkt
-imageFormat : "1" # 1:1 or 1:1.6
+btnModal : produkt
+image_format : "1"
+image_alt: Gutes Altes Bild
 reverse: false
 ---
 

@@ -7,14 +7,12 @@ layout: 'blog.njk'
         <div class="visit-con">
             {% set headline = element.data.headline %}
             {% set type = element.data.type %}
-            {% set text_markdown = ".." + element.data.page.filePathStem + ".md" %}
             {% if headline|length %}
                 <h1>{{ headline }}</h1>
             {% endif %}
             {% if type == "text" %}
-                {% markdown %}
-                {%- include text_markdown -%}
-                {% endmarkdown %}
+                {# TODO: Set markdown variable here to make this work#}
+                {%- include 'text_markdown.njk' -%}
             {% elif type == "maps" %}
                 Maps
             {% endif %}

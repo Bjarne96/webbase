@@ -1,8 +1,9 @@
 ---
-type: headline
-subtype: line
-h1: GRÜNE PROJEKTE
-order: 0
+# TEST HEADLINE Components
+# type: headline
+# subtype: line
+# h1: GRÜNE PROJEKTE
+# order: 0
 
 # type: testx
 # order: 20

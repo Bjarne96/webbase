@@ -1,7 +1,8 @@
 ---
 order: 10
-headline : Decke
-img_res : assets/produkt_decke.png
+h2 : Decke
+image_src : assets/produkt_decke.png
+image_alt : Eine wirklich schöne Schurwolldecke.
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen
 price : 199€

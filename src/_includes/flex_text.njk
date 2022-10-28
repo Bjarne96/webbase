@@ -1,6 +1,11 @@
 <div class="flex-text">
+    {% set headline = flex_text %}
     {% include 'headline.njk' %}
+    {% set text_markdown = flex_text %}
     {% include 'text_markdown.njk' %}
-    {% include 'text_italic.njk' %}
+    {% if flex_text.text_italic|length %}
+        <p class="italic-text">{{ flex_text.text_italic | safe }}</p>
+    {% endif %}
+    {% set button = flex_text %}
     {% include 'button.njk' %}
 </div>

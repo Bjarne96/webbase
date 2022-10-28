@@ -7,7 +7,9 @@ h2 : Schurwolle
 btnText : Mehr Erfahren
 btnUrl : /wolle
 external: false
-image : ./assets/wolle.png
+image_src : ./assets/wolle.png
+image_alt : Ein tolles Schaf.
+image_format : "1"
 bgcl: "sec"
 reverse: true
 

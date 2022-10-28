@@ -1,21 +1,24 @@
-{% set headline = slide.data.headline %}
-{% set btnText = slide.data.btnText %}
-{% set img_res = slide.data.img_res %}
-{% set btnUrl = slide.data.btnUrl %}
-{% set specs = slide.data.specs %}
-{% set price = slide.data.price %}
-{% set btnType = "primary" %}
-{% set text_markdown = "../" + slide.data.page.filePathStem + ".md" %}
+{# Slides inherit the data ALWAYS from the "slide" variable. #}
+{% set specs = slide.specs %}
+{% set price = slide.price %}
+{# Components - INCLUDE #}
+{% set flex_text = slide %}
+{% set headline = slide %}
+{% set image = slide %}
+{% set text_markdown = slide %}
+{% set button = slide %}
+{# Components - INCLUDE END #}
 <div class="comp-product-slide">
-    <img alt="{{ headline }}" src="{{ img_res }}"/>
+    {% include 'image.njk' %}
     <div class="product-content">
-        <h1>{{ headline }}</h1>
+        {% include 'headline.njk' %}
         <div class="product-specs">
-            {% for text_italic in specs %}
-                {% include 'text_italic.njk' %}
+            {% for spec in specs %}
+                <p class="italic-text">{{ spec }}</p>
             {% endfor %}
         </div>
-        {% include "flex_text.njk" %}
+        {% include "text_markdown.njk" %}
+        {% include "button.njk" %}
         <h2 class="product-price">{{ price }}</h2>
     </div>
 </div>

@@ -1,18 +1,14 @@
-{# 
-
-Expects:
-btnText
-btnType = primary or secondary
-and
-btnTarget
-btnUrl and external
-btnUrl
-btnModal = Uses data-modal-id DATASET to open a modal with ELEMENT ID.
-
-#}
-{% if btnText|length and btnType == "primary" or btnType == "secondary" %}
+{% set btnText = button.btnText %}
+{% set btnType = button.btnType %}
+{% set btnUrl = button.btnUrl %}
+{% set external = button.external %}
+{% set btnModal = button.btnModal %}
+{% if not btnType|length %}
+    {% set btnType = "primary" %}
+{% endif %}
+{% if btnText|length %}
     {% if btnTarget|length %}
-        <div data-target-id="{{ btnTarget }}" class="navigate btn btn-primary">
+        <div data-target-id="{{ btnTarget }}" class="navigate btn btn-{{ btnType }}">
             {{ btnText }}
         </div>
     {% elif btnUrl|length and external == false %}
@@ -28,7 +24,7 @@ btnModal = Uses data-modal-id DATASET to open a modal with ELEMENT ID.
             </div>
         </a>
     {% elif btnModal|length %}
-        <div data-modal-id="{{ btnModal }}" class="modal-btn btn btn-primary">
+        <div data-modal-id="{{ btnModal }}" class="modal-btn btn btn-{{ btnType }}">
             {{ btnText }}
         </div>
     {% endif %}

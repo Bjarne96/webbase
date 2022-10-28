@@ -11,27 +11,38 @@ layout: '_base.njk'
             {% include 'transition.njk' %}
         {% endif %}
         {% if type == "flex_content" %}
+            {% set flex_content = row.data %}
             {% include 'flex_content.njk' %}
         {% elif type == "flex_text" %}
+            {% set flex_text = row.data %}
             {% include 'flex_text.njk' %}
         {% elif type == "headline" %}
+            {% set headline = row.data %}
             {% include 'headline.njk' %}
         {% elif type == "slider" %}
+            {% set slider = row.data %}
             {% include 'slider.njk' %}
         {% elif type == "welcome-content" %}
+            {% set todo = row.data %}
             {% include 'welcome-content.njk' %}
         {% elif type == "welcome_text" %}
+            {% set welcome_text = row.data %}
             {% include 'welcome_text.njk' %}
         {% elif type == "colorpallet-content" %}
+            {% set todo = row.data %}
             {% include 'colorpallet-content.njk' %}
         {% elif type == "test" %}
+            {% set test = row.data %}
             {% include 'test.njk' %}
         {% elif type == "custom" %}
+            {% set custom = row.data %}
             {% set path = "../customer/templates/" + value + ".njk" %}
             {% include path %}
         {% endif %}
         {% set transition = row.data.transition_bot %}
+        {# TODO Refactor Transition to the similar comp variable bind system #}
         {% if transition|length %}
+            {% set todo = row.data %}
             {% include 'transition.njk' %}
         {% endif %}
     {% endfor %}

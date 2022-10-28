@@ -1,6 +1,7 @@
-{% set h1 = row.data.h1 %}
-{% set id = row.data.id %}
-{% set subtype = row.data.subtype %}
+{% set h1 = headline.h1 %}
+{% set h2 = headline.h2 %}
+{% set id = headline.id %}
+{% set subtype = headline.subtype %}
 {% if subtype == "line" %}
     <div id="{{ id }}" class="hl-wraper">
         <div class="hl-line"></div>
