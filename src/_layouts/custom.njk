@@ -10,18 +10,18 @@ layout: '_base.njk'
         {% if transition|length %}
             {% include 'transition.njk' %}
         {% endif %}
-        {% if type == "flex-content" %}
-            {% include 'flex-content.njk' %}
-        {% elif type == "parallax-content" %}
-            {% include 'parallax-content.njk' %}
+        {% if type == "flex_content" %}
+            {% include 'flex_content.njk' %}
+        {% elif type == "flex_text" %}
+            {% include 'flex_text.njk' %}
         {% elif type == "headline" %}
             {% include 'headline.njk' %}
         {% elif type == "slider" %}
             {% include 'slider.njk' %}
         {% elif type == "welcome-content" %}
             {% include 'welcome-content.njk' %}
-        {% elif type == "welcome-text" %}
-            {% include 'welcome-text.njk' %}
+        {% elif type == "welcome_text" %}
+            {% include 'welcome_text.njk' %}
         {% elif type == "colorpallet-content" %}
             {% include 'colorpallet-content.njk' %}
         {% elif type == "test" %}

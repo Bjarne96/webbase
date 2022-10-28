@@ -1,5 +1,5 @@
 ---
-type: flex-content
+type: flex_content
 include_toc: true
 order: 30
 id : decken_und_kissen

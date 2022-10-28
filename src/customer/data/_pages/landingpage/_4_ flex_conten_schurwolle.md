@@ -1,5 +1,5 @@
 ---
-type: flex-content
+type: flex_content
 include_toc: true
 id : wolle
 order: 40

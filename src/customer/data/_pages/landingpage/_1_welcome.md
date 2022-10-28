@@ -1,5 +1,5 @@
 ---
-type: welcome-text
+type: welcome_text
 order: 10
 next_section: decken_und_kissen
 texts:

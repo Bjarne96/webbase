@@ -7,13 +7,13 @@ layout: 'blog.njk'
         <div class="visit-con">
             {% set headline = element.data.headline %}
             {% set type = element.data.type %}
-            {% set textPath = ".." + element.data.page.filePathStem + ".md" %}
+            {% set text_markdown = ".." + element.data.page.filePathStem + ".md" %}
             {% if headline|length %}
                 <h1>{{ headline }}</h1>
             {% endif %}
             {% if type == "text" %}
                 {% markdown %}
-                {%- include textPath -%}
+                {%- include text_markdown -%}
                 {% endmarkdown %}
             {% elif type == "maps" %}
                 Maps

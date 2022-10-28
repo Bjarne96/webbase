@@ -4,17 +4,18 @@
 {% set btnUrl = slide.data.btnUrl %}
 {% set specs = slide.data.specs %}
 {% set price = slide.data.price %}
-{% set textPath = "../" + slide.data.page.filePathStem + ".md" %}
+{% set btnType = "primary" %}
+{% set text_markdown = "../" + slide.data.page.filePathStem + ".md" %}
 <div class="comp-product-slide">
     <img alt="{{ headline }}" src="{{ img_res }}"/>
     <div class="product-content">
         <h1>{{ headline }}</h1>
         <div class="product-specs">
-            {% for spec in specs %}
-                <p class="italic-text">{{ spec }}</p>
+            {% for text_italic in specs %}
+                {% include 'text_italic.njk' %}
             {% endfor %}
         </div>
-        {% include "flex-text.njk" %}
+        {% include "flex_text.njk" %}
         <h2 class="product-price">{{ price }}</h2>
     </div>
 </div>

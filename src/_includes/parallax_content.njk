@@ -1,7 +1,7 @@
 {# VARIABLES #}
 {% set id = row.data.id %}
 {% set h2 = row.data.h2 %}
-{% set textPath = "../" + row.data.page.filePathStem + ".md" %}
+{% set text_markdown = "../" + row.data.page.filePathStem + ".md" %}
 {% set textExtra = row.data.textExtra %}
 {% set btnText = row.data.btnText %}
 {% set btnUrl = row.data.btnUrl %}
@@ -40,7 +40,7 @@
         </div>
         <div class="parallax-text">
             {% set h2 = '' %}
-            {% include 'flex-text.njk' %}
+            {% include 'flex_text.njk' %}
         </div>
     </div>
 </div>

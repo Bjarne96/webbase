@@ -1,26 +1,29 @@
-<div class="flex-text">
-    {% if h2|length %}
-        <h2>{{ h2 }}</h2>
-    {% endif %}
-    {% markdown %}
-    {%- include textPath -%}
-    {% endmarkdown %}
-    {% if textExtra|length %}
-        <p class="italic-text">{{ textExtra | safe }}</p>
-    {% endif %}
+{# 
+
+Expects:
+btnText
+btnType = primary or secondary
+and
+btnTarget
+btnUrl and external
+btnUrl
+btnModal = Uses data-modal-id DATASET to open a modal with ELEMENT ID.
+
+#}
+{% if btnText|length and btnType == "primary" or btnType == "secondary" %}
     {% if btnTarget|length %}
         <div data-target-id="{{ btnTarget }}" class="navigate btn btn-primary">
             {{ btnText }}
         </div>
     {% elif btnUrl|length and external == false %}
         <a href="{{ btnUrl }}">
-            <div class="btn btn-primary">
+            <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
             </div>
         </a>
     {% elif btnUrl|length %}
         <a target="_blank" href="{{ btnUrl }}">
-            <div class="btn btn-primary">
+            <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
             </div>
         </a>
@@ -29,4 +32,4 @@
             {{ btnText }}
         </div>
     {% endif %}
-</div>
+{% endif %}

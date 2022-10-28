@@ -1,0 +1,12 @@
+{# 
+
+Expects the path to a markdownfile and 
+extracts its content into a paragraph.
+<p> </p>
+
+#}
+{% if text_markdown %}
+    {% markdown %}
+    {%- include text_markdown -%}
+    {% endmarkdown %}
+{% endif %}

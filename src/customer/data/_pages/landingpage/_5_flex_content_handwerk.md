@@ -1,5 +1,5 @@
 ---
-type: flex-content
+type: flex_content
 include_toc: true
 order: 50
 id : handwerk
