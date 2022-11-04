@@ -7,7 +7,8 @@
         </a>
     {% elif type == "png" or type == "jpg" %}
         {% set src = collections.config[0].data.navigation_logo_type %}
-        <a class="logo" href="/">
+        {% set src = collections.config[0].data.domain %}
+        <a class="logo" href="{{ domain }}">
             <img alt="Logo" src="../assets/logo.{{ type }}"/>
         </a>
     {% endif %}

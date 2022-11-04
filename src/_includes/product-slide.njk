@@ -7,8 +7,9 @@
 {% set image = slide %}
 {% set markdown = slide %}
 {% set button = slide %}
+{% set image_size = "half" %}
 {# Components - INCLUDE END #}
-<div class="comp-product-slide">
+<section class="comp-product-slide">
     {% include 'image.njk' %}
     <div class="product-content">
         {% include 'headline.njk' %}
@@ -35,4 +36,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

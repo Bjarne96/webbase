@@ -94,20 +94,25 @@ $footer-child-minwd : 260px;
         padding: $gaps * .5;
         min-width: $footer-child-minwd;
 
-        h3 {
+        span {
             font-size: var(--fs-foo-lv1);
             font-weight: var(--fw-foo-lv1);
+            padding: $gaps * .25;
         }
 
         li {
-            margin-top: $gaps * .25;
             font-size: var(--fs-foo-lv2);
             font-weight: var(--fw-foo-lv2);
+            padding: $gaps * .25 0;
+
+            a {
+                width: 100px;
+                padding: $gaps * .25;
+            }
         }
     }
 }
 
 .footer-wave {
-    // color: var(--foo-bg-color) !important;
     background-color: transparent !important;
 }

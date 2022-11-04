@@ -3,8 +3,8 @@ type: flex_content
 include_toc: true
 order: 50
 id : handwerk
-h2 : Handwerk
-image_src : ./assets/handwerk.png
+h2 : Das Handwerk
+image_src : handwerk.png
 image_alt : Ein tolles Handwerk.
 image_format : "1"
 btnText : Mehr Erfahren
@@ -12,4 +12,4 @@ btnUrl : /handwerk
 reverse: false
 ---
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+Die Arbeit mit der Schurwolle zum fertigen Produkt liegt uns von Tiefschlafen besonders am Herzen. Seit drei Generationen Arbeiten wir mit Schurwolle und unsere Produkte werden in feinster Handarbeit hergestellt. Zuerst wird die Schurwolle sortiert und gewaschen, damit diese in der Wollkämmmaschine fein gewebt werden kann. In dieser werden etwa 40 Lagen für eine Decke und 20 für eine Kissen aufeinander gewebt. Anschließend verwenden wir Leinen- und Baumwollstoffe um die Schurwolle als Decken und Kissen erlebbar zu machen.

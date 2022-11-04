@@ -1,7 +1,7 @@
 ---
 order: 10
 h2 : Decke
-image_src : assets/produkt_decke.png
+image_src : produkt_decke.png
 image_alt : Eine wirklich schöne Schurwolldecke.
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen

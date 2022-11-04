@@ -1,6 +1,6 @@
 {% set top = collections.config[0].data.footer_transition_top %}
 {% set bot = collections.config[0].data.footer_transition_bot %}
-<div class="footer-wraper">
+<footer class="footer-wraper">
     {% if top|length %}
         {% set transitionPath = ''+top+'.njk' %}
         <div class="cl-footer">
@@ -20,7 +20,7 @@
                 {% set children = element.data.children %}
                 {% set socialmedia = element.data.socialmedia %}
                 <div class="footer-child">
-                    <h3>{{ value }}</h3>
+                    <span>{{ value }}</span>
                     {% if socialmedia %}
                         {% include 'socialmedia.njk' %}
                     {% else %}
@@ -54,7 +54,7 @@
                 {% set children = element.data.children %}
                 {% if footer %}
                     <div class="footer-child">
-                        <h3>{{ value }}</h3>
+                        <span>{{ value }}</span>
                         <ul>
                             {% for c in children %}
                                 {% set chref = c.child["href"] %}
@@ -96,4 +96,4 @@
             {% include transitionPath %}
         </div>
     {% endif %}
-</div>
+</footer>

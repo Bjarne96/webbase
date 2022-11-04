@@ -1,10 +1,10 @@
 ---
-type: flex_content
+type: xflex_content
 include_toc: true
 order: 30
 id : decken_und_kissen
 h2 : Decken & Kissen
-image_src : ./assets/decke.png
+image_src : decke.png
 btnText : Mehr Erfahren
 btnModal : produkt
 image_format : "1"

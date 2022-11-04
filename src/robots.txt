@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /404
+Disallow: /agb
+Disallow: /datenschutz
+Disallow: /impressum
+Disallow: /gesendet
+
+Sitemap: http://www.tiefschlafen.de/sitemap.xml

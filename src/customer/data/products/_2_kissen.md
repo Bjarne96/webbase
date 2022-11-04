@@ -1,7 +1,7 @@
 ---
 order: 20
 h2 : Kissen
-image_src : assets/produkt_kissen.png
+image_src : produkt_kissen.png
 image_alt : Eine wirklich schönes Schurwollkissen.
 btnUrl : tiefschlafen.de
 btnText : Shop besuchen

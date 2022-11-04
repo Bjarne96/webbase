@@ -1,9 +1,8 @@
 @font-face {
     font-family: var(--font-family);
-    src: url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+    src: url('/assets/fonts/Lora-VariableFont_wght.ttf') format("truetype");
 }
 
 :root {
-    /*     FAMILY      */
     --font-family: 'Lora', serif;
 }

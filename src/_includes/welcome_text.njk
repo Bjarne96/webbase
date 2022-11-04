@@ -3,14 +3,17 @@
 <div class="wt">
     <div class="wt-content">
         {% for text in texts %}
-            <div class="wt-item animate-rotateX" style="animation-delay: {{ loop.index + (0.2 * loop.index) }}s;">
+            {# <div class="wt-item animate-rotateX" style="animation-delay: {{ loop.index + (0.2 * loop.index) }}s;"> #}
+            <div class="wt-item">
                 {{ text }}
             </div>
         {% endfor %}
     </div>
     {% if next_section|length %}
-        <div class="btn-container">
-            <div style="animation-delay: {{ texts.length + 1.2 }}s;" class="animate-fade navigate btn-icon btn-icon-secondary" data-target-id="{{ next_section }}">
+        <div
+            class="btn-container">
+            {# <div style="animation-delay: {{ texts.length + 1.2 }}s;" class="animate-fade navigate btn-icon btn-icon-secondary" data-target-id="{{ next_section }}"> #}
+            <div class="navigate btn-icon btn-icon-secondary" data-target-id="{{ next_section }}">
                 {% set svg = collections.config[0].data.arrow_down %}
                 {% include 'svg.njk' %}
             </div>

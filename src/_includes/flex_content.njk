@@ -1,6 +1,7 @@
 {% set reverse = flex_content.reverse %}
 {% set bgcl = flex_content.bgcl %}
 {% set id = flex_content.id %}
+{% set image_size = "half" %}
 {# Components #}
 {% set image = flex_content %}
 {# CLASSES #}
@@ -14,10 +15,10 @@
     {% set flex_content_class = flex_content_class + " bg-cl-pri " %}
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
-<div id="{{ id }}" class="flex-content {{ flex_content_class }}">
+<section id="{{ id }}" class="flex-content {{ flex_content_class }}">
     {% include 'image.njk' %}
     <div class="text-con">
         {% set flex_text = flex_content %}
         {% include 'flex_text.njk' %}
     </div>
-</div>
+</section>
