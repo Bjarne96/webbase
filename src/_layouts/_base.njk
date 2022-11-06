@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     {% set domain = collections.config[0].data.domain %}
+    {% set meta_description = collections.config[0].data.meta_description %}
     <head>
+        <meta name="robots" content="noindex">
+        <meta name="googlebot" content="noindex">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="color-scheme" content="dark light">
-        <meta name="description" content="Free Web tutorials">
+        <meta name="description" content="{{ meta_description }}">
         <title>{{ title }}</title>
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
@@ -22,8 +25,8 @@
         {% include '_modal.njk' %}
     </body>
     <!-- JS -->
-    <script src="/js/app.bundle.js" defer></script>
+    <script src="/js/app.bundle.js"></script>
     {% if script %}
-        <script src="/js/{{ script }}.bundle.js" defer></script>
+        <script src="/js/{{ script }}.bundle.js"></script>
     {% endif %}
 </html>

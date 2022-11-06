@@ -1,8 +1,8 @@
 ---
 tags: config
 # NAVIGATION Visit Button
-navigation_visit_value: 
-navigation_visit_href: 
+navigation_cta_value: 
+navigation_cta_href:
 # NAVIGATION Logo
 navigation_logo_type: 'svg'
 # FOOTER
@@ -17,4 +17,5 @@ arrow_up: arrow-up-slim-long
 close: xmark-solid
 #DOMAIN
 domain: https://tiefschlafen.de
+meta_description: Tiefschlafen bietet dir hochwertige Schurwollprodukte, wie Schurwolldecken und Schurwollkissen für einen besseren Schlaf.
 ---

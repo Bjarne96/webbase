@@ -8,12 +8,10 @@ children:
         id: wolle
         href: /#schurwolle
         value: Schurwolle
-    - child:
-        id: decken_und_kissen
-        href: /#decken_und_kissen_
-        value: Decken & Kissen
+        title: Eine Übersicht wie Tiefschlafen mit Schurwolle arbeitet.
     - child:
         id: handwerk
         href: /#handwerk_
         value: Handwerk
+        title: Eine Übersicht wie Tiefschlafen ihre Produkte herstellt arbeitet.
 ---

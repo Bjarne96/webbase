@@ -1,7 +1,6 @@
-<div class="navigation-wraper">
+<header class="navigation-wraper">
     <div class="topbar topbar-up">
         {% include 'logo.njk' %}
-        {% include 'visit.njk' %}
         {% include 'menu.njk' %}
     </div>
     <div class="navigation" data-visible="false" aria-hidden="true">
@@ -11,18 +10,11 @@
                 {%- for element in collections.navigation|sort(attribute="data.order") -%}
                     {% set navigation = element.data.navigation %}
                     {% if navigation %}
-                        {% set href = element.data.href %}
-                        {% set value = element.data.value %}
-                        {% set visit = element.data.visit %}
-                        {% set modal = element.data.modal %}
-                        {% set id = element.data.id %}
-                        {% set external = element.data.external %}
                         {% set children = element.data.children %}
-                        {% if id and id|length %}
-                            <li>
-                                <a class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
-                            </li>
-                        {% elif children and children|length %}
+                        {% set value = element.data.value %}
+                        {% set children = element.data.children %}
+                        {% set link = element.data %}
+                        {% if children and children|length %}
                             <li class="submenu navigate">
                                 <div data-target-toggle-submenu="{{ loop.index }}" class="submenu-toggle">
                                     {{ value }}
@@ -34,32 +26,22 @@
                                 </div>
                                 <ul class="submenu-list submenu-list-{{ loop.index }}" data-visible="false">
                                     {% for c in children %}
-                                        {% set child = c.child %}
-                                        {% set chref = child["href"] %}
-                                        {% set cvalue = child["value"] %}
-                                        {% set cid = child["id"] %}
-                                        <li data-target-id="{{ cid }}">
-                                            <a href="{{ chref }}">{{ cvalue }}</a>
-                                        </li>
+                                        {% set link = c.child %}
+                                        {% include 'link.njk' %}
                                     {% endfor %}
                                 </ul>
                             </li>
-                        {% elif external %}
-                            <li>
-                                <a target="_blank" href="{{ href }}">{{ value }}</a>
-                            </li>
-                        {% elif value and value|length %}
-                            <li>
-                                <a class="navigate" href="{{ href }}">{{ value }}</a>
-                            </li>
+                        {% else %}
+                            {% include 'link.njk' %}
                         {% endif %}
                     {% endif %}
                 {%- endfor -%}
             </ul>
         </nav>
-        {% include 'visit.njk' %}
-        <div class="nav-social-media-wraper">
-            {% include 'socialmedia.njk' %}
-        </div>
+        {% if collections.socialmedia and collections.socialmedia|length %}
+            <div class="nav-social-media-wraper">
+                {% include 'socialmedia.njk' %}
+            </div>
+        {% endif %}
     </div>
-</div>
+</header>

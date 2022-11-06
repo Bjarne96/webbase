@@ -1,6 +1,6 @@
 ---
 order: 20
-h2 : Kissen
+h2 : Schurwollkissen
 image_src : produkt_kissen.png
 image_alt : Eine wirklich schönes Schurwollkissen.
 btnUrl : tiefschlafen.de
@@ -11,6 +11,7 @@ price : 40€
 #     - "Stoff: Leinen"
 #     - "Füllung: Weich"
 ---
+Unsere Schurwollkissen haben viel positive Eigenschaften im Vergleich zu herkömmlichen Kissen.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.

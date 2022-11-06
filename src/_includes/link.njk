@@ -1,0 +1,18 @@
+{% set href = link.href %}
+{% set value = link.value %}
+{% set title = link.title %}
+{% set id = link.id %}
+{% set external = link.external %}
+{% if id and id|length %}
+    <li>
+        <a title="{{ title }}" class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
+    </li>
+{% elif external %}
+    <li>
+        <a title="{{ title }}" target="_blank" href="{{ href }}">{{ value }}</a>
+    </li>
+{% else %}
+    <li>
+        <a title="{{ title }}" href="{{ href }}">{{ value }}</a>
+    </li>
+{% endif %}
