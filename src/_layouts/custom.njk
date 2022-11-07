@@ -25,9 +25,9 @@ layout: '_base.njk'
         {% elif type == "welcome-content" %}
             {% set todo = row.data %}
             {% include 'welcome-content.njk' %}
-        {% elif type == "welcome_text" %}
-            {% set welcome_text = row.data %}
-            {% include 'welcome_text.njk' %}
+        {% elif type == "welcome_cta" %}
+            {% set welcome_cta = row.data %}
+            {% include 'welcome_cta.njk' %}
         {% elif type == "colorpallet-content" %}
             {% set todo = row.data %}
             {% include 'colorpallet-content.njk' %}

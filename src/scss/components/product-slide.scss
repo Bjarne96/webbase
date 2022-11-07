@@ -37,6 +37,11 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
                 margin-left: var(--gaps);
             }
         }
+
+        .product-price {
+            font-weight: 500;
+            font-size: calc(var(--fs-p) * 2);
+        }
     }
 
     .btn-icon {

@@ -1,0 +1,109 @@
+@use '../abstracts/' as *;
+
+:root {
+
+    --wt-font-weight: var(--fw-h1);
+    --wt-line-height: var(--ls-h1);
+    --wt-font-size: var(--fs-h1);
+
+    @include rangemq(zero, small) {
+        --wt-font-size: clamp(1.4rem, 6.5vw, 2.4rem);
+    }
+
+    @include rangemq(small, medium) {
+        --wt-font-size: clamp(2.4rem, 6.5vw, 3.3rem);
+    }
+
+    @include rangemq(medium, large) {
+        --wt-font-size: clamp(3.3rem, 6.5vw, 4.3rem);
+    }
+
+    @include rangemq(large, extralarge) {
+        --wt-font-size: clamp(4.3rem, 6.5vw, 4.8rem);
+    }
+
+    @include minmq(extralarge) {
+        --wt-font-size: 4.8rem;
+    }
+}
+
+
+.wt {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .wt-content {
+        margin: auto 0;
+        position: relative;
+        z-index: -1;
+
+        .wt-item {
+            font-size: var(--wt-font-size);
+            font-weight: var(--wt-font-weight);
+            line-height: var(--wt-line-height);
+            text-align: center;
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: var(--xxl-headline-gap);
+    }
+}
+
+.animate-rotateX {
+    white-space: nowrap;
+    animation: rotateXAnimation .5s, ease-in-out 1s;
+    animation-fill-mode: forwards;
+    transform: rotateX(90deg);
+}
+
+.animate-scale {
+    white-space: nowrap;
+    animation: scaleAnimation .5s, ease-in-out 1s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+.animate-fade {
+    white-space: nowrap;
+    animation: fadeAnimation .5s, ease-in-out 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes rotateXAnimation {
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
