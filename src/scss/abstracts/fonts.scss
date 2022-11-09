@@ -5,17 +5,25 @@
     /*     HEADLINE1     */
     --fs-h1: 5rem;
     --fw-h1: 400;
-    --ls-h1: 125%;
+    --ls-h1: 1px;
+    --lh-h1: 100%;
+
+    /*     HERO SUBHEADING     */
+    --fs-hs: 5rem;
+    --fw-hs: 400;
+    --ls-hs: 125%;
+    --lh-hs: 130%;
 
     /*     HEADLINE2     */
     --fs-h2: 5rem;
     --fw-h2: 400;
     --ls-h2: 125%;
+    --lh-h2: 100%;
 
     /*     PARAGRAPHS     */
     --fs-p: .9rem;
-    --lh-p: 1.4rem;
     --ls-p: .0rem;
+    --lh-p: 1.4rem;
 
     /*     NAVIGATION     */
     --fs-nav-lv1: 1.2rem;
@@ -36,9 +44,18 @@
 
     /*     RESPONSIVE     */
     @include maxmq (small) {
-        /*     HEADLINES     */
-        --fs-h1: 2.2rem;
-        --fs-h2: 2.2rem;
+        /*     HEADLINE 1     */
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 3rem);
+        --fw-h1: 600;
+        --ls-h1: 1px;
+        --lh-h1: 145%;
+        /*     HEADLINE 2     */
+        --fs-h2: 2rem;
+
+        --fs-hs: 1.2rem;
+        --fw-hs: 500;
+        --ls-hs: .5px;
+        --lh-hs: 180%;
     }
 
     @include rangemq (small, large) {

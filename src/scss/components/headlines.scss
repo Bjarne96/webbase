@@ -48,6 +48,7 @@ h1 {
     font-size: var(--fs-h1);
     font-weight: var(--fw-h1);
     letter-spacing: var(--ls-h1);
+    line-height: var(--lh-h1);
 
 }
 
@@ -56,6 +57,7 @@ h2 {
     font-size: var(--fs-h2);
     font-weight: var(--fw-h2);
     letter-spacing: var(--ls-h2);
+    line-height: var(--lh-h2);
 }
 
 // Fixing the scrolling (because padding extends the target)

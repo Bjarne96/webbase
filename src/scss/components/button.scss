@@ -2,10 +2,14 @@
 
 /*     BUTTON     */
 
+:root {
+    --min-width: 10rem;
+}
+
 .btn {
     text-align: center;
     cursor: pointer;
-    padding: .6em 1.2em;
+    padding: .9em 1.3em;
     border-radius: $border_radius;
     width: fit-content;
     font-size: var(--fs-btn);
@@ -16,9 +20,33 @@
     color: var(--btn-pri-color);
     font-weight: var(--fw-btn-pri);
     border-width: 0px !important;
+    min-width: var(--min-width);
 
     * {
         color: var(--btn-pri-color);
+        font-weight: var(--fw-btn-pri);
+    }
+}
+
+.btn-secondary {
+    color: var(--btn-sec-color);
+    font-weight: var(--fw-btn-sec);
+    border: 2px solid var(--btn-sec-color);
+    min-width: calc(var(--min-width) - 2px);
+
+    * {
+        color: var(--btn-pri-color);
+        font-weight: var(--fw-btn-pri);
+    }
+}
+
+.btn-textOnly {
+    color: var(--text-color);
+    font-weight: var(--fw-btn-pri);
+    border-width: 0px !important;
+
+    * {
+        color: var(--text-color);
         font-weight: var(--fw-btn-pri);
     }
 }

@@ -15,7 +15,7 @@ const init = async () => {
 };
 const hydrate = async () => {
     // Hydrate Parallax
-    hydrateParallax();
+    // hydrateParallax();
     // Hydrate Navigation
     const navigation = new Navigation();
     

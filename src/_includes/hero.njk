@@ -1,0 +1,29 @@
+{% set headlines = hero.headlines %}
+{% set subheadlines = hero.subheadlines %}
+{% set image = hero %}
+{% set button = hero %}
+{#  #}
+<div class="hero">
+    <div class="hero-image">
+        {% include 'image.njk' %}
+    </div>
+    <div class="hero-content">
+        <div class="hero-content-heading hero-text">
+            <h1>
+                {% for headline in headlines %}
+                    {{ headline }}<br/>
+                {% endfor %}
+            </h1>
+        </div>
+        <div class="hero-content-subheading hero-text">
+            {% for subheadline in subheadlines %}
+                <p>{{ subheadline }}</p>
+            {% endfor %}
+        </div>
+        <div class="hero-button-row">
+            {% include 'button.njk' %}
+            {% set second_button = true %}
+            {% include 'button.njk' %}
+        </div>
+    </div>
+</div>

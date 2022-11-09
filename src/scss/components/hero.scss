@@ -1,0 +1,44 @@
+@use '../abstracts/' as *;
+
+:root {
+    --outer-gaps: 1rem;
+    --inner-gaps: 2rem;
+}
+
+.hero {
+
+    .hero-content {
+        padding: var(--outer-gaps);
+
+        >*+* {
+            margin-top: var(--inner-gaps);
+        }
+
+        .hero-content-subheading {
+            p {
+                font-size: var(--fs-hs);
+                font-weight: var(--fw-hs);
+                letter-spacing: var(--ls-hs);
+                line-height: var(--lh-hs);
+            }
+        }
+
+        .hero-button-row {
+            * {
+                margin: 0 auto;
+            }
+
+            >*+* {
+                margin-top: calc(var(--inner-gaps) * .5);
+            }
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+    }
+
+    .hero-image {}
+
+}
