@@ -10,6 +10,7 @@ footer_created_for: Tiefschlafen
 footer_transition_top: 
 footer_transition_bot: 
 # BUTTONS
+pri_btn_shadow: true
 arrow_left: arrow-left-slim-long
 arrow_right: arrow-right-slim-long
 arrow_down: arrow-down-slim-long
