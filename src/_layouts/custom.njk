@@ -28,6 +28,9 @@ layout: '_base.njk'
         {% elif type == "hero" %}
             {% set hero = row.data %}
             {% include 'hero.njk' %}
+        {% elif type == "benefits" %}
+            {% set benefits = row.data %}
+            {% include 'benefits.njk' %}
         {% elif type == "colorpallet-content" %}
             {% set todo = row.data %}
             {% include 'colorpallet-content.njk' %}

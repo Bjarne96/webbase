@@ -1,14 +1,55 @@
 @use '../abstracts/' as *;
 
 :root {
-    --outer-gaps: 1rem;
+
     --inner-gaps: 2rem;
+
+    @include maxmq (medium) {
+        --outer-gaps: 1.5rem;
+    }
+
+    @include minmq(medium) {
+        --outer-gaps: 2rem;
+    }
+
+    @include minmq (large) {
+        --max-width: 500px;
+    }
 }
 
 .hero {
 
+    @include minmq (large) {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .hero-content-frame {
+
+        @include maxmq (large) {
+            width: 100%;
+        }
+
+        @include minmq (large) {
+            width: 50vw;
+            max-height: 100vh;
+            margin: auto;
+
+            * {
+                max-width: var(--max-width);
+            }
+        }
+    }
+
     .hero-content {
+
+
         padding: var(--outer-gaps);
+
+        @include minmq (large) {
+            margin: auto;
+        }
 
         >*+* {
             margin-top: var(--inner-gaps);
@@ -24,21 +65,50 @@
         }
 
         .hero-button-row {
-            * {
-                margin: 0 auto;
+
+            @include maxmq (large) {
+                >*+* {
+                    margin-top: calc(var(--inner-gaps) * .5);
+                }
             }
 
-            >*+* {
-                margin-top: calc(var(--inner-gaps) * .5);
+            @include minmq (large) {
+                display: flex;
+                flex-direction: row;
+
+                >*+* {
+                    margin-left: calc(var(--inner-gaps) * .5);
+                }
             }
         }
 
         .hero-text {
-            text-align: center;
+            text-align: left;
         }
 
     }
 
-    .hero-image {}
+    .hero-image {
+        overflow: hidden;
+
+        @include maxmq (large) {
+            width: 100vw;
+            height: 70vh;
+        }
+
+        @include minmq (large) {
+            margin-right: auto;
+            width: 50vw;
+            max-height: 100vh;
+        }
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
 
 }

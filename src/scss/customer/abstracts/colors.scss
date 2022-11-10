@@ -5,7 +5,7 @@
 
     /*     LIGHT SCHEME     */
     --primary: #e6d2b4;
-    --secondary: #e6d2b4;
+    --secondary: #e3c696;
     --tertiary: #234c5d;
     // --quaternary: #454342;
     // --quinary: #454342;
@@ -15,7 +15,7 @@
     /*     DARK SCHEME     */
     @media (prefers-color-scheme: dark) {
         --primary: #e6d2b4;
-        --secondary: #e6d2b4;
+        --secondary: #e3c696;
         --tertiary: #234c5d;
 
         --text: var(--tertiary);

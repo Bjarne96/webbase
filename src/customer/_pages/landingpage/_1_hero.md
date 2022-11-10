@@ -1,9 +1,9 @@
 ---
 type: hero
-order: 10
+order: 1
 headlines:
     - "Mit nur einem Sprung"
-    - "unter deiner neuen Schurwolldecke."
+    - "unter deine neue Schurwolldecke."
 subheadlines:
     - "Nachhaltige und langlebige Produkte aus Schurwolle."
     - "Für einen gesunden und guten Tiefschlaf."

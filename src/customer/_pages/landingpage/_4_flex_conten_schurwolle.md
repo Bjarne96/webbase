@@ -1,15 +1,14 @@
 ---
 type: flex_content
-include_toc: true
 id : wolle
-order: 40
+order: 4
 h2 : Die Schurwolle
 btnText : Mehr Erfahren
-btnUrl : /wolle
+btnUrl : /schurwolle
 external: false
 image_src : wolle.png
 image_alt : Ein tolles Schaf.
-image_format : "1"
+image_format : "1.3"
 bgcl: "sec"
 reverse: true
 

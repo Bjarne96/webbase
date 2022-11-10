@@ -1,12 +1,11 @@
 ---
 type: flex_content
-include_toc: true
-order: 50
+order: 5
 id : handwerk
 h2 : Das Handwerk
 image_src : handwerk.png
 image_alt : Ein tolles Handwerk.
-image_format : "1"
+image_format : "1.3"
 btnText : Mehr Erfahren
 btnUrl : /handwerk
 reverse: false

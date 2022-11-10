@@ -39,29 +39,39 @@
 
     /*     BUTTONS     */
     --fs-btn: 1rem;
-    --fw-btn-pri: 500;
-    --fw-btn-sec: 500;
+    --fw-btn-pri: 400;
+    --fw-btn-sec: 400;
 
     /*     RESPONSIVE     */
     @include maxmq (small) {
         /*     HEADLINE 1     */
-        --fs-h1: clamp(1.1rem, 5vw + .5rem, 3rem);
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
+        --fw-h1: 600;
+        --ls-h1: 1px;
+        --lh-h1: 145%;
+        /*     HEADLINE 2     */
+        --fs-h2: 1.8rem;
+        /*     SUBHEADING     */
+        --fs-hs: 1.2rem;
+        --fw-hs: 400;
+        --ls-hs: .5px;
+        --lh-hs: 180%;
+    }
+
+    @include rangemq (small, large) {
+        /*     HEADLINE 1     */
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
         --fw-h1: 600;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
         --fs-h2: 2rem;
 
+        /*     SUBHEADING     */
         --fs-hs: 1.2rem;
-        --fw-hs: 500;
+        --fw-hs: 400;
         --ls-hs: .5px;
         --lh-hs: 180%;
-    }
-
-    @include rangemq (small, large) {
-        /*     HEADLINES     */
-        --fs-h1: 3.0rem;
-        --fs-h2: 2.5rem;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
@@ -70,9 +80,19 @@
     }
 
     @include rangemq (large, extralarge) {
-        /*     HEADLINES     */
-        --fs-h1: 3.5rem;
-        --fs-h2: 2.5rem;
+        /*     HEADLINE 1     */
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
+        --fw-h1: 600;
+        --ls-h1: 1px;
+        --lh-h1: 145%;
+        /*     HEADLINE 2     */
+        --fs-h2: 2rem;
+
+        /*     SUBHEADING     */
+        --fs-hs: 1.2rem;
+        --fw-hs: 400;
+        --ls-hs: .5px;
+        --lh-hs: 180%;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;
@@ -81,9 +101,19 @@
     }
 
     @include minmq (extralarge) {
-        /*     HEADLINES     */
-        --fs-h1: 4rem;
-        --fs-h2: 3.0rem;
+        /*     HEADLINE 1     */
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
+        --fw-h1: 600;
+        --ls-h1: 1px;
+        --lh-h1: 145%;
+        /*     HEADLINE 2     */
+        --fs-h2: 2rem;
+
+        /*     SUBHEADING     */
+        --fs-hs: 1.2rem;
+        --fw-hs: 400;
+        --ls-hs: .5px;
+        --lh-hs: 180%;
 
         /*     PARAGRAPHS     */
         --fs-p: 1rem;

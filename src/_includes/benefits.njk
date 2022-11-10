@@ -1,0 +1,6 @@
+{% set benefits_collection = benefits.collection %}
+{{benefits_collection}}
+{%- for benefit in collections[benefits_collection]|sort(attribute="data.order") -%}
+yy {{benefit.icon}}
+{%- endfor -%}
+xxx

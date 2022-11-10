@@ -13,6 +13,7 @@
     {% include 'image.njk' %}
     <div class="product-content">
         {% include 'headline.njk' %}
+        <p class="product-price">{{ price }}</p>
         {% if specs|length %}
             <div class="product-specs">
                 {% for spec in specs %}
@@ -22,17 +23,17 @@
         {% endif %}
         {% include "markdown.njk" %}
         <div class="product-row">
-            <p class="product-price">{{ price }}</p>
             {% include "button.njk" %}
-        </div>
-        <div class="product-row">
-            <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
-                {% set svg = collections.config[0].data.arrow_left %}
-                {% include 'svg.njk' %}
-            </div>
-            <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
-                {% set svg = collections.config[0].data.arrow_right %}
-                {% include 'svg.njk' %}
+            <div class="product-row">
+                <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
+                    {% set svg = collections.config[0].data.arrow_left %}
+                    {% include 'svg.njk' %}
+                </div>
+                <p>Nächstes Produkt</p>
+                <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
+                    {% set svg = collections.config[0].data.arrow_right %}
+                    {% include 'svg.njk' %}
+                </div>
             </div>
         </div>
     </div>

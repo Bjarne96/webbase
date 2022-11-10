@@ -25,7 +25,7 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
         margin: 0 auto;
 
         >*+* {
-            margin-top: var(--gaps);
+            margin-top: calc(var(--gaps) * 2);
         }
 
         .product-row {
@@ -40,7 +40,7 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
 
         .product-price {
             font-weight: 500;
-            font-size: calc(var(--fs-p) * 2);
+            font-size: calc(var(--fs-p) * 1.5);
         }
     }
 
