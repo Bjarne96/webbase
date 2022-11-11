@@ -5,9 +5,9 @@
 {% if not image_loading|length %}
     {% set image_loading = "lazy" %}
 {% endif %}
-{% set widths = [300, 600, 900, 1200, 1500, 1920] %}
+{% set widths = [400, 600, 800, 1100, 1500, 1920] %}
 {% if image_size == "half" %}
-    {% set widths = [300, 600] %}
+    {% set widths = [400, 600, 800] %}
 {% endif %}
 {% set srcset = "" %}
 {% set webp_src = image_src %}
@@ -19,9 +19,9 @@
 {% endfor %}
 {% set image_priority = image.image_priority %}
 {% if image_format|length and image_alt|length and image_src|length %}
-    {% set image_style = "height: calc(calc(1vw / "+ image_format +") * 100);max-height: calc(600px  / "+ image_format +");" %}
-    <div style="{{ image_style }}" class="img-con">
-        <img title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
+    {% set image_style = "height: 100%;height: calc(calc(1vw / "+ image_format +") * 100);max-height: calc(600px  / "+ image_format +");overflow: hidden;" %}
+    <div style="{{ image_style }}">
+        <img class="img-center" title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
     </div>
 {% elif image_alt|length and image_src|length %}
     <img title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>

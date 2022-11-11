@@ -1,18 +1,18 @@
 @use '../abstracts/' as *;
 
-$siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
-
 :root {
+    --max-width: 600px;
 
-    --vertical-gaps: 1.5rem;
     --horizontal-outer-gaps: 2rem;
     --vertical-outer-gaps: 4rem;
+
+    --vertical-gaps: 1.5rem;
     --container-gaps: 1rem;
+
     --btn-arrow-size: 2rem;
     --btn-arrow-gap: 1rem;
 
     @include minmq (large) {
-        --max-width: 500px;
         --container-gaps: 2rem;
     }
 }
@@ -70,7 +70,7 @@ $siteGaps: calc(var(--btn-icon-size) + calc($gaps * 2));
     }
 
     .product-cp-cl {
-        max-width: 600px;
+        max-width: var(--max-width);
 
         @include minmq(large) {
             width: calc(50vw - var(--container-gaps));

@@ -1,24 +1,27 @@
 {% set reverse = flex_content.reverse %}
 {% set bgcl = flex_content.bgcl %}
 {% set id = flex_content.id %}
-{% set image_size = "half" %}
+{% set image_size = "full" %}
 {# Components #}
 {% set image = flex_content %}
+{% set flex_text = flex_content %}
 {# CLASSES #}
-{% set flex_content_class = "" %}
+{% set flex_content_ct_class =  "flex-content-ct" %}
 {% if reverse %}
-    {% set flex_content_class =  flex_content_class + " row-reverse " %}
+    {% set flex_content_ct_class =  flex_content_ct_class+" flex-content-ct-reverse" %}
 {% endif %}
-{% if bgcl == "sec" %}
-    {% set flex_content_class = flex_content_class + " bg-cl-sec " %}
-{% elif bgcl == "pri" %}
-    {% set flex_content_class = flex_content_class + " bg-cl-pri " %}
+{% if bgcl|length %}
+    {# "pri" or "sec" #}
+    {% set flex_content_bgcl = "bg-cl-" + bgcl %}
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
-<section id="{{ id }}" class="flex-content {{ flex_content_class }}">
-    {% include 'image.njk' %}
-    <div class="text-con">
-        {% set flex_text = flex_content %}
-        {% include 'flex_text.njk' %}
+<section id="{{ id }}" class="flex-content {{ flex_content_bgcl }}">
+    <div class="{{ flex_content_ct_class }}">
+        <div class="flex-content-image flex-content-cl flex-content-cl-right">
+            {% include 'image.njk' %}
+        </div>
+        <div class="flex-content-text-container flex-content-cl flex-content-cl-left">
+            {% include 'flex_text.njk' %}
+        </div>
     </div>
 </section>

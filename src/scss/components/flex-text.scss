@@ -13,25 +13,13 @@
             margin-top: $gaps;
             display: block;
         }
-
-        // EXTRA TEXT MARGIN ? WHY
-        // >p {
-        //     margin-top: $gaps * .5;
-        // }
     }
 
     @include minmq(extralarge) {
-        // Parent has to give general margin
-        // margin: $gaps;
 
         >*+* {
             margin-top: $gaps;
             display: block;
         }
-
-        // EXTRA TEXT MARGIN ? WHY
-        // >p {
-        //     margin-top: $gaps * .5;
-        // }
     }
 }

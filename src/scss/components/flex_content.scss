@@ -1,104 +1,83 @@
 @use '../abstracts/' as *;
-$max-img-wd: 600px;
 
-/*     CONTAINER     */
+:root {
+    --fc-max-width: 600px;
 
-.grid-container {
-    display: flex;
-    flex-direction: column;
+    --fc-vertical-gaps: 1.5rem;
+
+    @include maxmq (small) {
+        --fc-vertical-outer-gaps: 2.5rem;
+        --fc-container-gaps: 1rem;
+    }
+
+
+    @include rangemq (small, large) {
+        --fc-vertical-outer-gaps: 4rem;
+        --fc-container-gaps: 2rem;
+    }
+
+    @include minmq (large) {
+        --fc-vertical-outer-gaps: 8rem;
+        --fc-container-gaps: 2rem;
+    }
 }
 
 .flex-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: calc(100% - $gaps * 2);
-    margin: 0 auto;
+    padding: var(--fc-vertical-outer-gaps) 0;
 
-    @include maxmq(large) {
-        padding: calc($gaps * 1) 0;
+    .flex-content-ct {
+        @include rangemq(small, large) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include minmq(large) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: auto;
+            max-width: calc(var(--fc-max-width) * 2);
+        }
     }
 
     @include minmq(large) {
-        padding: calc($gaps * 2) 0;
-    }
-
-    .text-con {
-        @include minmq(extralarge) {
-            margin: $gaps;
+        .flex-content-ct-reverse {
+            flex-direction: row-reverse;
         }
     }
 
-    /*     IMAGES     */
-    .img-con {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        z-index: 0;
-        border-radius: $border_radius;
+
+    .flex-content-image img {
         width: 100%;
-        margin: 0 $gaps $gaps $gaps;
+    }
 
-        img {
-            // Image placement
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-            height: 100%;
-            border-radius: $border_radius;
-            display: block;
+    .flex-content-text-container {
+
+        >* {
+            padding-top: var(--fc-vertical-gaps);
+        }
+
+    }
+
+    .flex-content-cl {
+        max-width: var(--fc-max-width);
+        padding: 0 var(--fc-container-gaps);
+
+        @include minmq(large) {
+            width: calc(50vw - var(--fc-container-gaps));
+
+            margin: auto 0;
         }
     }
 
-    @include minmq(flexcontentBr) {
-        div {
-            max-width: $max-img-wd;
-        }
-    }
-
-    @include minmq(extralarge) {
-        .img-con {
-            margin: 0 $gaps;
+    @include minmq(large) {
+        .flex-content-cl-right {
+            margin-right: auto;
         }
 
-        flex-direction: row;
+        .flex-content-cl-left {
+            margin-left: auto;
+        }
     }
-}
-
-.row-reverse {
-    @include minmq(extralarge) {
-        flex-direction: row-reverse;
-    }
-}
-
-/*     GP - IMAGES      */
-
-.img-gp-con {
-    background-color: var(--light);
-    border-radius: $border_radius;
-
-    @include minmq(small) {
-        height: auto !important;
-    }
-
-
-    img {
-        max-width: 400px;
-        max-height: 300px;
-    }
-}
-
-/*     About us Style Fix    */
-#überuns-img-wraper {
-    @include maxmq(small) {
-        display: flex;
-        justify-content: left;
-    }
-
-}
-
-#überuns-img {
-    width: auto;
 }
