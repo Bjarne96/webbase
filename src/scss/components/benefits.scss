@@ -1,7 +1,6 @@
 @use '../abstracts/' as *;
 
 :root {
-
     --vertical-gaps: 4rem;
     --outer-gaps: 2rem;
     --container-gaps: 1rem;
@@ -12,39 +11,57 @@
     }
 }
 
-.benefits {
+.benefits-container {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: var(--container-gaps) 0;
     justify-content: center;
-    width: 100vw;
-    overflow: hidden;
 
-    .benefit {
+
+    .benefits {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 140px;
-        padding: var(--container-gaps);
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: var(--container-gaps) 0;
+        justify-content: center;
+        overflow: hidden;
 
-        @include minmq (extralarge) {
-            flex: auto;
+        @include maxmq(large) {
+            max-width: 600px;
         }
 
-        .benefit-text {
-            font-size: calc(var(--fs-p) * 1.2);
-            font-weight: 500;
+        @include rangemq(large, extralarge) {
+            max-width: 800px;
         }
 
-        .benefit-icon {
-            svg {
-                width: 48px;
-                height: 48px;
-                margin: auto;
+        @include minmq(extralarge) {
+            width: 1450px;
+        }
 
-                path {
-                    fill: var(--tertiary);
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 140px;
+            padding: var(--container-gaps);
+
+            @include minmq (extralarge) {
+                flex: auto;
+            }
+
+            .benefit-text {
+                font-size: calc(var(--fs-p) * 1.2);
+                font-weight: 500;
+            }
+
+            .benefit-icon {
+                svg {
+                    width: 48px;
+                    height: 48px;
+                    margin: auto;
+
+                    path {
+                        fill: var(--tertiary);
+                    }
                 }
             }
         }
