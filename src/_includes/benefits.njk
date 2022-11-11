@@ -1,6 +1,16 @@
 {% set benefits_collection = benefits.collection %}
-{{benefits_collection}}
-{%- for benefit in collections[benefits_collection]|sort(attribute="data.order") -%}
-yy {{benefit.icon}}
-{%- endfor -%}
-xxx
+{% set bgcl = benefits.bgcl %}
+{% if bgcl == "sec" %}
+    {% set benefitsclasses = " bg-cl-sec " %}
+{% endif %}
+<div class="benefits {{ benefitsclasses }}">
+    {%- for benefit in collections[benefits_collection]|sort(attribute="data.order") -%}
+        <div class="benefit">
+            <div class="benefit-icon">
+                {% set svg = benefit.data.icon %}
+                {% include "svg.njk" %}
+            </div>
+            <p class="benefit-text">{{ benefit.data.text }}</p>
+        </div>
+    {%- endfor -%}
+</div>

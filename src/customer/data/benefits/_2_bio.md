@@ -1,5 +1,5 @@
 ---
 order: 20
-text : "Biologische Resourcen"
+text : "Bio Qualität"
 icon: "_benefit-bio"
 ---

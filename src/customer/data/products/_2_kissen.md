@@ -4,8 +4,8 @@ h2 : Schurwollkissen
 image_src : produkt_kissen.png
 image_alt : Eine wirklich schönes Schurwollkissen.
 btnUrl : tiefschlafen.de
-btnText : Shop besuchen
-price : 40€
+btnText : Im Shop kaufen
+price : 80€
 # specs:
 #     - "Größe: 40x40cm"
 #     - "Stoff: Leinen"

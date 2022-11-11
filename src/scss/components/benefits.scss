@@ -1,0 +1,52 @@
+@use '../abstracts/' as *;
+
+:root {
+
+    --vertical-gaps: 4rem;
+    --outer-gaps: 2rem;
+    --container-gaps: 1rem;
+
+    @include minmq (large) {
+        --max-width: 500px;
+        --container-gaps: 2rem;
+    }
+}
+
+.benefits {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--container-gaps) 0;
+    justify-content: center;
+    width: 100vw;
+    overflow: hidden;
+
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 140px;
+        padding: var(--container-gaps);
+
+        @include minmq (extralarge) {
+            flex: auto;
+        }
+
+        .benefit-text {
+            font-size: calc(var(--fs-p) * 1.2);
+            font-weight: 500;
+        }
+
+        .benefit-icon {
+            svg {
+                width: 48px;
+                height: 48px;
+                margin: auto;
+
+                path {
+                    fill: var(--tertiary);
+                }
+            }
+        }
+    }
+}

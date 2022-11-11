@@ -4,8 +4,8 @@ h2 : Schurwolldecke
 image_src : produkt_decke.png
 image_alt : Eine wirklich schöne Schurwolldecke.
 btnUrl : tiefschlafen.de
-btnText : Shop besuchen
-price : 199€
+btnText : Im Shop kaufen
+price : 299€
 # specs:
 #     - "Größe: 200x200cm"
 #     - "Stoff: Leinen"
