@@ -1,7 +1,7 @@
 ---
 order: 10
 h2 : Schurwolldecke
-image_src : produkt_decke.png
+image_src : produkt_baumwolldecke.png
 image_alt : Eine wirklich schöne Schurwolldecke.
 btnUrl : tiefschlafen.de
 btnText : Im Shop kaufen
