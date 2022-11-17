@@ -10,4 +10,5 @@ right: false
 delay: 0
 auto_slide_timing: 0
 order: 3
+observer: true
 ---

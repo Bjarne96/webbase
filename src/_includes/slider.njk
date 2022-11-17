@@ -4,6 +4,7 @@
 {% set left = slider.left %}
 {% set right = slider.right %}
 {% set delay = slider.delay %}
+{% set observer = slider.observer %}
 {% set auto_slide_timing = slider.auto_slide_timing %}
 {% set max_height = slider.max_height %}
 {% set max_width = slider.max_width %}
@@ -19,7 +20,10 @@
 {% if template == "image" or  template == "product" %}
     {% set path = template + "-slide.njk" %}
 {% endif %}
-<div class="slider-container">
+{% if observer %}
+    {% set observer_class = " observer-target observer-hidden " %}
+{% endif %}
+<div class="slider-container {{ observer_class }}">
     {% if left %}
         <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
             {% if switch == "arrow" %}

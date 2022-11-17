@@ -7,6 +7,7 @@ video_src : über_uns_trailer.mp4
 video_thumbnail_src : über_uns_trailer_thumbnail.png
 video_alt : Ein tolles Handwerk.
 reverse: true
+observer: true
 bgcl: "sec"
 ---
 

@@ -1,6 +1,7 @@
 {% set reverse = flex_content.reverse %}
 {% set bgcl = flex_content.bgcl %}
 {% set id = flex_content.id %}
+{% set observer = flex_content.observer %}
 {% set image_size = "full" %}
 {# Components #}
 {% set image = flex_content %}
@@ -13,11 +14,14 @@
 {% endif %}
 {% if bgcl|length %}
     {# "pri" or "sec" #}
-    {% set flex_content_bgcl = "bg-cl-" + bgcl %}
+    {% set custom_class = custom_class + " bg-cl-" + bgcl + " " %}
+{% endif %}
+{% if observer %}
+    {% set observer_class = " observer-target observer-hidden " %}
 {% endif %}
 {# FLEX CONTENT CONTAINER #}
-<section id="{{ id }}" class="flex-content {{ flex_content_bgcl }}">
-    <div class="{{ flex_content_ct_class }}">
+<section id="{{ id }}" class="flex-content {{ custom_class }}">
+    <div class="{{ flex_content_ct_class }} {{ observer_class }}">
         <div class="flex-content-media flex-content-cl flex-content-cl-right">
             {% if flex_content.image_src|length %}
                 {% include 'image.njk' %}
@@ -25,7 +29,7 @@
                 {% include 'video.njk' %}
             {% endif %}
         </div>
-        <div class="flex-content-text-container flex-content-cl flex-content-cl-left">
+        <div class="flex-content-text-container flex-content-cl flex-content-cl-left {{ observer_class }}">
             {% include 'flex_text.njk' %}
         </div>
     </div>
