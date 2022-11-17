@@ -4,15 +4,9 @@
 {% set id = link.id %}
 {% set external = link.external %}
 {% if id and id|length %}
-    <li>
-        <a title="{{ title }}" class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
-    </li>
+    <a title="{{ title }}" class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
 {% elif external %}
-    <li>
-        <a title="{{ title }}" target="_blank" href="{{ href }}">{{ value }}</a>
-    </li>
+    <a title="{{ title }}" target="_blank" href="{{ href }}">{{ value }}</a>
 {% else %}
-    <li>
-        <a title="{{ title }}" href="{{ href }}">{{ value }}</a>
-    </li>
+    <a title="{{ title }}" href="{{ href }}">{{ value }}</a>
 {% endif %}

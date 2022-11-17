@@ -27,12 +27,16 @@
                                 <ul class="submenu-list submenu-list-{{ loop.index }}" data-visible="false">
                                     {% for c in children %}
                                         {% set link = c.child %}
-                                        {% include 'link.njk' %}
+                                        <li>
+                                            {% include 'link.njk' %}
+                                        </li>
                                     {% endfor %}
                                 </ul>
                             </li>
                         {% else %}
-                            {% include 'link.njk' %}
+                            <li>
+                                {% include 'link.njk' %}
+                            </li>
                         {% endif %}
                     {% endif %}
                 {%- endfor -%}

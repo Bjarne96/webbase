@@ -1,18 +1,26 @@
-{% set top = collections.config[0].data.footer_transition_top %}
-{% set bot = collections.config[0].data.footer_transition_bot %}
+{% set transition = collections.config[0].data.footer_transition %}
+{% set transition_type = collections.config[0].data.footer_transition_type %}
+{% set transition_alt = collections.config[0].data.footer_transition_alt %}
+{% set footer_scroll_target = collections.config[0].data.footer_scroll_target %}
 <footer class="footer-wraper">
-    {% if top|length %}
-        {% set transitionPath = ''+top+'.njk' %}
-        <div class="cl-footer">
-            {% include transitionPath %}
-        </div>
-    {% endif %}
-    <div class="footer-btn-container">
-        <div class="navigate btn-icon btn-icon-light" data-target-id="body-wraper">
+    <div class="navigate footer-btn-container" data-target-id="{{ footer_scroll_target }}">
+        <div class=" btn-icon btn-icon-primary">
             {% set svg = collections.config[0].data.arrow_up %}
             {% include 'svg.njk' %}
         </div>
+        <p>Nach Oben</p>
     </div>
+    {% if transition|length %}
+        {% if transition_type == "svg" %}
+            <div class="cl-footer">
+                {% set svg = transition %}
+                {% include "svg.njk" %}
+            </div>
+        {% elif transition_type == "image" %}
+            {% set image = {image_src: transition, image_alt: transition_alt} %}
+            {% include "image.njk" %}
+        {% endif %}
+    {% endif %}
     <div class="footer-children-container">
         <div class="footer-children">
             {%- for element in collections.footer|sort(attribute="data.order") -%}
@@ -27,7 +35,9 @@
                         <ul>
                             {% for c in children %}
                                 {% set link = c.child %}
-                                {% include 'link.njk' %}
+                                <li>
+                                    {% include 'link.njk' %}
+                                </li>
                             {% endfor %}
                         </ul>
                     {% endif %}
@@ -43,7 +53,9 @@
                         <ul>
                             {% for c in children %}
                                 {% set link = c.child %}
-                                {% include 'link.njk' %}
+                                <li>
+                                    {% include 'link.njk' %}
+                                </li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -57,14 +69,7 @@
         with ♥
         {% if collections.config[0].data.footer_created_for|length %}
             {% set value = collections.config[0].data.footer_created_for %} for
-            <strong>{{ value }}</strong>.
+            <strong>{{ value }}</strong>. {% else %}.
         {% endif %}
-        .
     </div>
-    {% if bot|length %}
-        {% set transitionPath = ''+bot+'.njk' %}
-        <div class="cl-footer">
-            {% include transitionPath %}
-        </div>
-    {% endif %}
 </footer>

@@ -25,13 +25,13 @@
         <div data-target-id="{{ btnTarget }}" class="navigate btn btn-{{ btnType }}">
             {{ btnText }}
         </div>
-    {% elif btnUrl|length and external == false %}
+    {% elif btnUrl|length %}
         <a href="{{ btnUrl }}">
             <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
             </div>
         </a>
-    {% elif btnUrl|length %}
+    {% elif btnUrl|length and external == true %}
         <a target="_blank" href="{{ btnUrl }}">
             <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
