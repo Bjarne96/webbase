@@ -7,8 +7,10 @@ navigation_cta_href:
 navigation_logo_type: 'svg'
 # FOOTER
 footer_created_for: Tiefschlafen
-footer_transition_top: 
-footer_transition_bot: 
+footer_transition: schaf_stehend.png
+footer_transition_type: image
+footer_transition_alt: Ein stehends Schaf auf der Wiese.
+footer_scroll_target: product-slider
 # BUTTONS
 pri_btn_shadow: true
 arrow_left: arrow-left-slim-long
