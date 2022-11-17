@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin-top: calc(var(--gaps) * 3);
+    padding-top: calc(var(--gaps) * 3);
+    background-color: var(--foo-bg-color);
 
     .footer-children-container {
         display: flex;
