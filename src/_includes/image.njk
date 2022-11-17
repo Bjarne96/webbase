@@ -17,7 +17,6 @@
         {% set webp_src = image_src + "-" + width + ".webp" %}
     {% endif %}
 {% endfor %}
-{% set image_priority = image.image_priority %}
 {% if image_format|length and image_alt|length and image_src|length %}
     {% set image_style = "height: 100%;height: calc(calc(1vw / "+ image_format +") * 100);max-height: calc(600px  / "+ image_format +");overflow: hidden;" %}
     <div style="{{ image_style }}">
@@ -27,4 +26,4 @@
     <img title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
 {% endif %}
 {# Build the image into webp images with different sizes #}
-{% img src=image_src, alt=image_alt, loading=image_priority, widths=widths %}
+{% img src=image_src, widths=widths %}

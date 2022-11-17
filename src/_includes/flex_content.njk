@@ -4,6 +4,7 @@
 {% set image_size = "full" %}
 {# Components #}
 {% set image = flex_content %}
+{% set video = flex_content %}
 {% set flex_text = flex_content %}
 {# CLASSES #}
 {% set flex_content_ct_class =  "flex-content-ct" %}
@@ -17,8 +18,12 @@
 {# FLEX CONTENT CONTAINER #}
 <section id="{{ id }}" class="flex-content {{ flex_content_bgcl }}">
     <div class="{{ flex_content_ct_class }}">
-        <div class="flex-content-image flex-content-cl flex-content-cl-right">
-            {% include 'image.njk' %}
+        <div class="flex-content-media flex-content-cl flex-content-cl-right">
+            {% if flex_content.image_src|length %}
+                {% include 'image.njk' %}
+            {% elif flex_content.video_src|length %}
+                {% include 'video.njk' %}
+            {% endif %}
         </div>
         <div class="flex-content-text-container flex-content-cl flex-content-cl-left">
             {% include 'flex_text.njk' %}

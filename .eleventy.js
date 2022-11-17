@@ -28,7 +28,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksShortcode("img", function(img) {
         try {
             const src = "./src/assets/" + img.src;
-            console.log('img.widths', img.widths);
             var imageOptimization = async function () {
                 await Image(src, {
                     filenameFormat: function (hash, src, width, format, options) {

@@ -1,0 +1,17 @@
+{% set video_alt = video.video_alt %}
+{% set video_src = video.video_src %}
+{% set video_thumbnail_src = video.video_thumbnail_src %}
+{% set video_loading = video.video_loading %}
+{% set thumbnail_webp_src = "/assets/" + video_thumbnail_src + "-600.webp" %}
+{% if not video_loading|length %}
+    {% set video_loading = "none" %}
+    {# auto || metadata #}
+{% endif %}
+<video controls preload="{{ video_loading }}" poster="{{ thumbnail_webp_src }}">
+    <source
+    src="/assets/{{ video_src }}" type="video/mp4"/>
+    {# <source src="" type="video/mp4" /> #}
+    <p>Dein Browser unterstützt dieses Video Format nicht.</p>
+</video>
+{# Build the image into webp images with different sizes #}
+{% img src=video_thumbnail_src, widths=[600] %}
