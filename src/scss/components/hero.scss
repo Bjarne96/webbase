@@ -29,6 +29,8 @@
 
         @include maxmq (large) {
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
 
         @include minmq (large) {
@@ -44,8 +46,11 @@
 
     .hero-content {
 
-
         padding: var(--outer-gaps);
+
+        @include maxmq (large) {
+            width: 600px;
+        }
 
         @include minmq (large) {
             margin: auto;

@@ -30,73 +30,8 @@ export function Navigation() {
     let toggleNavigationDebouceOn = false;
     let navigateDebouceOn = false;
     let activeSubmenu = {};
+    let smartbarDebounceOn = false;
     var navigation = select(navigationSelector);
-    //Main Function to enable functionality
-    showTopbar();
-    sidebarOn = checkScreenWidthSmall($navigationBr);
-    if(!sidebarOn) {
-        $defaultOffset = $defaultOffset + $topbar_height
-    }
-    // Add eventlistener to mobile-toggle
-    select(toggleSelector)
-        .addEventListener("click", () => toggleNavigation());
-
-    // Hide navigation when scrolling
-    if(sidebarOn) {
-        enableSmartTopbar();
-    } else {
-        enableSmartSubmenuClose();
-    }
-    detectViewportChange();
-    // Add eventlistener to navigate
-    const navigationElements = selectAll(navigateElementSelector);
-    const href = window.location.href;
-    var hash = window.location.hash;
-    // 
-    navigationElements.forEach((element) => {
-        // navigation listener to scroll to the targeted section
-        element.addEventListener("click", (e) => {
-            this.navigate(findDataset(e));
-        });
-        if(hash && element.href == href) {
-            window.addEventListener('load', () => {
-                element.click();
-                window.removeEventListener('load', this);
-            });
-            hash = null;
-        }
-    })
-
-    this.navigate = function (dataset) {
-        if (dataset[targetContentDatasetKey]) {
-            if (navigateDebouceOn) return;
-            setTimeout(() => {
-                navigateDebouceOn = false;
-            }, 300);
-            navigateDebouceOn = true;   
-            if(sidebarOn) {
-                disableSmartTopbar();
-                this.disableNavigation();
-                hideTopbar();
-                let target = selectId(dataset.targetId);
-                scrollToElement(target, $defaultOffset).then(() => {
-                    enableSmartTopbar();
-                });
-                
-            } else {
-                disableSmartSubmenuClose();
-                disableActiveSubmenu();
-                let target = selectId(dataset.targetId);
-                scrollToElement(target, $defaultOffset).then(() => {
-                    enableSmartSubmenuClose();
-                });
-            }
-        } else if(dataset[targetSubmenuListDatasetKey]) {
-            let submenu = navigation.querySelector(submenuListNumberSelector + dataset.targetToggleSubmenu);
-            let submenuBtn = navigation.querySelector(dropdownIconNumberSelector + dataset.targetToggleSubmenu);
-            toggleSubmenu(submenu, submenuBtn);
-        }
-    }
 
     let toggleNavigation = function () {
         if (toggleNavigationDebouceOn) return;
@@ -143,12 +78,19 @@ export function Navigation() {
         }
     }
     function showTopbar () {
+        if(!topbar.classList.contains(toggleTopbarUpClass)) return;
         topbar.classList.remove(toggleTopbarUpClass);
     };
-    function  hideTopbar () {
+    function hideTopbar () {
+        if(topbar.classList.contains(toggleTopbarUpClass)) return;
         topbar.classList.add(toggleTopbarUpClass);
     };
     function smartTopbar () {
+        if (smartbarDebounceOn) return;
+        setTimeout(() => {
+            smartbarDebounceOn = false;
+        }, 300);
+        smartbarDebounceOn = true
         actionWhenScrolling(showTopbar, hideTopbar);
     };
     function smartSubmenuClose () {
@@ -197,4 +139,66 @@ export function Navigation() {
             }
         });
     }
+    enableSmartTopbar();
+    this.navigate = function (dataset) {
+        if (dataset[targetContentDatasetKey]) {
+            if (navigateDebouceOn) return;
+            setTimeout(() => {
+                navigateDebouceOn = false;
+            }, 300);
+            navigateDebouceOn = true;
+            const target = selectId(dataset.targetId);
+            if(sidebarOn) {
+                disableSmartTopbar();
+                this.disableNavigation();
+                hideTopbar();
+                scrollToElement(target, $defaultOffset).then(() => {
+                    enableSmartTopbar();
+                });
+                
+            } else {
+                disableSmartSubmenuClose();
+                disableActiveSubmenu();
+                scrollToElement(target, $defaultOffset).then(() => {
+                    enableSmartSubmenuClose();
+                });
+            }
+        } else if(dataset[targetSubmenuListDatasetKey]) {
+            let submenu = navigation.querySelector(submenuListNumberSelector + dataset.targetToggleSubmenu);
+            let submenuBtn = navigation.querySelector(dropdownIconNumberSelector + dataset.targetToggleSubmenu);
+            toggleSubmenu(submenu, submenuBtn);
+        }
+    }
+    //Main Function to enable functionality
+    showTopbar();
+    sidebarOn = checkScreenWidthSmall($navigationBr);
+    if(!sidebarOn) {
+        $defaultOffset = $defaultOffset + $topbar_height
+    }
+    // Add eventlistener to mobile-toggle
+    select(toggleSelector)
+        .addEventListener("click", () => toggleNavigation());
+
+    // Hide navigation when scrolling
+    if(sidebarOn) {
+        enableSmartTopbar();
+    } else {
+        enableSmartSubmenuClose();
+    }
+    detectViewportChange();
+    // Add eventlistener to navigate
+    const navigationElements = selectAll(navigateElementSelector);
+    const href = window.location.href;
+    var hash = window.location.hash;
+
+    navigationElements.forEach((element) => {
+        // navigation listener to scroll to the targeted section
+        element.addEventListener("click", (e) => {
+            this.navigate(findDataset(e));
+        });
+        if(hash && element.href == href) {
+            element.click();
+            hash = null;
+        }
+    })
 }
