@@ -43,11 +43,15 @@
                     {% endif %}
                 </div>
             {% endfor %}
+            {% set bereiche = [] %}
             {%- for element in collections.navigation|sort(attribute="data.order") -%}
                 {% set value = element.data.value %}
                 {% set footer = element.data.footer %}
                 {% set children = element.data.children %}
-                {% if footer %}
+                {% if not children|length %}
+                    {% set bereiche = (bereiche.push(element.data), bereiche) %}
+                {% endif %}
+                {% if footer and children|length %}
                     <div class="footer-child">
                         <span>{{ value }}</span>
                         <ul>
@@ -61,6 +65,17 @@
                     </div>
                 {% endif %}
             {% endfor %}
+            <div class="footer-child">
+                <span>Bereiche</span>
+                <ul>
+                    {% for item in bereiche %}
+                        {% set link = item %}
+                        <li>
+                            {% include 'link.njk' %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
     <div class="footer-created-by">

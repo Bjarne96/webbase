@@ -1,6 +1,6 @@
 ---
 order: 4
-value: RECHTLICHES
+value: Informationen
 children:
     - child:
         href: /agb
@@ -11,7 +11,7 @@ children:
         value: Impressum
         external: false
     - child:
-        href: /datenschutzerklärung
-        value: Datenschutzerklärung
+        href: /datenschutz
+        value: Datenschutz
         external: false
 ---

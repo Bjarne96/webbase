@@ -3,12 +3,11 @@
 
 $dev-breakpoints: (
     zero: 0px,
+    extrasmall: 400px,
     small: 576px,
     medium: 768px,
     large: 992px,
     extralarge: 1300px,
-    flexcontentBr: 632px,
-    parallaxcontentBr: 1500px,
 );
 
 $breakpoints: map.merge($dev-breakpoints, $cu-breakpoints);
