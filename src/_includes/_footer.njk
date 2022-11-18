@@ -1,9 +1,8 @@
-{% set transition = collections.config[0].data.footer_transition %}
-{% set transition_type = collections.config[0].data.footer_transition_type %}
-{% set transition_alt = collections.config[0].data.footer_transition_alt %}
-{% set footer_scroll_target = collections.config[0].data.footer_scroll_target %}
+{% set transition = collections.footer_config[0].data.transition_src %}
+{% set transition_type = collections.footer_config[0].data.transition_type %}
+{% set transition_alt = collections.footer_config[0].data.transition_alt %}
 <footer class="footer-wraper">
-    <div class="navigate footer-btn-container" data-target-id="{{ footer_scroll_target }}">
+    <div class="navigate footer-btn-container" data-target-id="body-wraper">
         <div class=" btn-icon btn-icon-primary">
             {% set svg = collections.config[0].data.arrow_up %}
             {% include 'svg.njk' %}
@@ -48,7 +47,7 @@
                 {% set value = element.data.value %}
                 {% set footer = element.data.footer %}
                 {% set children = element.data.children %}
-                {% if not children|length %}
+                {% if not children|length and footer %}
                     {% set bereiche = (bereiche.push(element.data), bereiche) %}
                 {% endif %}
                 {% if footer and children|length %}
@@ -82,8 +81,8 @@
         All rights reserved © 2022. Created by
         <strong>Abb Design</strong>
         with ♥
-        {% if collections.config[0].data.footer_created_for|length %}
-            {% set value = collections.config[0].data.footer_created_for %} for
+        {% if collections.footer_config[0].data.created_for|length %}
+            {% set value = collections.footer_config[0].data.created_for %} for
             <strong>{{ value }}</strong>. {% else %}.
         {% endif %}
     </div>

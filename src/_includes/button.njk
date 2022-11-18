@@ -1,3 +1,9 @@
+{% set btnText = button.btnText %}
+{% set btnType = button.btnType %}
+{% set btnUrl = button.btnUrl %}
+{% set external = button.external %}
+{% set btnModal = button.btnModal %}
+{% set btnTarget = button.btnTarget %}
 {% if second_button %}
     {% set btnText = button.btnText2 %}
     {% set btnType = button.btnType2 %}
@@ -5,34 +11,27 @@
     {% set external = button.external2 %}
     {% set btnModal = button.btnModal2 %}
     {% set btnTarget = button.btnTarget2 %}
-{% else %}
-    {% set btnText = button.btnText %}
-    {% set btnType = button.btnType %}
-    {% set btnUrl = button.btnUrl %}
-    {% set external = button.external %}
-    {% set btnModal = button.btnModal %}
-    {% set btnTarget = button.btnTarget %}
 {% endif %}
 {% if not btnType|length %}
     {% set btnType = "primary" %}
 {% endif %}
 {% set config = collections.config[0].data %}
 {% if config.pri_btn_shadow and btnType == "primary" %}
-    {# {% set btnType = btnType + " shadow " %} #}
+    {% set btnType = btnType + " shadow " %}
 {% endif %}
 {% if btnText|length %}
     {% if btnTarget|length %}
         <div data-target-id="{{ btnTarget }}" class="navigate btn btn-{{ btnType }}">
             {{ btnText }}
         </div>
-    {% elif btnUrl|length %}
-        <a href="{{ btnUrl }}">
+    {% elif btnUrl|length and external == true %}
+        <a target="_blank" href="{{ btnUrl }}">
             <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
             </div>
         </a>
-    {% elif btnUrl|length and external == true %}
-        <a target="_blank" href="{{ btnUrl }}">
+    {% elif btnUrl|length %}
+        <a href="{{ btnUrl }}">
             <div class="btn btn-{{ btnType }}">
                 {{ btnText }}
             </div>

@@ -6,8 +6,9 @@ headline: Bitte füllen Sie das Formular für Ihre Anfrage aus.
 script: 'contact'
 ---
 
-<div class="contact-wraper">
-    <h1>{{ headline }}</h1>
+<div
+    class="contact-wraper">
+    {# <h1>{{ headline }}</h1> #}
     <form id="form" name="contact" action="/gesendet" method="POST" data-netlify="true">
         {%- for field in collections.fields|sort(attribute="data.order") -%}
             {% set type = field.data.type %}

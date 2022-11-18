@@ -1,5 +1,5 @@
 ---
-order: 15
+order: 40
 id: product-slider
 href: /#Produkt
 value: Produkt

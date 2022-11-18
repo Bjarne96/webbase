@@ -7,15 +7,21 @@ $nav_sp_bar: 1.5rem;
 $sub_sp_bar: 1.2rem;
 $drop-shadow: drop-shadow(0px 3px 5px black);
 
-.navigation-wraper * {
+.navigation-wraper>* {
     background-color: var(--nav-bg-color);
-    color: var(--nav-color);
 }
 
 .navigation {
     position: fixed;
     display: flex;
     z-index: 1000;
+
+
+
+    a {
+        color: var(--nav-color);
+        text-transform: uppercase;
+    }
 
     @include maxmq(small) {
         inset: 0 0 0 25%;
@@ -59,9 +65,22 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
         font-weight: var(--fw-nav-lv1);
     }
 
+    .cta {
+        @include maxmq(navigationBr) {
+            margin: $gaps 0;
+            // margin-top: auto;
+        }
+
+        @include minmq(navigationBr) {
+            margin-left: auto;
+            margin-right: $gaps;
+        }
+    }
+
     nav {
         @include maxmq(navigationBr) {
             margin: auto 0;
+            // margin-bottom: auto;
         }
 
         @include minmq(navigationBr) {
@@ -95,19 +114,6 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
 
         @include minmq(navigationBr) {
             margin-left: $nav_sp_bar;
-        }
-    }
-
-    .visit-us-btn {
-        @include maxmq(navigationBr) {
-            margin-top: auto;
-            margin-bottom: $nav_sp_ver;
-            display: none;
-        }
-
-        @include minmq(navigationBr) {
-            margin-left: auto;
-            margin-right: $nav_sp_bar;
         }
     }
 }

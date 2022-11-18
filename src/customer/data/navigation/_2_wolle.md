@@ -1,5 +1,5 @@
 ---
-order: 30
+order: 20
 href: /schurwolle
 value: Schurwolle
 title: Mehr über die Verarbeitung udn Herkunft von Schurwolle von Tiefschlafen erfahren.

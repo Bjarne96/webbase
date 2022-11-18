@@ -1,18 +1,8 @@
 ---
 tags: config
-# NAVIGATION Visit Button
-navigation_cta_value: 
-navigation_cta_href:
-# NAVIGATION Logo
-navigation_logo_type: 'svg'
-# FOOTER
-footer_created_for: Tiefschlafen
-footer_transition: schaf_stehend.png
-footer_transition_type: image
-footer_transition_alt: Ein stehends Schaf auf der Wiese.
-footer_scroll_target: product-slider
 # BUTTONS
-pri_btn_shadow: true
+pri_btn_shadow: false
+# ICONS
 arrow_left: arrow-left-slim-long
 arrow_right: arrow-right-slim-long
 arrow_down: arrow-down-slim-long

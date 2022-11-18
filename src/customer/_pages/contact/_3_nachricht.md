@@ -1,7 +1,7 @@
 ---
 label: Nachricht
-required: false
+required: true
 name: message
 type: message
-order: 110
+order: 30
 ---

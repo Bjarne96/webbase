@@ -42,6 +42,12 @@
                 {%- endfor -%}
             </ul>
         </nav>
+        {% set button = collections.header_config[0].data %}
+        {% if button.btnText and (button.btnTarget or  button.btnUrl) %}
+            <div class="cta">
+                {% include 'button.njk' %}
+            </div>
+        {% endif %}
         {% if collections.socialmedia and collections.socialmedia|length %}
             <div class="nav-social-media-wraper">
                 {% include 'socialmedia.njk' %}

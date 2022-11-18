@@ -2,34 +2,30 @@
 
 /*     KONTAKT     */
 
+:root {
+    --outer-gaps: 2rem;
+}
+
 .contact-wraper {
     padding: $gaps;
-    // max-width: var(--contactform-wd);
     display: flex;
     flex-direction: column;
     align-items: left;
     border-radius: $border_radius;
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
 
     @include minmq(small) {
         background-color: var(--bg-sec-color);
-        margin: 0 $gaps * .5;
+        padding: var(--outer-gaps);
     }
 
     form {
         width: 100%;
-        // max-width: var(--contactform-wd);
         display: grid;
         gap: $gaps;
         grid-template-columns: 1fr;
-
-        @include minmq(medium) {
-            grid-template-columns: 1fr 1fr;
-
-            h2 {
-                grid-column: span 2;
-            }
-
-        }
 
         h2 {
             margin-top: $gaps;

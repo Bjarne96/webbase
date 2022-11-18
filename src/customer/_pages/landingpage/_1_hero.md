@@ -7,7 +7,7 @@ headlines:
 subheadlines:
     - "Nachhaltige und langlebige Produkte aus Schurwolle."
     - "Für einen gesunden und guten Tiefschlaf."
-btnText: "Produkte anschauen"
+btnText: "Produkte"
 btnTarget: "product-slider"
 btnText2: "Mehr Erfahren"
 btnTarget2: "wolle"

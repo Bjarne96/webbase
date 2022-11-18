@@ -1,4 +1,4 @@
-{% set type = collections.config[0].data.navigation_logo_type %}
+{% set type = collections.header_config[0].data.logo_type %}
 {% if type|length %}
     {% if type == "svg" %}
         {% set svg = "logo" %}
@@ -6,8 +6,8 @@
             {% include "svg.njk" %}
         </a>
     {% elif type == "png" or type == "jpg" %}
-        {% set src = collections.config[0].data.navigation_logo_type %}
-        {% set src = collections.config[0].data.domain %}
+        {% set src = collections.header_config[0].data.logo_type %}
+        {% set src = collections.header_config[0].data.domain %}
         <a class="logo" href="{{ domain }}">
             <img alt="Logo" src="../assets/logo.{{ type }}"/>
         </a>
