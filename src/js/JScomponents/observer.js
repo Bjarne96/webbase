@@ -1,9 +1,8 @@
 import { selectAll } from "./select";
 
 export function hydrateObserver() {
-    console.log('observe');
     let options = {
-        threshold: .8
+        threshold: .5
     }
     const showObserver = new IntersectionObserver(((entries) => {
         entries.forEach((entry) => {
@@ -22,6 +21,6 @@ export function hydrateObserver() {
 
     const hiddenElements = selectAll(".observer-target");
     hiddenElements.forEach((el) => showObserver.observe(el))
-    hiddenElements.forEach((el) => hideObserver.observe(el))
+    // hiddenElements.forEach((el) => hideObserver.observe(el))
 }
 

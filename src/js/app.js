@@ -14,8 +14,9 @@ const init = async () => {
     fixBrowserIssues();
 };
 const hydrate = async () => {
+    // Hydrate Navigation
     const navigation = new Navigation();
-
+    // Hydrate Animations based on Observer
     await hydrateObserver();
     
     // Hydrate Modals
