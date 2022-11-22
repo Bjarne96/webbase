@@ -26,10 +26,15 @@
     --lh-p: 1.4rem;
 
     /*     NAVIGATION     */
-    --fs-nav-lv1: 1.2rem;
-    --fw-nav-lv1: 400;
+    --fs-nav-lv1: .9rem;
+    --fw-nav-lv1: 500;
+    --ls-nav-lv1: 2.5px;
+    // --lh-nav-lv1: 1.4rem;
+
     --fs-nav-lv2: 1.1rem;
     --fw-nav-lv2: 300;
+    --ls-nav-lv2: 1px;
+    // --lh-nav-lv2: 1.4rem;
 
     /*     FOOTER     */
     --fs-foo-lv1: 1.2rem;
@@ -102,8 +107,8 @@
 
     @include minmq (extralarge) {
         /*     HEADLINE 1     */
-        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
-        --fw-h1: 600;
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 2.5rem);
+        --fw-h1: 500;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */

@@ -3,13 +3,13 @@
 /*     BUTTON     */
 
 :root {
-    --min-width: 10rem;
+    --min-width: 8rem;
 }
 
 .btn {
     text-align: center;
     cursor: pointer;
-    padding: .6em .8em;
+    padding: .4em .8em;
     border-radius: $border_radius;
     width: fit-content;
     font-size: var(--fs-btn);
@@ -28,6 +28,10 @@
     }
 }
 
+.btn-primary:hover {
+    background-color: var(--btn-pri-bghover-color);
+}
+
 .btn-secondary {
     color: var(--btn-sec-color);
     font-weight: var(--fw-btn-sec);
@@ -38,6 +42,10 @@
         color: var(--btn-pri-color);
         font-weight: var(--fw-btn-pri);
     }
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-sec-bghover-color);
 }
 
 .btn-textOnly {

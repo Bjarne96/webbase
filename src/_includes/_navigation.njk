@@ -4,7 +4,15 @@
         {% include 'menu.njk' %}
     </div>
     <div class="navigation" data-visible="false" aria-hidden="true">
-        {% include 'logo.njk' %}
+        <div class="endpoint">
+            {% set name = collections.header_config[0].data.link_value %}
+            {% include 'logo.njk' %}
+        {# {% set link = {} %}
+                    {% set link.value = collections.header_config[0].data.link_name %}
+                    {% set link.href = collections.header_config[0].data.link_href %}
+                    {% set link.title = collections.header_config[0].data.link_title %} #}
+            {# {% include 'link.njk' %} #}
+        </div>
         <nav>
             <ul>
                 {%- for element in collections.navigation|sort(attribute="data.order") -%}

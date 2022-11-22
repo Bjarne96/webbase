@@ -4,7 +4,7 @@ h2 : Schurwollkissen
 image_src : produkt_kissen.png
 image_alt : Eine wirklich schönes Schurwollkissen.
 btnUrl : tiefschlafen.de
-btnText : Im Shop kaufen
+btnText : Zum Shop
 price : 80€
 # specs:
 #     - "Größe: 40x40cm"

@@ -7,12 +7,12 @@ headlines:
 subheadlines:
     - "Nachhaltige und langlebige Produkte aus Schurwolle."
     - "Für einen gesunden und guten Tiefschlaf."
-btnText: "Produkte"
+btnText: "Produkte finden"
 btnTarget: "product-slider"
 btnText2: "Mehr Erfahren"
 btnTarget2: "wolle"
 btnType2: "secondary"
-image_src: springendes_schaf.png
+image_src: herov3.png
 image_alt: Ein Springendes Schaf auf einer Wiese.
 image_loading: eager
 ---

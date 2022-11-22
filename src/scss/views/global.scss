@@ -53,6 +53,18 @@ span {
     transition: all .5s ease-in-out;
 }
 
+/*    COLOR HOVER   */
+
+.color-on-hover {
+    transition: all 0.3s;
+    filter: grayscale(1);
+}
+
+.color-on-hover:hover {
+    filter: grayscale(0);
+}
+
+
 /*    FLOATING STYLES   */
 
 .floating {
@@ -111,6 +123,18 @@ strong {
 
 .bg-cl-sec {
     background-color: var(--bg-sec-color) !important;
+}
+
+.bg-cl-ter {
+    background-color: var(--bg-ter-color) !important;
+}
+
+.bg-cl-qua {
+    background-color: var(--bg-qua-color) !important;
+}
+
+.bg-cl-qui {
+    background-color: var(--bg-qui-color) !important;
 }
 
 .cl-pri {

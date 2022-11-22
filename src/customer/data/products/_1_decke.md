@@ -1,10 +1,10 @@
 ---
 order: 10
 h2 : Schurwolldecke
-image_src : produkt_baumwolldecke.png
+image_src : herov3.png
 image_alt : Eine wirklich schöne Schurwolldecke.
 btnUrl : tiefschlafen.de
-btnText : Im Shop kaufen
+btnText : Zum Shop
 price : 299€
 # specs:
 #     - "Größe: 200x200cm"

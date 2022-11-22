@@ -5,10 +5,11 @@ order: 4
 h2 : Die Schurwolle
 btnText : Mehr Erfahren
 btnUrl : /schurwolle
+btnType : secondary
 image_src : schaf_sitzend.png
 image_alt : Ein tolles Schaf.
 image_format : "1.4"
-bgcl: "sec"
+bgcl: "qua"
 observer: true
 reverse: true
 

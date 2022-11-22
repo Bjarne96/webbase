@@ -54,14 +54,12 @@
             }
 
             .benefit-icon {
+                fill: var(--text);
+
                 svg {
                     width: 48px;
                     height: 48px;
                     margin: auto;
-
-                    path {
-                        fill: var(--tertiary);
-                    }
                 }
             }
         }

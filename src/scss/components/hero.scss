@@ -13,7 +13,7 @@
     }
 
     @include minmq (large) {
-        --max-width: 500px;
+        --hero-max-width: 750px;
     }
 }
 
@@ -39,7 +39,7 @@
             margin: auto;
 
             * {
-                max-width: var(--max-width);
+                max-width: var(--hero-max-width);
             }
         }
     }
@@ -49,7 +49,7 @@
         padding: var(--outer-gaps);
 
         @include maxmq (large) {
-            width: 600px;
+            width: var(--hero-max-width);
         }
 
         @include minmq (large) {

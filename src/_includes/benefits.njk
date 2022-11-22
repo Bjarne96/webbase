@@ -1,17 +1,16 @@
 {% set benefits_collection = benefits.collection %}
 {% set bgcl = benefits.bgcl %}
-{% if bgcl == "sec" %}
-    {% set benefitsclasses = " bg-cl-sec " %}
-{% endif %}
-<div class="benefits-container {{ benefitsclasses }}">
+{#  bg-cl-{{ bgcl }} #}
+<div class="benefits-container ">
     <div class="benefits">
         {%- for benefit in collections[benefits_collection]|sort(attribute="data.order") -%}
+            {% set color = benefit.data.color %}
             <div class="benefit">
-                <div class="benefit-icon">
+                <div class="benefit-icon" {% if color|length %} style="fill: {{ color }};" {% endif %}>
                     {% set svg = benefit.data.icon %}
                     {% include "svg.njk" %}
                 </div>
-                <p class="benefit-text">{{ benefit.data.text }}</p>
+                <p class="benefit-text" {% if color|length %} style="color: {{ color }};" {% endif %}>{{ benefit.data.text }}</p>
             </div>
         {%- endfor -%}
     </div>

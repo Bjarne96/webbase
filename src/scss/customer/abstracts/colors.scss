@@ -1,14 +1,12 @@
 :root {
-    //--senary: #;--septenary: #;
-
     --light: #FFFFFF;
 
     /*     LIGHT SCHEME     */
     --primary: #e6d2b4;
-    --secondary: #e3c696;
-    --tertiary: #234c5d;
-    // --quaternary: #454342;
-    // --quinary: #454342;
+    --secondary: #e6d2b4;
+    --tertiary: #234c5e;
+    --quaternary: #336f89;
+    --quinary: #336f8929;
 
     --text: var(--tertiary);
 
@@ -23,35 +21,41 @@
 
     /*     NAVIGATION     */
     --nav-color: var(--tertiary);
-    --nav-bg-color: var(--secondary);
+    --nav-bg-color: var(--primary);
+
 
     /*     TEXT     */
     --text-color: var(--text);
-    --headline-color: var(--quinary);
+    --headline-color: var(--text);
 
     /*     BUTTON PRIMARY     */
     --btn-pri-color: var(--primary);
     --btn-pri-bg-color: var(--tertiary);
+    --btn-pri-bghover-color: var(--quaternary);
 
     /*     BUTTON SECONDARY     */
     --btn-sec-color: var(--tertiary);
     --btn-sec-bg-color: transparent;
     --btn-sec-bo-color: var(--tertiary);
+    --btn-sec-bghover-color: var(--quinary);
 
     /*     BODY     */
     --color: var(--text);
     --bg-pri-color: var(--primary);
     --bg-sec-color: var(--secondary);
+    --bg-ter-color: var(--tertiary);
+    --bg-qua-color: var(--quaternary);
+    --bg-qui-color: var(--quinary);
 
     /*     FOOTER     */
     --foo-color: var(--tertiary);
-    --foo-bg-color: var(--secondary);
+    --foo-bg-color: var(--primary);
 
     /*     BUTTON ARROW PRIMARY     */
     --btn-icon-pri-color: var(--text);
 
     /*     BUTTON ARROW SECONDARY     */
-    --btn-icon-sec-color: var(--quaternary);
+    --btn-icon-sec-color: var(--tertiary);
 
     /*     BUTTON ARROW LIGHT     */
     --btn-icon-light-color: var(--light);
@@ -59,3 +63,11 @@
     /*     LINK     */
     --link-color: var(--tertiary);
 }
+
+//--senary: #;--septenary: #;
+// FRESH GREEN// EARTHY GREEN// BLUE// WHITE// YELLOW
+// --primary: #fcffe5;// --primary: #fff9d6;// --primary: #fafeff;// --primary: #ffffff;// --primary: #fbeec1;
+// --secondary: #fcffe5;// --secondary: #fff9d6;// --secondary: #fafeff;// --secondary: #ffffff;// --secondary: #fbeec1;
+// --tertiary: #245903;// --tertiary: #245903;// --tertiary: #0d5f8a;// --tertiary: #000000;// --tertiary: #05396b;
+// --quaternary: #b7d184;// --quaternary: #afc856;// --quaternary: #0d5f8a;// --quaternary: #e6d2b4;// --quaternary: #05396b;
+// --quinary: #b7d184;// --quinary: #d0d284;// --quinary: #e2f7fd;// --quinary: #000000;// --quinary: #f7e188;
