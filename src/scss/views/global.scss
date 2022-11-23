@@ -90,6 +90,41 @@ span {
     }
 }
 
+/*     Start Stroke      */
+.stroke-animation a,
+.stroke-animation a:after,
+.stroke-animation a:before {
+    transition: all .5s;
+}
+
+.stroke-animation a:hover {
+    color: var(--nav-color);
+}
+
+.stroke-animation a {
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+.stroke-animation a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: var(--nav-color);
+    opacity: .8;
+    height: 2px;
+}
+
+.stroke-animation a:hover:after {
+    width: 100%;
+}
+
+
 
 /*    UTILITY STYLES   */
 

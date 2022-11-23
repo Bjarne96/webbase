@@ -1,8 +1,12 @@
-{% set href = link.href %}
-{% set value = link.value %}
-{% set title = link.title %}
-{% set id = link.id %}
-{% set external = link.external %}
+{% if not alternateLink %}
+    {% set href = link.href %}
+    {% set value = link.value %}
+    {% set title = link.title %}
+    {% set id = link.id %}
+    {% set external = link.external %}
+{% else %}
+    {% set alternateLink = false %}
+{% endif %}
 {% if id and id|length %}
     <a title="{{ title }}" class="navigate" data-target-id="{{ id }}" href="{{ href }}">{{ value }}</a>
 {% elif external %}

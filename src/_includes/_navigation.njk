@@ -7,11 +7,13 @@
         <div class="endpoint">
             {% set name = collections.header_config[0].data.link_value %}
             {% include 'logo.njk' %}
-        {# {% set link = {} %}
-                    {% set link.value = collections.header_config[0].data.link_name %}
-                    {% set link.href = collections.header_config[0].data.link_href %}
-                    {% set link.title = collections.header_config[0].data.link_title %} #}
-            {# {% include 'link.njk' %} #}
+            {% set alternateLink = true %}
+            {% set value = collections.header_config[0].data.link_value %}
+            {% set href = collections.header_config[0].data.link_href %}
+            {% set title = collections.header_config[0].data.link_title %}
+            <div class="stroke-animation">
+                {% include 'link.njk' %}
+            </div>
         </div>
         <nav>
             <ul>
@@ -42,7 +44,7 @@
                                 </ul>
                             </li>
                         {% else %}
-                            <li>
+                            <li class="stroke-animation">
                                 {% include 'link.njk' %}
                             </li>
                         {% endif %}
