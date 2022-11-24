@@ -174,14 +174,32 @@ strong {
 
 .cl-pri {
     color: var(--bg-pri-color);
+    fill: var(--bg-pri-color) !important;
 }
 
 .cl-sec {
     color: var(--bg-sec-color);
+    fill: var(--bg-sec-color) !important;
+}
+
+.cl-ter {
+    color: var(--bg-ter-color);
+    fill: var(--bg-ter-color) !important;
+}
+
+.cl-qua {
+    color: var(--bg-qua-color);
+    fill: var(--bg-qua-color) !important;
+}
+
+.cl-qui {
+    color: var(--bg-qui-color);
+    fill: var(--bg-qui-color) !important;
 }
 
 .cl-footer {
     color: var(--foo-bg-color);
+    fill: var(--foo-bg-color) !important;
 }
 
 /*    REMOVE DEFAULTS   */

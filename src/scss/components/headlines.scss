@@ -44,7 +44,7 @@
 }
 
 h1 {
-    color: var(--headline-color) !important;
+    // color: var(--headline-color);
     font-size: var(--fs-h1);
     font-weight: var(--fw-h1);
     letter-spacing: var(--ls-h1);
@@ -53,22 +53,9 @@ h1 {
 }
 
 h2 {
-    color: var(--headline-color) !important;
+    // color: var(--headline-color);
     font-size: var(--fs-h2);
     font-weight: var(--fw-h2);
     letter-spacing: var(--ls-h2);
     line-height: var(--lh-h2);
-}
-
-// Fixing the scrolling (because padding extends the target)
-#bier-hl {
-    @include maxmq(medium) {
-        padding: $gaps 0 !important;
-        margin-top: $gaps * 1;
-    }
-
-    @include minmq(medium) {
-        padding: calc($gaps * 2) 0 !important;
-        margin-top: $gaps * 3;
-    }
 }

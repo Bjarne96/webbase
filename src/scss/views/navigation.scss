@@ -9,12 +9,6 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
 
 .navigation-wraper>* {
     background-color: var(--nav-bg-color);
-}
-
-.navigation {
-    position: fixed;
-    display: flex;
-    z-index: 1000;
 
     a {
         color: var(--nav-color);
@@ -23,6 +17,12 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
         letter-spacing: var(--ls-nav-lv1);
         text-transform: uppercase;
     }
+}
+
+.navigation {
+    position: fixed;
+    display: flex;
+    z-index: 1000;
 
     @include maxmq(small) {
         inset: 0 0 0 25%;
@@ -60,17 +60,12 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
     @include minmq(navigationBr) {
         inset: 0 0 0 0;
         height: $topbar_height;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .endpoint {
-        display: flex;
-        flex-direction: row;
+        display: grid;
         align-items: center;
 
-        *+* {
-            margin-left: 1rem;
+        .navigation-item {
+            grid-column: 1;
+            grid-row: 1;
         }
     }
 
@@ -128,6 +123,16 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
 }
 
 /*     LOGO      */
+.endpoint {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    *+* {
+        margin-left: 1rem;
+    }
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -254,10 +259,6 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
     @include maxmq(navigationBr) {
         margin-top: auto;
     }
-
-    @include minmq(navigationBr) {
-        display: none !important;
-    }
 }
 
 .topbar {
@@ -273,10 +274,6 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
     grid-auto-columns: auto;
     // filter: $drop-shadow;
     transition: all 0.3s;
-
-    @include minmq(navigationBr) {
-        display: none;
-    }
 
     .logo {
         margin-left: $topnav_spacing;
@@ -302,6 +299,19 @@ $drop-shadow: drop-shadow(0px 3px 5px black);
             height: $topbar_height * .6;
             margin-right: $topnav_spacing;
         }
+    }
+}
+
+// Hide Class
+@include minmq(navigationBr) {
+    .hide-after-br {
+        display: none !important;
+    }
+}
+
+@include maxmq(navigationBr) {
+    .hide-before-br {
+        display: none !important;
     }
 }
 

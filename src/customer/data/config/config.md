@@ -5,8 +5,8 @@ color_on_hover: true
 # BUTTONS
 pri_btn_shadow: false
 # ICONS
-arrow_left: circle-chevron-left-solid
-arrow_right: circle-chevron-right-solid
+arrow_left: arrow-left-slim-long
+arrow_right: arrow-right-slim-long
 arrow_down: arrow-down-slim-long
 arrow_up: arrow-up-slim-long
 close: xmark-solid

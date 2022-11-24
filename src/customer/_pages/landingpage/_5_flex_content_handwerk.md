@@ -6,10 +6,10 @@ h2 : Das Handwerk
 image_src : handwerk.png
 image_alt : Ein tolles Handwerk.
 image_format : "1.3"
-btnText : Mehr Erfahren
-btnUrl : /handwerk
-btnType : secondary
-bgcl: "qua"
+# btnText : Mehr Erfahren
+# btnUrl : /handwerk
+# btnType : secondary
+bgcl: "pri"
 reverse: false
 observer: true
 ---

@@ -9,7 +9,8 @@ btnType : secondary
 image_src : schaf_sitzend.png
 image_alt : Ein tolles Schaf.
 image_format : "1.4"
-bgcl: "qua"
+bgcl: "ter"
+color: "pri"
 observer: true
 reverse: true
 
