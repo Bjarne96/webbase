@@ -1,4 +1,8 @@
-<div class="flex-text">
+{% set color = flex_text.color %}
+{% if color|length %}
+    {% set custom_class = custom_class + " cl-" + color + " " %}
+{% endif %}
+<div class="flex-text {{ custom_class }}">
     {% set headline = flex_text %}
     {% include 'headline.njk' %}
     {% set markdown = flex_text %}

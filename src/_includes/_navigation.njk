@@ -1,21 +1,15 @@
 <header class="navigation-wraper">
-    <div class="topbar topbar-up">
-        {% include 'logo.njk' %}
+    <div class="topbar topbar-up hide-after-br">
+        <div class="endpoint">
+            {% include 'logo.njk' %}
+        </div>
         {% include 'menu.njk' %}
     </div>
     <div class="navigation" data-visible="false" aria-hidden="true">
-        <div class="endpoint">
-            {% set name = collections.header_config[0].data.link_value %}
+        <div class="navigation-item endpoint hide-before-br">
             {% include 'logo.njk' %}
-            {% set alternateLink = true %}
-            {% set value = collections.header_config[0].data.link_value %}
-            {% set href = collections.header_config[0].data.link_href %}
-            {% set title = collections.header_config[0].data.link_title %}
-            <div class="stroke-animation">
-                {% include 'link.njk' %}
-            </div>
         </div>
-        <nav>
+        <nav class="navigation-item">
             <ul>
                 {%- for element in collections.navigation|sort(attribute="data.order") -%}
                     {% set navigation = element.data.navigation %}
@@ -54,12 +48,12 @@
         </nav>
         {% set button = collections.header_config[0].data %}
         {% if button.btnText and (button.btnTarget or  button.btnUrl) %}
-            <div class="cta">
+            <div class="navigation-item cta hide-before-br">
                 {% include 'button.njk' %}
             </div>
         {% endif %}
         {% if collections.socialmedia and collections.socialmedia|length %}
-            <div class="nav-social-media-wraper">
+            <div class="nav-social-media-wraper hide-after-br">
                 {% include 'socialmedia.njk' %}
             </div>
         {% endif %}

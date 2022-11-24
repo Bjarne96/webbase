@@ -12,4 +12,11 @@
             <img alt="Logo" src="../assets/logo.{{ type }}"/>
         </a>
     {% endif %}
+    {% set alternateLink = true %}
+    {% set value = collections.header_config[0].data.link_value %}
+    {% set href = collections.header_config[0].data.link_href %}
+    {% set title = collections.header_config[0].data.link_title %}
+    <div class="stroke-animation">
+        {% include 'link.njk' %}
+    </div>
 {% endif %}
