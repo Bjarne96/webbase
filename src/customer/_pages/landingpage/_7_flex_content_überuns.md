@@ -8,8 +8,7 @@ video_thumbnail_src : über_uns_trailer_thumbnail.png
 video_alt : Ein tolles Handwerk.
 reverse: true
 observer: true
-bgcl: "ter"
-color: "pri"
+bgcl: "pri"
+color: "ter"
 ---
-
-Die Arbeit mit der Schurwolle zum fertigen Produkt liegt uns von Tiefschlafen besonders am Herzen. Seit drei Generationen Arbeiten wir mit Schurwolle und unsere Produkte werden in feinster Handarbeit hergestellt. Zuerst wird die Schurwolle sortiert und gewaschen, damit diese in der Wollkämmmaschine fein gewebt werden kann. In dieser werden etwa 40 Lagen für eine Decke und 20 für eine Kissen aufeinander gewebt. Anschließend verwenden wir Leinen- und Baumwollstoffe um die Schurwolle als Decken und Kissen erlebbar zu machen.
+Wir stehen für regionale Produktion, artgerechte Tierhaltung und die Langlebigkeit unserer Schurwolldecken. Wir glaube das alle Schurwolldecken möglichst umwelt- und tierfreundlich produziert werden sollten. Wir haben den Anspruch von Qualität und Langlebigkeit an unsere Produkte. Wir möchten die natürliche Qualität der Schurwolle, durch unsere Schurwolldecken an unsere Kunden weitergeben. 

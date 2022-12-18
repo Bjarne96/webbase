@@ -17,25 +17,25 @@
         <div class="product-cp-headline">
             {% include 'headline.njk' %}
         </div>
-        <p class="product-cp-price">
-            {{ price }}
-        </p>
         <div class="product-cp-text">
             {% include "markdown.njk" %}
         </div>
+        <p class="product-cp-price">
+            {{ price }}
+        </p>
         <div class="product-cp-btns">
             {% include "button.njk" %}
             {# <div class="product-cp-cu-btn">
-                            <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
-                                {% set svg = collections.config[0].data.arrow_left %}
-                                {% include 'svg.njk' %}
-                            </div>
-                            <p class="product-cp-cu-btn-text">Nächstes Produkt</p>
-                            <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
-                                {% set svg = collections.config[0].data.arrow_right %}
-                                {% include 'svg.njk' %}
-                            </div>
-                        </div> #}
+                                        <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
+                                            {% set svg = collections.config[0].data.arrow_left %}
+                                            {% include 'svg.njk' %}
+                                        </div>
+                                        <p class="product-cp-cu-btn-text">Nächstes Produkt</p>
+                                        <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
+                                            {% set svg = collections.config[0].data.arrow_right %}
+                                            {% include 'svg.njk' %}
+                                        </div>
+                                    </div> #}
         </div>
     </div>
 </section>

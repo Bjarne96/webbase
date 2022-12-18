@@ -7,8 +7,13 @@ $nav_sp_bar: 1.5rem;
 $sub_sp_bar: 1.2rem;
 $drop-shadow: drop-shadow(0px 3px 5px black);
 
+:root {
+    --nav-color: var(--primary);
+}
+
 .navigation-wraper>* {
     background-color: var(--nav-bg-color);
+    // background-color: transparent;
 
     a {
         color: var(--nav-color);

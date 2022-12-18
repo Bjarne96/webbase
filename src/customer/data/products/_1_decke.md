@@ -1,17 +1,12 @@
 ---
 order: 10
-h2 : Schurwolldecke
-image_src : herov3.png
-image_alt : Eine wirklich schöne Schurwolldecke.
+h2 : Alljahres Schurwolldecke
+image_src : produkt_baumwolldecke.png
+image_alt : Eine wirklich schöne Alljahres Schurwolldecke.
 btnUrl : tiefschlafen.de
 btnText : Zum Shop
-price : 299€
-# specs:
-#     - "Größe: 200x200cm"
-#     - "Stoff: Leinen"
-#     - "Füllung: Winter"
+price : 295,00 €
 ---
-Unsere Schurwolldecken haben viel positive Eigenschaften im Vergleich zu herkömmlichen Decken.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.
+Eine warme und langlebige Decke, die atmungsaktiv wirkt und dir dabei hilft bei einer gleichmäßigen Temperatur zu schlafen. 
+Die Füllung der Decke besteht zu 100% aus Schurwolle und der Bezug zu 100% aus weicher Baumwolle. 
+Die Schurwolldecke ist selbstreinigend und ist geruchsneutralisierend. Daher muss sie nicht gewaschen werden. Die Decke ist für Allergiker gut geeignet.

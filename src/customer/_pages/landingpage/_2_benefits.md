@@ -2,6 +2,6 @@
 type: benefits
 order: 2
 collection: benefits
-bgcl: "ter"
-color: "pri"
+bgcl: "pri"
+color: "ter"
 ---

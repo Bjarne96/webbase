@@ -5,7 +5,7 @@ id : handwerk
 h2 : Das Handwerk
 image_src : handwerk.png
 image_alt : Ein tolles Handwerk.
-image_format : "1.3"
+image_format : "1.6"
 # btnText : Mehr Erfahren
 # btnUrl : /handwerk
 # btnType : secondary
@@ -13,5 +13,4 @@ bgcl: "pri"
 reverse: false
 observer: true
 ---
-
-Die Arbeit mit der Schurwolle zum fertigen Produkt liegt uns von Tiefschlafen besonders am Herzen. Seit drei Generationen Arbeiten wir mit Schurwolle und unsere Produkte werden in feinster Handarbeit hergestellt. Zuerst wird die Schurwolle sortiert und gewaschen, damit diese in der Wollkämmmaschine fein gewebt werden kann. In dieser werden etwa 40 Lagen für eine Decke und 20 für eine Kissen aufeinander gewebt. Anschließend verwenden wir Leinen- und Baumwollstoffe um die Schurwolle als Decken und Kissen erlebbar zu machen.
+Wir arbeiten mit Bio-Bauern in Nordfriesland zusammen und produzieren die Decken dort selbst. Unsere Schurwolle wird in der Kämmmaschine in bis zu 40 Schichten gewebt. In präziser Handarbeit wird die Schurwolle dann fixiert und anschließend in einen Bio-Stoff aus Baumwolle oder Leinen eingearbeitet. Wir achten dabei auf eine ausgewogene Verteilung des Füllmaterials, um eine langlebige Decke für einen großartigen Schlaf herzustellen. Unsere Decken halten mindestens 10 Jahre.
