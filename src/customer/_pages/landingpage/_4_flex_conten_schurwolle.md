@@ -8,7 +8,6 @@ btnUrlx : /schurwolle
 btnTypex : secondary
 image_src : schaf_mit_schurwolle.png
 image_alt : Ein tolles Schaf.
-image_format : "1.6"
 bgcl: "pri"
 color: "ter"
 observer: true

@@ -13,5 +13,6 @@ link_title: 'Tiefschlafen bietet dir hochwertige Schurwollprodukte, wie Schurwol
 # CTA BUTTON #
 btnText: Produkte finden
 btnTarget: product-slider
+btnType: "tertiary"
 external: false
 ---

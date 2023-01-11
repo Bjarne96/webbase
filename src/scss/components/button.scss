@@ -9,7 +9,7 @@
 .btn {
     text-align: center;
     cursor: pointer;
-    padding: .4em .8em;
+    padding: .4em 1.4em;
     border-radius: $border_radius;
     width: fit-content;
     font-size: var(--fs-btn);
@@ -46,6 +46,39 @@
 
 .btn-secondary:hover {
     background-color: var(--btn-sec-bghover-color);
+}
+
+.btn-tertiary {
+    background-color: var(--btn-ter-bg-color);
+    color: var(--btn-ter-color);
+    font-weight: var(--fw-btn-ter);
+    border-width: 0px !important;
+    min-width: var(--min-width);
+
+    * {
+        color: var(--btn-ter-color);
+        font-weight: var(--fw-btn-pri);
+    }
+}
+
+.btn-tertiary:hover {
+    background-color: var(--btn-ter-bghover-color);
+}
+
+.btn-quintary {
+    color: var(--btn-qui-color);
+    font-weight: var(--fw-btn-qui);
+    border: 1px solid var(--btn-qui-color);
+    min-width: calc(var(--min-width) - 2px);
+
+    * {
+        color: var(--btn-pri-color);
+        font-weight: var(--fw-btn-pri);
+    }
+}
+
+.btn-quintary:hover {
+    background-color: var(--btn-qui-bghover-color);
 }
 
 .btn-textOnly {
