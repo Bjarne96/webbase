@@ -12,7 +12,7 @@ btnTarget2: "wolle"
 btnType2: "secondary"
 images:
     - image1:
-        image_src: schurwolldecke_mit_kissen.png
+        image_src: schurwolldecke_mit_schurwollkissen.png
         image_alt: Schurwolldecken und Schurwollkissen, freigestellt als Produktfoto.
         image_loading: eager
     - image2:

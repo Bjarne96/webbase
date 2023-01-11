@@ -1,8 +1,8 @@
 ---
 order: 10
 h2 : Alljahres Schurwolldecke
-image_src : produkt_baumwolldecke.png
-image_alt : Eine wirklich schöne Alljahres Schurwolldecke.
+image_src : schurwolldecke_mit_schurwollkissen_mit_schatten.png
+image_alt : Eine Alljahres Schurwolldecke.
 btnUrl : tiefschlafen.de
 btnText : Zum Shop
 price : 295,00 €
