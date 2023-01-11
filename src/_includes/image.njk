@@ -26,4 +26,12 @@
     <img title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
 {% endif %}
 {# Build the image into webp images with different sizes #}
-{% img src=image_src, widths=widths %}
+{# {% img src=image_src, widths=widths %} #}
+{% if image_src %}
+    {% img src=image_src, widths=widths %}
+{% else %}
+    <div>Find me</div>
+    <script>
+        console.warn("image_src konnte nicht geladen werden.", image_src, image_alt);
+    </script>
+{% endif %}
