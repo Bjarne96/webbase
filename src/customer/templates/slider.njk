@@ -2,6 +2,8 @@
 {% set template = slider.template %}
 {% set customslide = slider.customslide %}
 {% set switch = slider.switch %}
+{% set left_img = slider.left_img %}
+{% set right_img = slider.right_img %}
 {% set collection = slider.collection %}
 {% set left = slider.left %}
 {% set right = slider.right %}
@@ -33,10 +35,11 @@
         <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
             {% if switch == "arrow" %}
                 {% set svg = collections.config[0].data.arrow_left %}
-            {% else %}
-                {% set svg = "" %}
+                {% include 'svg.njk' %}
+            {% elif switch == "img" %}
+                {% set image = {image_src: right_img, image_alt: " "} %}
+                {% include 'image.njk' %}
             {% endif %}
-            {% include 'svg.njk' %}
         </div>
     {% endif %}
     <div id="{{ template }}-slider" class="slider" style="{{ max_height_string }}{{ max_width_string }}" data-slides=".{{ template }}-slide" data-left="#{{ template }}-left" data-right="#{{ template }}-right" data-delay="{{ delay }}" data-auto_slide_timing="{{ auto_slide_timing }}">
@@ -55,10 +58,11 @@
         <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
             {% if switch == "arrow" %}
                 {% set svg = collections.config[0].data.arrow_right %}
-            {% else %}
-                {% set svg = "" %}
+                {% include 'svg.njk' %}
+            {% elif switch == "img" %}
+                {% set image = {image_src: right_img, image_alt: " "} %}
+                {% include 'image.njk' %}
             {% endif %}
-            {% include 'svg.njk' %}
         </div>
     {% endif %}
 </div>

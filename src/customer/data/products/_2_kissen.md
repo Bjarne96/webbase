@@ -5,7 +5,7 @@ image_src : schurwollkissen_mit_schatten.png
 image_alt : Eine Schurwollkissen.
 btnUrl : tiefschlafen.de
 btnText : Zum Shop
-price : 80€
+price : 80,00€
 ---
 Dieses Kissen ist die ideale Ergänzung zu unseren Schurwolldecken. Für einen gesunden und ergonomischen Schlaf.
 Die Füllung des Kissens besteht zu 100% aus Schurwolle und der Bezug zu 100% aus weicher Baumwolle. 

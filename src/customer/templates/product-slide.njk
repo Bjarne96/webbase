@@ -17,14 +17,14 @@
         <div class="product-cp-headline">
             {% include 'headline.njk' %}
         </div>
+        <p class="product-cp-price">
+            {{ price }}
+        </p>
+        <div class="product-cp-btns">
+            {% include "button.njk" %}
+        </div>
         <div class="product-cp-text">
             {% include "markdown.njk" %}
         </div>
-    </div>
-    <p class="product-cp-price">
-        {{ price }}
-    </p>
-    <div class="product-cp-btns">
-        {% include "button.njk" %}
     </div>
 </section>

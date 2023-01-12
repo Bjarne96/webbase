@@ -109,7 +109,7 @@
 .btn-icon {
     cursor: pointer;
     z-index: 2;
-    opacity: .8;
+    // opacity: 1;
     width: var(--btn-icon-size);
     height: var(--btn-icon-size);
 
@@ -121,7 +121,8 @@
 }
 
 .btn-icon:hover {
-    opacity: 1;
+    // opacity: .9;
+    filter: brightness(115%);
 }
 
 .btn-icon-primary {

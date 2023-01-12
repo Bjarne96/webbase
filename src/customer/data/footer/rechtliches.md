@@ -3,10 +3,6 @@ order: 4
 value: Informationen
 children:
     - child:
-        href: /agb
-        value: AGB
-        external: false
-    - child:
         href: /impressum
         value: Impressum
         external: false
@@ -14,4 +10,8 @@ children:
         href: /datenschutz
         value: Datenschutz
         external: false
+    # - child:
+    #     href: /agb
+    #     value: AGB
+    #     external: false
 ---
