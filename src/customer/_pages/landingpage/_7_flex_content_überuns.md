@@ -3,9 +3,8 @@ type: flex_content
 order: 70
 id : über_uns
 h2 : Über Uns
-video_src : über_uns_trailer.mp4
-video_thumbnail_src : über_uns_trailer_thumbnail.png
-video_alt : Ein tolles Handwerk.
+image_src : logo.png
+image_alt : Ein tolles Handwerk.
 reverse: true
 observer: true
 bgcl: "pri"

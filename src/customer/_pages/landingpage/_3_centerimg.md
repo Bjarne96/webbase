@@ -1,7 +1,7 @@
 ---
 type: custom
 value: centerimg
-order: 3
+order: 30
 image_src: schurwolldecken_vorteile_auflistung.png
 image_alt: "xxx" 
 image_loading: lazy

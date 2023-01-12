@@ -1,0 +1,30 @@
+{# Slides inherit the data ALWAYS from the "slide" variable. #}
+{% set specs = slide.specs %}
+{% set price = slide.price %}
+{# Components - INCLUDE #}
+{% set flex_text = slide %}
+{% set headline = slide %}
+{% set image = slide %}
+{% set image_size = "full" %}
+{% set markdown = slide %}
+{% set button = slide %}
+{# Components - INCLUDE END #}
+<section class="product-cp">
+    <div class="product-cp-image product-cp-cl product-cp-cl-left">
+        {% include 'image.njk' %}
+    </div>
+    <div class="product-cp-content product-cp-cl product-cp-cl-right">
+        <div class="product-cp-headline">
+            {% include 'headline.njk' %}
+        </div>
+        <div class="product-cp-text">
+            {% include "markdown.njk" %}
+        </div>
+    </div>
+    <p class="product-cp-price">
+        {{ price }}
+    </p>
+    <div class="product-cp-btns">
+        {% include "button.njk" %}
+    </div>
+</section>

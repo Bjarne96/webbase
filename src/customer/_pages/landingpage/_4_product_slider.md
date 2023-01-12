@@ -1,6 +1,8 @@
 ---
-type: sliderx
+type: custom
+value: slider
 template: product
+customslide: true
 collection: products
 xmax_height: 750px
 xmax_width: 750px
@@ -9,6 +11,6 @@ left: true
 right: true
 delay: 0
 auto_slide_timing: 0
-order: 33
+order: 40
 observer: true
 ---

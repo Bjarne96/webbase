@@ -1,7 +1,9 @@
 @use '../../../scss/abstracts/' as *;
 
 :root {
-    @include maxmq (medium) {}
+    --outer-gap: var(--gaps);
+    --btn-row-width: 470px;
+    --vertical-content-spacing: 5rem;
 
     @include minmq(medium) {
         --outer-gap: 4rem;
@@ -15,12 +17,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
     min-height: 100vh;
 
     .hero-content-frame {
         width: 100%;
-        padding: 0 var(--outer-gap);
         background-color: var(--secondary) !important;
     }
 
@@ -28,6 +28,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: var(--gaps);
 
         img {
             object-fit: cover;
@@ -38,45 +39,37 @@
         }
 
         .hero-image-large {
-            display: block;
-            max-width: 1400px;
+            display: none;
         }
 
         .hero-image-small {
-            display: none;
+            display: block;
         }
     }
 
     .hero-content {
-        margin-top: calc(var(--vertical-content-spacing) + $topbar_height);
+        margin-top: $topbar_height;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+
+        .hero-content-heading {
+            margin: var(--gaps);
+        }
 
         .hero-button-row {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            margin-top: 1.5rem;
-            margin-bottom: var(--vertical-content-spacing);
-            max-width: var(--btn-row-width);
-            width: 100%;
+            flex-direction: column;
+            // justify-content: center;
 
-            *+* {
-                margin-left: auto;
+            >* {
+                margin-top: var(--gaps);
             }
-        }
 
-    }
-
-    > {
-        .img[title]:hover:before {
-            opacity: 1;
-            color: red;
-        }
-
-        .img[title] {
-            position: relative;
+            >*+* {
+                margin-bottom: var(--gaps);
+            }
         }
 
     }
@@ -87,3 +80,67 @@
     letter-spacing: 2px;
     color: var(--primary);
 }
+
+// .hero {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     min-height: 100vh;
+
+//     .hero-content-frame {
+//         width: 100%;
+//         padding: 0 var(--outer-gap);
+//         background-color: var(--secondary) !important;
+//     }
+
+//     .hero-image {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         img {
+//             object-fit: cover;
+//             object-position: center;
+//             width: 100%;
+//             height: 100%;
+//             display: block;
+//         }
+
+//         .hero-image-large {
+//             display: block;
+//             max-width: 1400px;
+//         }
+
+//         .hero-image-small {
+//             display: none;
+//         }
+//     }
+
+//     .hero-content {
+//         margin-top: calc(var(--vertical-content-spacing) + $topbar_height);
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         .hero-button-row {
+//             display: flex;
+//             flex-direction: row;
+//             justify-content: center;
+//             margin-top: 1.5rem;
+//             margin-bottom: var(--vertical-content-spacing);
+//             max-width: var(--btn-row-width);
+//             width: 100%;
+
+//             *+* {
+//                 margin-left: auto;
+//             }
+//         }
+
+//     }
+// }
+
+// .hero-text h1 {
+//     text-align: center;
+//     letter-spacing: 2px;
+//     color: var(--primary);
+// }

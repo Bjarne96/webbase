@@ -50,8 +50,8 @@
     /*     RESPONSIVE     */
     @include maxmq (small) {
         /*     HEADLINE 1     */
-        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
-        --fw-h1: 600;
+        --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.5rem);
+        --fw-h1: 500;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
@@ -61,6 +61,8 @@
         --fw-hs: 400;
         --ls-hs: .5px;
         --lh-hs: 180%;
+        /*     BUTTONS     */
+        --fs-btn: .9rem;
     }
 
     @include rangemq (small, large) {

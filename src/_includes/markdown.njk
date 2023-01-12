@@ -6,7 +6,7 @@ extracts its content into a paragraph.
 
 #}
 {% set markdown_path = ".." + markdown.page.filePathStem + ".md" %}
-{% if markdown_path|length %}
+{% if markdown.page.filePathStem|length %}
     {% markdown %}
     {%- include markdown_path -%}
     {% endmarkdown %}

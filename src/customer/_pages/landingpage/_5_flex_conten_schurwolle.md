@@ -1,7 +1,7 @@
 ---
 type: flex_content
 id : wolle
-order: 4
+order: 50
 h2 : Die Schurwolle
 btnTextx : Mehr Erfahren
 btnUrlx : /schurwolle

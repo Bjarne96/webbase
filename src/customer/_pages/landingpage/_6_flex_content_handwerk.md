@@ -1,6 +1,6 @@
 ---
 type: flex_content
-order: 5
+order: 60
 id : handwerk
 h2 : Das Handwerk
 image_src : handwerk.png

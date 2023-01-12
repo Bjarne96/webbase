@@ -1,0 +1,64 @@
+{% set slider = custom %}
+{% set template = slider.template %}
+{% set customslide = slider.customslide %}
+{% set switch = slider.switch %}
+{% set collection = slider.collection %}
+{% set left = slider.left %}
+{% set right = slider.right %}
+{% set delay = slider.delay %}
+{% set observer = slider.observer %}
+{% set auto_slide_timing = slider.auto_slide_timing %}
+{% set max_height = slider.max_height %}
+{% set max_width = slider.max_width %}
+{% set max_height_string = "" %}
+{% if max_height|length %}
+    {% set max_height_string = "max-height:" + max_height + ";" %}
+{% endif %}
+{% set max_width_string = "" %}
+{% if max_width|length %}
+    {% set max_width_string = "max-width:" + max_width + ";" %}
+{% endif %}
+{% if customslide and slider.type == "custom" %}
+    {% set path = "../templates/" + template + "-slide.njk" %}
+{% elif customslide %}
+    {% set path = "../customer/templates/" + template + "-slide.njk" %}
+{% elif template == "image" or  template == "product" %}
+    {% set path = template + "-slide.njk" %}
+{% endif %}
+{% if observer %}
+    {% set observer_class = " observer-target observer-hidden " %}
+{% endif %}
+<div class="slider-container {{ observer_class }}">
+    {% if left %}
+        <div id="{{ template }}-left" class="slider-btn-icon slider-btn-icon-left btn-icon btn-icon-primary">
+            {% if switch == "arrow" %}
+                {% set svg = collections.config[0].data.arrow_left %}
+            {% else %}
+                {% set svg = "" %}
+            {% endif %}
+            {% include 'svg.njk' %}
+        </div>
+    {% endif %}
+    <div id="{{ template }}-slider" class="slider" style="{{ max_height_string }}{{ max_width_string }}" data-slides=".{{ template }}-slide" data-left="#{{ template }}-left" data-right="#{{ template }}-right" data-delay="{{ delay }}" data-auto_slide_timing="{{ auto_slide_timing }}">
+        <div class="slider-wraper">
+            {%- for slide in collections[collection]|sort(attribute="data.order") -%}
+                <div class="slide-frame">
+                    <div class="slide {{ template }}-slide" style="{{ max_height_string }}{{ max_width_string }}">
+                        {% set slide = slide.data %}
+                        {% include path %}
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+    </div>
+    {% if right %}
+        <div id="{{ template }}-right" class="slider-btn-icon slider-btn-icon-right btn-icon btn-icon-primary">
+            {% if switch == "arrow" %}
+                {% set svg = collections.config[0].data.arrow_right %}
+            {% else %}
+                {% set svg = "" %}
+            {% endif %}
+            {% include 'svg.njk' %}
+        </div>
+    {% endif %}
+</div>
