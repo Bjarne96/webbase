@@ -1,6 +1,6 @@
 ---
-type: benefits
-order: 2
+type: benxefits
+order: 222
 collection: benefits
 bgcl: "pri"
 color: "ter"

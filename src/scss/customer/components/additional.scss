@@ -1,0 +1,43 @@
+@use '../../../scss/abstracts/' as *;
+
+
+.centerline-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    margin: var(--gaps);
+    text-align: center;
+
+    .centerline span {
+        font-size: 1.1rem;
+
+        @include minmq(large) {
+            display: block;
+        }
+    }
+}
+
+.centerimg-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+
+    .centerimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: var(--gaps) var(--gaps);
+        max-width: 1200px;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+}
