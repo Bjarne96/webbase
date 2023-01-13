@@ -9,8 +9,8 @@ xmax_width: 750px
 switch: img
 left_img: kreis_mit_pfeil_links.png
 right_img: kreis_mit_pfeil_rechts.png
-left: true
-right: true
+left: false
+right: false
 delay: 0
 auto_slide_timing: 0
 order: 40

@@ -37,7 +37,7 @@
                 {% set svg = collections.config[0].data.arrow_left %}
                 {% include 'svg.njk' %}
             {% elif switch == "img" %}
-                {% set image = {image_src: right_img, image_alt: " "} %}
+                {% set image = {image_src: left_img, image_alt: " "} %}
                 {% include 'image.njk' %}
             {% endif %}
         </div>

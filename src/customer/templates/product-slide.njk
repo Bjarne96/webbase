@@ -13,18 +13,34 @@
     <div class="product-cp-image product-cp-cl product-cp-cl-left">
         {% include 'image.njk' %}
     </div>
-    <div class="product-cp-content product-cp-cl product-cp-cl-right">
-        <div class="product-cp-headline">
-            {% include 'headline.njk' %}
-        </div>
-        <p class="product-cp-price">
-            {{ price }}
-        </p>
-        <div class="product-cp-btns">
-            {% include "button.njk" %}
-        </div>
-        <div class="product-cp-text">
-            {% include "markdown.njk" %}
-        </div>
+    <div class="product-cp-headline">
+        {% include 'headline.njk' %}
+    </div>
+    <p class="product-cp-price">
+        {{ price }}
+    </p>
+    <div class="product-cp-btns">
+        {% include "button.njk" %}
+    </div>
+    <div class="product-cp-text">
+        {% include "markdown.njk" %}
+    </div>
+    <div id="{{ template }}-left" class="slide-left">
+        {% if switch == "arrow" %}
+            {% set svg = collections.config[0].data.arrow_left %}
+            {% include 'svg.njk' %}
+        {% elif switch == "img" %}
+            {% set image = {image_src: left_img, image_alt: " "} %}
+            {% include 'image.njk' %}
+        {% endif %}
+    </div>
+    <div id="{{ template }}-right" class="slide-right">
+        {% if switch == "arrow" %}
+            {% set svg = collections.config[0].data.arrow_right %}
+            {% include 'svg.njk' %}
+        {% elif switch == "img" %}
+            {% set image = {image_src: right_img, image_alt: " "} %}
+            {% include 'image.njk' %}
+        {% endif %}
     </div>
 </section>
