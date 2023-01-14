@@ -1,7 +1,23 @@
 {% set centervideo = custom %}
 {% set video = centervideo %}
-<div class="centervideo-frame">
-    <div class="centervideo">
-        {% include "video.njk" %}
+{% set image = centervideo %}
+{% if video.use_bg_image %}
+    <div class="center-overlay-container">
+        <div class="centerimg-frame">
+            <div class="centerimg">
+                {% include "image.njk" %}
+            </div>
+        </div>
+        <div class="centervideo-frame">
+            <div class="centervideo">
+                {% include "video.njk" %}
+            </div>
+        </div>
     </div>
-</div>
+{% else %}
+    <div class="centervideo-frame">
+        <div class="centervideo">
+            {% include "video.njk" %}
+        </div>
+    </div>
+{% endif %}

@@ -10,14 +10,8 @@
         --fc-container-gaps: 1rem;
     }
 
-
-    @include rangemq (small, large) {
-        --fc-vertical-outer-gaps: 4rem;
-        --fc-container-gaps: 2rem;
-    }
-
-    @include minmq (large) {
-        --fc-vertical-outer-gaps: 8rem;
+    @include minmq (small) {
+        --fc-vertical-outer-gaps: 3rem;
         --fc-container-gaps: 2rem;
     }
 }

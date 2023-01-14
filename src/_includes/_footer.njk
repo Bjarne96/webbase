@@ -1,17 +1,26 @@
 {% set transition = collections.footer_config[0].data.transition_src %}
 {% set transition_type = collections.footer_config[0].data.transition_type %}
 {% set transition_alt = collections.footer_config[0].data.transition_alt %}
+{% set multi_img_transition = collections.footer_config[0].data.multi_img_transition %}
+{% set transitions = collections.footer_config[0].data.transitions %}
 <footer class="footer-wraper">
-    {% if transition|length %}
-        {% if transition_type == "svg" %}
-            <div class="cl-footer">
-                {% set svg = transition %}
-                {% include "svg.njk" %}
-            </div>
-        {% elif transition_type == "image" %}
-            {% set image = {image_src: transition, image_alt: transition_alt} %}
-            {% include "image.njk" %}
-        {% endif %}
+    {% if multi_img_transition %}
+        <div class="footer-transitions">
+            {% for i in transitions %}
+                {% set image = transitions[loop.index0]["transition"+loop.index] %}
+                <div class="{{ image.class }}">
+                    {% include "image.njk" %}
+                </div>
+            {% endfor %}
+        </div>
+    {% elif transition_type == "image" %}
+        {% set image = {image_src: transition, image_alt: transition_alt} %}
+        {% include "image.njk" %}
+    {% elif transition_type == "svg" %}
+        <div class="cl-footer">
+            {% set svg = transition %}
+            {% include "svg.njk" %}
+        </div>
     {% endif %}
     <div class="navigate footer-btn-container" data-target-id="body-wraper">
         <div class=" btn-icon btn-icon-primary">

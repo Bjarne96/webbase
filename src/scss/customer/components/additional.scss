@@ -1,19 +1,35 @@
 @use '../../../scss/abstracts/' as *;
 
+:root {
+    --media-max-wd: 650px;
+}
 
 .centerline-frame {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 30vh;
-    margin: var(--gaps);
+    margin: calc(var(--gaps) * 3);
     text-align: center;
 
     .centerline span {
         font-size: 1.1rem;
+        line-height: var(--lh-h1);
+
+        @include minmq(small) {
+            display: block;
+        }
+
+        @include minmq(medium) {
+            font-size: 1.3rem;
+        }
 
         @include minmq(large) {
-            display: block;
+            font-size: 1.5rem;
+        }
+
+        @include minmq(extralarge) {
+            font-size: 1.7rem;
         }
     }
 }
@@ -29,7 +45,7 @@
         justify-content: center;
         align-items: center;
         margin: var(--gaps) var(--gaps);
-        max-width: 1200px;
+        max-width: var(--media-max-wd);
 
         img {
             object-fit: cover;
@@ -51,7 +67,7 @@
     .centervideo video {
         width: calc(100vw - calc(var(--gaps) * 2));
         margin: var(--gaps) var(--gaps);
-        max-width: 1200px;
+        max-width: var(--media-max-wd);
     }
 
 }
@@ -63,4 +79,20 @@
     width: 100vw;
     margin-top: calc(var(--gaps) * 5);
 
+}
+
+.center-overlay-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+
+    >* {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .centervideo-frame .centervideo video {
+        width: calc(80vw - calc(var(--gaps) * 2));
+        max-width: calc(var(--media-max-wd) - 150px);
+    }
 }

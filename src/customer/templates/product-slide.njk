@@ -25,7 +25,7 @@
     <div class="product-cp-text">
         {% include "markdown.njk" %}
     </div>
-    <div id="{{ template }}-left" class="slide-left">
+    <div id="{{ template }}-left" class="slide-left slide-btn">
         {% if switch == "arrow" %}
             {% set svg = collections.config[0].data.arrow_left %}
             {% include 'svg.njk' %}
@@ -34,7 +34,7 @@
             {% include 'image.njk' %}
         {% endif %}
     </div>
-    <div id="{{ template }}-right" class="slide-right">
+    <div id="{{ template }}-right" class="slide-right slide-btn">
         {% if switch == "arrow" %}
             {% set svg = collections.config[0].data.arrow_right %}
             {% include 'svg.njk' %}

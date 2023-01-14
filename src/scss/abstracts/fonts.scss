@@ -51,7 +51,7 @@
     @include maxmq (small) {
         /*     HEADLINE 1     */
         --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.5rem);
-        --fw-h1: 500;
+        // --fw-h1: 500;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
@@ -68,7 +68,7 @@
     @include rangemq (small, large) {
         /*     HEADLINE 1     */
         --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
-        --fw-h1: 600;
+        // --fw-h1: 600;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
@@ -89,7 +89,7 @@
     @include rangemq (large, extralarge) {
         /*     HEADLINE 1     */
         --fs-h1: clamp(1.1rem, 5vw + .5rem, 1.8rem);
-        --fw-h1: 600;
+        // --fw-h1: 600;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
@@ -110,7 +110,7 @@
     @include minmq (extralarge) {
         /*     HEADLINE 1     */
         --fs-h1: clamp(1.1rem, 5vw + .5rem, 2.5rem);
-        --fw-h1: 500;
+        // --fw-h1: 500;
         --ls-h1: 1px;
         --lh-h1: 145%;
         /*     HEADLINE 2     */
