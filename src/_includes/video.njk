@@ -14,4 +14,12 @@
     <p>Dein Browser unterstützt dieses Video Format nicht.</p>
 </video>
 {# Build the image into webp images with different sizes #}
-{% img src=video_thumbnail_src, widths=[600] %}
+{# {% img src=image_src, widths=widths %} #}
+{% if video_thumbnail_src %}
+    {% img src=video_thumbnail_src, widths=[600] %}
+{% else %}
+    <div>Image Missing</div>
+    <script>
+        console.warn("video_thumbnail_src konnte nicht geladen werden.", video_thumbnail_src, video_alt);
+    </script>
+{% endif %}

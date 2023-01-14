@@ -2,12 +2,6 @@
 {% set transition_type = collections.footer_config[0].data.transition_type %}
 {% set transition_alt = collections.footer_config[0].data.transition_alt %}
 <footer class="footer-wraper">
-    <div class="navigate footer-btn-container" data-target-id="body-wraper">
-        <div class=" btn-icon btn-icon-primary">
-            {% set svg = collections.config[0].data.arrow_up %}
-            {% include 'svg.njk' %}
-        </div>
-    </div>
     {% if transition|length %}
         {% if transition_type == "svg" %}
             <div class="cl-footer">
@@ -19,6 +13,12 @@
             {% include "image.njk" %}
         {% endif %}
     {% endif %}
+    <div class="navigate footer-btn-container" data-target-id="body-wraper">
+        <div class=" btn-icon btn-icon-primary">
+            {% set svg = collections.config[0].data.arrow_up %}
+            {% include 'svg.njk' %}
+        </div>
+    </div>
     <div class="footer-children-container">
         <div class="footer-children">
             {%- for element in collections.footer|sort(attribute="data.order") -%}

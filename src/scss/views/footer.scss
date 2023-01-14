@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    padding-top: calc(var(--gaps) * 3);
+    padding-top: calc(var(--gaps) * 2);
     // background-color: var(--foo-bg-color);
 
     .footer-children-container {
@@ -70,6 +70,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: var(--foo-bg-color);
 
         >*+* {
             margin-top: var(--gaps);

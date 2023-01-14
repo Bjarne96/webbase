@@ -1,6 +1,8 @@
 ---
-type: xreviews
-order: 80
+type: customx
+value: centerimgx
+order: 80x
+image_src: schurwolldecken_vorteile_auflistung.png
+image_alt: "Die Vorteile einer Schurwolldecke sind die feuchtigkeitsaugleichende, wärmelreguliernde, und atmungsaktive Wirkung. Sie sind aus biologischen Ressourcen und lokal produziert." 
+image_loading: lazy
 ---
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

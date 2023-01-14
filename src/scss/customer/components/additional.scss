@@ -41,3 +41,26 @@
     }
 
 }
+
+.centervideo-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    .centervideo video {
+        width: calc(100vw - calc(var(--gaps) * 2));
+        margin: var(--gaps) var(--gaps);
+        max-width: 1200px;
+    }
+
+}
+
+.centerbtn-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: calc(var(--gaps) * 5);
+
+}
