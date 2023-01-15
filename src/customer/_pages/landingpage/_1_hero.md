@@ -1,7 +1,7 @@
 ---
 type: custom
 value: hero
-order: 1
+order: 10
 headline: "Endliche Tiefschlafen.<br /> Unter deiner Schurwolldecke."
 btnText: "Produkte finden"
 btnTarget: "product-slider"

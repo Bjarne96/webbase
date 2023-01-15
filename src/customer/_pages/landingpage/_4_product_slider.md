@@ -1,6 +1,7 @@
 ---
 type: custom
 value: slider
+order: 40
 template: product
 customslide: true
 collection: products
@@ -13,6 +14,5 @@ left: false
 right: false
 delay: 0
 auto_slide_timing: 0
-order: 40
 observer: true
 ---
