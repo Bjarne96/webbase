@@ -85,6 +85,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-columns: 1fr;
+    margin-top: calc(var(--gaps) * 2);
 
     >* {
         grid-column: 1;

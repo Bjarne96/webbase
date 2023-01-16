@@ -75,33 +75,34 @@ function Slider(
     //     );
     // });
     // Set slides to sliders index
-    let setProgressbar = () => {
-        progressBarEls.forEach((bar, i) => {
-            if (!bar) {
-                return;
-            }
-            // Removes the unnecessary progressbar animations
-            bar.style.animation = "none";
-            // Addds only the needed progressbar animation
-            if (i == this.index) {
-                // timeout for doing rendering steps on after another and the transition delay
-                setTimeout(() => {
-                    bar.style.animation = "";
-                }, transition_delay);
-            }
-        });
-    };
+    // let setProgressbar = () => {
+    //     progressBarEls.forEach((bar, i) => {
+    //         if (!bar) {
+    //             return;
+    //         }
+    //         // Removes the unnecessary progressbar animations
+    //         bar.style.animation = "none";
+    //         // Addds only the needed progressbar animation
+    //         if (i == this.index) {
+    //             // timeout for doing rendering steps on after another and the transition delay
+    //             setTimeout(() => {
+    //                 bar.style.animation = "";
+    //             }, transition_delay);
+    //         }
+    //     });
+    // };
     // Adds the startAutoslide and stopAutoslide function, when auto_slide_timing is given
     if (auto_slide_timing && auto_slide_timing != 0) {
-        auto_slide_timing = Number(auto_slide_timing) * 1000;
+        auto_slide_timing = Number(auto_slide_timing);
+        console.log('auto_slide_timing', auto_slide_timing);
         var autoslide;
         this.startAutoslide = () => {
             setSlides();
-            setProgressbar();
+            // setProgressbar();
             autoslide = setInterval(() => {
                 this.index++;
                 setSlides();
-                setProgressbar();
+                // setProgressbar();
             }, auto_slide_timing + transition_delay);
         };
         this.stopAutoslide = () => {
@@ -120,7 +121,7 @@ function Slider(
                     setSlides();
                     setTimeout(() => {
                         this.inTransition = false;
-                    }, 300);
+                    }, 1000);
                 }
             });
         });
@@ -136,7 +137,7 @@ function Slider(
                     setSlides();
                     setTimeout(() => {
                         this.inTransition = false;
-                    }, 300);
+                    }, 1000);
                 }
             });
         });

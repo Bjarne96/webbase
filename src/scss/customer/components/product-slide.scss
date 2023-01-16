@@ -34,6 +34,22 @@
             'pr-btn pr-right'
             'pr-text pr-text';
         grid-template-columns: 80vw 20vw;
+
+        .slide-left {
+            display: none;
+        }
+
+        // .product-cp-btns {
+        //     margin-bottom: auto;
+        //     padding-top: 0 !important;
+        // }
+
+        // .product-cp-price {
+        //     padding-top: 0 !important;
+        //     padding-bottom: 0 !important;
+        //     // margin-top: auto;
+        //     margin-bottom: auto;
+        // }
     }
 
     @include rangemq(small, extralarge) {
@@ -118,7 +134,7 @@
         height: 100%;
 
         h2 {
-            font-size: calc(var(--fs-h2) * .7);
+            line-height: calc(var(--lh-h2) * 1.2);
             // white-space: nowrap;
         }
     }
@@ -158,7 +174,7 @@
 
     .slide-btn {
         height: 150px;
-        width: 20vw;
+        width: 75px;
         max-width: 100px;
         margin: 0;
         padding-top: var(--vertical-gaps);

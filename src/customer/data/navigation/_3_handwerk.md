@@ -1,6 +1,7 @@
 ---
 order: 30
-href: /handwerk
+href: /#handwerk
+id: _handwerk
 value: Handwerk
 title: Mehr über die Verarbeitung Schurwollprodukten bei Tiefschlafen erfahren.
 external: false

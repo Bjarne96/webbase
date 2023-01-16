@@ -1,10 +1,10 @@
 ---
 type: flex_content
 order: 70
-id : über_uns
-h2 : Über Uns
-image_src : logo.png
-image_alt : Ein tolles Handwerk.
+id: ueber_uns
+h2: Über Uns
+image_src: logo.png
+image_alt: Ein tolles Handwerk.
 reverse: true
 color: "ter"
 ---

@@ -1,14 +1,14 @@
 {% set btnText = button.btnText %}
 {% set btnType = button.btnType %}
 {% set btnUrl = button.btnUrl %}
-{% set external = button.external %}
+{% set btnExternal = button.btnExternal %}
 {% set btnModal = button.btnModal %}
 {% set btnTarget = button.btnTarget %}
 {% if second_button %}
     {% set btnText = button.btnText2 %}
     {% set btnType = button.btnType2 %}
     {% set btnUrl = button.btnUrl2 %}
-    {% set external = button.external2 %}
+    {% set btnExternal = button.btnExternal2 %}
     {% set btnModal = button.btnModal2 %}
     {% set btnTarget = button.btnTarget2 %}
 {% endif %}
@@ -24,7 +24,7 @@
         <div data-target-id="{{ btnTarget }}" class="navigate btn btn-{{ btnType }}">
             {{ btnText }}
         </div>
-    {% elif btnUrl|length and external == true %}
+    {% elif btnUrl|length and btnExternal == true %}
         <a target="_blank" href="{{ btnUrl }}">
             <div class="btn btn-{{ btnType }}">
                 {{ btnText }}

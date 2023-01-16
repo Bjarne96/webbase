@@ -1,7 +1,7 @@
 ---
 type: flex_content
 order: 60
-id: handwerk
+id: _handwerk
 h2 : Das Handwerk
 image_src : handwerk.png
 image_alt : Ein tolles Handwerk.

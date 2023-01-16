@@ -3,8 +3,9 @@ order: 20
 h2 : Schurwollkissen
 image_src : schurwollkissen_mit_schatten.png
 image_alt : Eine Schurwollkissen.
-btnUrl : tiefschlafen.de
+btnUrl : https://shop.tiefschlafen.de
 btnText : Zum Shop
+btnExternal : true
 price : 80,00€
 ---
 Dieses Kissen ist die ideale Ergänzung zu unseren Schurwolldecken. Für einen gesunden und ergonomischen Schlaf.

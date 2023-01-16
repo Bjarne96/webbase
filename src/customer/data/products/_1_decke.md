@@ -3,8 +3,9 @@ order: 10
 h2 : Alljahres Schurwolldecke
 image_src : schurwolldecke_mit_schurwollkissen_mit_schatten.png
 image_alt : Eine Alljahres Schurwolldecke.
-btnUrl : tiefschlafen.de
+btnUrl : https://shop.tiefschlafen.de
 btnText : Zum Shop
+btnExternal : true
 price : 295,00 €
 ---
 Eine warme und langlebige Decke, die atmungsaktiv wirkt und dir dabei hilft bei einer gleichmäßigen Temperatur zu schlafen. 

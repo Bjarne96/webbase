@@ -1,6 +1,7 @@
 ---
 order: 20
-href: /schurwolle
+href: /#schurwolle
+id: wolle
 value: Schurwolle
 title: Mehr über die Verarbeitung udn Herkunft von Schurwolle von Tiefschlafen erfahren.
 external: false
