@@ -28,15 +28,18 @@
 
     @include maxmq(small) {
         grid-template-areas:
-            'pr-img pr-img'
-            'pr-hl pr-right'
-            'pr-price pr-right'
-            'pr-btn pr-right'
-            'pr-text pr-text';
-        grid-template-columns: 80vw 20vw;
+            'pr-img pr-img pr-img'
+            'pr-hl pr-hl pr-hl'
+            'pr-price pr-price pr-price'
+            'pr-left pr-btn pr-right'
+            'pr-text pr-text pr-text';
+        grid-template-columns: 18vw 64vw 18vw;
 
-        .slide-left {
-            display: none;
+        // Center Text and Content
+        .product-cp-headline h2 {
+            text-align: center;
+            // white-space: nowrap;
+            font-size: 1.5rem;
         }
 
         // .product-cp-btns {
@@ -44,12 +47,21 @@
         //     padding-top: 0 !important;
         // }
 
-        // .product-cp-price {
-        //     padding-top: 0 !important;
-        //     padding-bottom: 0 !important;
-        //     // margin-top: auto;
-        //     margin-bottom: auto;
-        // }
+        .product-cp-price {
+            padding-top: .5rem !important;
+            padding-bottom: 0 !important;
+            // margin-top: auto;
+            margin-bottom: auto;
+            text-align: center;
+        }
+
+        .product-cp-btns {
+            margin: auto;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
     }
 
     @include rangemq(small, extralarge) {
@@ -127,6 +139,11 @@
         padding-top: var(--vertical-gaps);
         margin-left: var(--horizontal-outer-gaps);
         width: calc(100% - calc(var(--horizontal-outer-gaps) * 2));
+
+        @include minmq (small) {
+            margin-left: 0;
+            justify-self: center;
+        }
     }
 
     .product-cp-headline {
@@ -174,10 +191,13 @@
 
     .slide-btn {
         height: 150px;
-        width: 75px;
+        width: 18vw;
         max-width: 100px;
-        margin: 0;
-        padding-top: var(--vertical-gaps);
+
+        @include maxmq(small) {
+            margin: auto;
+            padding-top: 0;
+        }
 
         @include minmq(extralarge) {
             width: 15vw;

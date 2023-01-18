@@ -17,7 +17,7 @@
         {% include 'headline.njk' %}
     </div>
     <p class="product-cp-price">
-        {{ price }}
+        {{ price |safe }}
     </p>
     <div class="product-cp-btns">
         {% include "button.njk" %}

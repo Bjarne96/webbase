@@ -43,6 +43,7 @@
 
 
         .default-input {
+            background-color: var(--secondary);
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
@@ -53,6 +54,8 @@
         }
 
         select {
+            background-color: var(--secondary);
+
             @media (prefers-color-scheme: light) {
                 background-color: white;
             }

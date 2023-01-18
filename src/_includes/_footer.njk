@@ -85,13 +85,13 @@
             </div>
         </div>
     </div>
-    <div class="footer-created-by">
-        All rights reserved © 2023. Created by
-        <strong>Abb Design</strong>
-        with ♥
-        {% if collections.footer_config[0].data.created_for|length %}
-            {% set value = collections.footer_config[0].data.created_for %} for
-            <strong>{{ value }}</strong>. {% else %}.
-        {% endif %}
-    </div>
+    {# <div class="footer-created-by">
+            All rights reserved © 2023. Created by
+            <strong>Abb Design</strong>
+            with ♥
+            {% if collections.footer_config[0].data.created_for|length %}
+                {% set value = collections.footer_config[0].data.created_for %} for
+                <strong>{{ value }}</strong>. {% else %}.
+            {% endif %}
+        </div> #}
 </footer>

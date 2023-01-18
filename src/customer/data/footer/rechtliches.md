@@ -7,8 +7,8 @@ children:
         value: Impressum
         external: false
     - child:
-        href: /datenschutz
-        value: Datenschutz
+        href: /datenschutzerklaerung
+        value: Datenschutzerklärung
         external: false
     # - child:
     #     href: /agb

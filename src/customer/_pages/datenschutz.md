@@ -1,7 +1,7 @@
 ---
 title: Tiefschlafen Datenschutz
 layout: 'article.njk'
-permalink: /datenschutz/index.html
+permalink: /datenschutzerklaerung/index.html
 ---
 Datenschutzerklärung<br/>
 <br/>

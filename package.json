@@ -1,7 +1,7 @@
 {
-    "name": "wildwuchs",
+    "name": "tiefschlafen",
     "version": "1.0.0",
-    "description": "Wildwuchs Brauwerk",
+    "description": "Tiefschlafen Landingpage.",
     "main": "public/index.html",
     "scripts": {
         "build:sass": "sass  --no-source-map src/scss/styles.scss:public/css/styles.css",
@@ -14,7 +14,8 @@
         "serve": "browser-sync start --server public --files public",
         "watch": "npm-run-all --parallel watch:*",
         "start": "npm-run-all build --parallel watch serve",
-        "postbuild": "postcss public/css/styles.css -u autoprefixer cssnano -r --no-map"
+        "postbuild": "del-cli --force ./public/customer",
+        "postbuild2": "postcss public/css/styles.css -u autoprefixer cssnano -r --no-map"
     },
     "dependencies": {
         "@11ty/eleventy-img": "^2.0.1",
@@ -40,16 +41,17 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Bjarne96/Wildwuchs.git"
+        "url": "git+https://github.com/Bjarne96/webbase.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Bjarne96/Wildwuchs/issues"
+        "url": "https://github.com/Bjarne96/webbase/issues"
     },
-    "homepage": "https://wildwuchs-brauwerk.netlify.app",
+    "homepage": "https://tiefschlafen.de",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.2",
+        "del-cli": "^5.0.0",
         "node-fetch": "^3.2.10",
         "webpack-cli": "^4.9.2"
     }
