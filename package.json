@@ -14,8 +14,12 @@
         "serve": "browser-sync start --server public --files public",
         "watch": "npm-run-all --parallel watch:*",
         "start": "npm-run-all build --parallel watch serve",
-        "postbuild": "del-cli --force ./public/customer",
-        "postbuild2": "postcss public/css/styles.css -u autoprefixer cssnano -r --no-map"
+        "postbuild": "npm-run-all --parallel postbuild:*",
+        "postbuild:delete": "del-cli --force ./public/customer",
+        "postbuild:css": "postcss public/css/styles.css -u autoprefixer cssnano -r --no-map",
+        "postbuild:js1": "uglifyjs ./public/js/app.bundle.js --output ./public/js/app.bundle.js",
+        "postbuild:js2": "uglifyjs ./public/js/contact.bundle.js --output ./public/js/contact.bundle.js",
+        "postbuild:js3": "uglifyjs ./public/js/contactsend.bundle.js --output ./public/js/contactsend.bundle.js"
     },
     "dependencies": {
         "@11ty/eleventy-img": "^2.0.1",
@@ -37,6 +41,7 @@
         "postcss-cli": "^9.1.0",
         "regenerator-runtime": "^0.11.1",
         "sass": "^1.49.8",
+        "uglify-js": "^3.17.4",
         "webpack": "^5.72.1"
     },
     "repository": {
