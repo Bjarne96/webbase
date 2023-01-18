@@ -140,9 +140,12 @@
         margin-left: var(--horizontal-outer-gaps);
         width: calc(100% - calc(var(--horizontal-outer-gaps) * 2));
 
+        @include rangemq (small, extralarge) {
+            justify-self: center;
+        }
+
         @include minmq (small) {
             margin-left: 0;
-            justify-self: center;
         }
     }
 
