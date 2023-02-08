@@ -1,6 +1,6 @@
 @use '../../../scss/abstracts/' as *;
 
-$slideshow_transition_time: .33s;
+$slideshow_transition_time: .5s;
 
 .slider-container {
     display: grid;
@@ -67,7 +67,7 @@ $slideshow_transition_time: .33s;
 
 .slide {
     will-change: transform;
-    transition: transform $slideshow_transition_time ease-out;
+    transition: transform $slideshow_transition_time ease-in-out;
     transition-delay: $slideshow_transition_time;
     overflow: hidden;
     width: 100vw;

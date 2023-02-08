@@ -1,13 +1,13 @@
 ---
 order: 30
-h2 : Schurwollkissen
+h2 : Kissen aus BIO-Schurwolle
 image_src : schurwollkissen_mit_schatten.png
 image_alt : Ein Schurwollkissen.
 image_loading : eager
 btnUrl : https://shop.tiefschlafen.de/products/kissen-aus-bio-schurwolle
 btnText : Zum Shop
 btnExternal : true
-price : "39,00€ &nbsp;<span style='font-weight: 300'>- 40cm x 80cm </span>"
+price : "Ab 72,00 €"
 ---
 Dieses Kissen ist die ideale Ergänzung zu unseren Schurwolldecken. Für einen gesunden und ergonomischen Schlaf.
 Warme und langlebige Kissen, die Dir dank ihrer atmungsaktiven Eigenschaft dabei hilft, bei einer gleichmäßigen Temperatur tief zu schlafen.  

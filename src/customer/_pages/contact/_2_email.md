@@ -2,7 +2,7 @@
 label: Email
 required: true
 name: email
-pattern: '[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$'
 type: email
 order: 20
 ---
