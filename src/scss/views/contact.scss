@@ -39,7 +39,8 @@
     }
 
     .input-container {
-        width: 100%;
+        width: calc(100% - calc(var(--gaps) * 2));
+        padding: var(--gaps);
 
 
         .default-input {

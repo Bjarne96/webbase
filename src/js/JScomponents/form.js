@@ -19,7 +19,7 @@ export function validate(formSelector) {
     
         const removeMissing = function (e) {
             if(e.target.value != "") {
-                removeClass(e.target, missingClassName)
+                removeClass(e.target.parentNode.parentNode, missingClassName)
                 e.target.removeEventListener("change", removeMissing);
             }
         }
@@ -27,17 +27,18 @@ export function validate(formSelector) {
         const fields = form.querySelectorAll(requiredClassName);
         let notfoundFirst = true;
         let formFilledOutFine = true;
-        fields.forEach(field => {
-            if(field.value == "") {
+        fields.forEach(field => {      
+            if(field.value == "" || (field.type == "checkbox" && field.checked == false)) {
+                console.log('field', field);
                 if(notfoundFirst) {
                     scrollToElement(field, $defaultOffset);
                     notfoundFirst = false;
                     formFilledOutFine = false;
                 }
-                addClass(field, missingClassName);
+                addClass(field.parentNode.parentNode, missingClassName);
                 field.addEventListener("change", (e) => removeMissing(e));
             } else {
-                removeClass(field, missingClassName);
+                removeClass(field.parentNode.parentNode, missingClassName);
             }
         });
         if(!formFilledOutFine) {

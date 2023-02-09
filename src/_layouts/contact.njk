@@ -16,11 +16,11 @@ script: 'contact'
             {% if type== "headline" %}
                 <h2>{{ value }}</h2>
             {% elif type== "submit" %}
-                <div>
+                <div class="input-container">
                     <button class="btn btn-primary" type="submit">{{ value }}</button>
                 </div>
             {% else %}
-                {% set inputclass = "default-input" %}
+                {% set inputclass = "" %}
                 {% set label = field.data.label %}
                 {% set pattern = field.data.pattern %}
                 {% set name = field.data.name %}
@@ -29,13 +29,20 @@ script: 'contact'
                 {% set id = field.data.id %}
                 {% set options = field.data.options %}
                 {% set values = field.data.values %}
+                {% if type != "checkbox" %}
+                    {% set inputclass = "default-input" %}
+                {% endif %}
+                {% if required %}
+                    {% set inputclass = inputclass + " required" %}
+                    {% set requiredDot = "<span class='reddot'>*</span>" %}
+                {% endif %}
                 <div class="input-container">
-                    <label>{{ label }}:
-                        {% if required %}
-                            {% set inputclass = inputclass + " required" %}
-                            <span class="reddot">*</span>
+                    <label>
+                        {% if type == "checkbox" %}
+                            <input type="{{ type }}" name="{{ name }}" placeholder=" " pattern="{{ pattern }}" class="{{ inputclass }}"/>
                         {% endif %}
-                        <br/>
+                        {{ label | safe }}
+                        {{ requiredDot | safe }}
                         {% if type == "text" or type == "number" or type == "date" or type == "time" or type == "email" %}
                             <input type="{{ type }}" name="{{ name }}" placeholder=" " pattern="{{ pattern }}" class="{{ inputclass }}"/>
                         {% elif type == "select" %}
