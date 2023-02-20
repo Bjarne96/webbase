@@ -6,7 +6,7 @@
 
       <loc>http://www.tiefschlafen.de/</loc>
 
-      <lastmod>2022-11-04</lastmod>
+      <lastmod>2023-02-20</lastmod>
 
       <changefreq>daily</changefreq>
 
@@ -16,47 +16,11 @@
 
    <url>
 
-      <loc>http://www.tiefschlafen.de/schurwolle</loc>
-
-      <lastmod>2022-11-04</lastmod>
-
-      <changefreq>monthly</changefreq>
-
-      <priority>0.9</priority>
-
-   </url>
-
-    <url>
-
-      <loc>http://www.tiefschlafen.de/handwerk</loc>
-
-      <lastmod>2022-11-04</lastmod>
-
-      <changefreq>monthly</changefreq>
-
-      <priority>0.9</priority>
-
-   </url>
-
-   <url>
-
       <loc>http://www.tiefschlafen.de/kontakt</loc>
 
-      <lastmod>2022-11-04</lastmod>
+      <lastmod>2023-02-20</lastmod>
 
-      <changefreq>monthly</changefreq>
-
-      <priority>0.8</priority>
-
-   </url>
-
-   <url>
-
-      <loc>http://www.tiefschlafen.de/agb</loc>
-
-      <lastmod>2022-11-04</lastmod>
-
-      <changefreq>monthly</changefreq>
+      <changefreq>yearly</changefreq>
 
       <priority>0.8</priority>
 
@@ -64,11 +28,11 @@
 
    <url>
 
-      <loc>http://www.tiefschlafen.de/datenschutz</loc>
+      <loc>http://tiefschlafen.de/datenschutzerklaerung/</loc>
 
-      <lastmod>2022-11-04</lastmod>
+      <lastmod>2023-02-20</lastmod>
 
-      <changefreq>monthly</changefreq>
+      <changefreq>yearly</changefreq>
 
       <priority>0.8</priority>
 
@@ -78,7 +42,7 @@
 
       <loc>http://www.tiefschlafen.de/impressum</loc>
 
-      <lastmod>2022-11-04</lastmod>
+      <lastmod>2023-02-20</lastmod>
 
       <changefreq>monthly</changefreq>
 
