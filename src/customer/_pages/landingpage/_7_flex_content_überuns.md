@@ -8,4 +8,4 @@ image_alt: Ein tolles Handwerk.
 reverse: true
 color: "ter"
 ---
-Wir stehen für regionale Produktion, artgerechte Tierhaltung und die Langlebigkeit unserer Schurwolldecken. Wir glaube das alle Schurwolldecken möglichst umwelt- und tierfreundlich produziert werden sollten. Wir haben den Anspruch von Qualität und Langlebigkeit an unsere Produkte. Wir möchten die natürliche Qualität der Schurwolle, durch unsere Schurwolldecken an unsere Kunden weitergeben. 
+Wir stehen für regionale Produktion, artgerechte Tierhaltung und die Langlebigkeit unserer Schurwollprodukte durch sorgfältige Verarbeitung. Wir glauben, dass alle Wollprodukte möglichst klima- und tierfreundlich verarbeitet werden sollten. Denn wir haben den Anspruch von Qualität und Langlebigkeit an unsere Produkte. Die natürliche Qualität der Schurwolle durch unsere Produkte möchten wir direkt an unsere Kunden weitergeben.

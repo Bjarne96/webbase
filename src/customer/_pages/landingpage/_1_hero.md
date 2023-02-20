@@ -2,7 +2,7 @@
 type: custom
 value: hero
 order: 10
-headline: "Endlich Tiefschlafen.<br /> Unter deiner Schurwolldecke."
+headline: "Endlich Tiefschlafen<br /> Unter deiner Schurwolldecke"
 btnText: "Produkte finden"
 btnTarget: "product-slider"
 btnType: "tertiary"
