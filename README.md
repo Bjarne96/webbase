@@ -17,6 +17,10 @@
 - On-Page SEO guidelines
 - Planning from design over development to deployment
 
+## Future of This project
+The overall CMS and UI component structure is currently being refactored into Astro.
+I will provide a link to the future project soon.
+
 ## Installation
 1. Install Node.js and npm.
 2. Run "npm i" in the console to install all necessary modules.
