@@ -1,6 +1,6 @@
 import { scrollable, scrollToElement } from "./scroll";
 import { select, selectAll, selectId } from "./select";
-import {toggleVisibility, toggleClassName} from "./toggles";
+import { toggleVisibility, toggleClassName } from "./toggles";
 import { findDataset } from "./dataset";
 
 // Select all elements
@@ -41,7 +41,7 @@ export function Navigation() {
         toggleNavigationDebouceOn = true;
         const state = toggleClassName(topbar, toggleTopbarIconOpenClass)
         toggleVisibility(navigation)
-        if(state == false) {
+        if (state == false) {
             //Hides it from user (animation delay)
             setTimeout(() => {
                 disableActiveSubmenu();
@@ -52,40 +52,40 @@ export function Navigation() {
     };
 
     this.disableNavigation = function () {
-        if(topbar.classList.contains(toggleTopbarIconOpenClass)) {
+        if (topbar.classList.contains(toggleTopbarIconOpenClass)) {
             toggleNavigation();
         }
     }
 
     let disableActiveSubmenu = function () {
-        if(activeSubmenu && activeSubmenu["menu"] && activeSubmenu["menu"].getAttribute("data-visible") == "true") {
+        if (activeSubmenu && activeSubmenu["menu"] && activeSubmenu["menu"].getAttribute("data-visible") == "true") {
             toggleVisibility(activeSubmenu["menu"]);
             toggleClassName(activeSubmenu["btn"], toggleSubmenuOpenClass);
             activeSubmenu = {};
         }
     }
     let toggleSubmenu = function (submenu, submenuBtn) {
-        if(activeSubmenu != undefined && activeSubmenu["menu"] != submenu) {
+        if (activeSubmenu != undefined && activeSubmenu["menu"] != submenu) {
             disableActiveSubmenu();
         }
         let state = toggleVisibility(submenu);
         toggleClassName(submenuBtn, toggleSubmenuOpenClass);
-        if(state == "true") {
+        if (state == "true") {
             activeSubmenu.menu = submenu;
             activeSubmenu.btn = submenuBtn;
         } else {
 
         }
     }
-    function showTopbar () {
-        if(!topbar.classList.contains(toggleTopbarUpClass)) return;
+    function showTopbar() {
+        if (!topbar.classList.contains(toggleTopbarUpClass)) return;
         topbar.classList.remove(toggleTopbarUpClass);
     };
-    function hideTopbar () {
-        if(topbar.classList.contains(toggleTopbarUpClass)) return;
+    function hideTopbar() {
+        if (topbar.classList.contains(toggleTopbarUpClass)) return;
         topbar.classList.add(toggleTopbarUpClass);
     };
-    function smartTopbar () {
+    function smartTopbar() {
         if (smartbarDebounceOn) return;
         setTimeout(() => {
             smartbarDebounceOn = false;
@@ -93,14 +93,14 @@ export function Navigation() {
         smartbarDebounceOn = true
         actionWhenScrolling(showTopbar, hideTopbar);
     };
-    function smartSubmenuClose () {
-        if(activeSubmenu && activeSubmenu["menu"]) {
+    function smartSubmenuClose() {
+        if (activeSubmenu && activeSubmenu["menu"]) {
             actionWhenScrolling(disableActiveSubmenu, disableActiveSubmenu);
         }
     }
-    function actionWhenScrolling (scrollingUpAction, scrollingDownAction) {
+    function actionWhenScrolling(scrollingUpAction, scrollingDownAction) {
         lastScrollPosition = window.scrollY;
-        if (newScrollPosition < lastScrollPosition ) {
+        if (newScrollPosition < lastScrollPosition) {
             scrollingDownAction();
         } else if (newScrollPosition > lastScrollPosition) {
             scrollingUpAction();
@@ -108,8 +108,8 @@ export function Navigation() {
         newScrollPosition = lastScrollPosition;
     }
 
-    function checkScreenWidthSmall (small) {
-        if(window.innerWidth < small) {
+    function checkScreenWidthSmall(small) {
+        if (window.innerWidth < small) {
             return true;
         } else {
             return false;
@@ -117,6 +117,9 @@ export function Navigation() {
     }
     function enableSmartTopbar() {
         window.addEventListener("scroll", smartTopbar);
+    }
+    function fixAriaLabelAndDataVisibility() {
+        toggleVisibility(navigation)
     }
     function disableSmartTopbar() {
         window.removeEventListener("scroll", smartTopbar);
@@ -127,12 +130,12 @@ export function Navigation() {
     function disableSmartSubmenuClose() {
         window.removeEventListener("scroll", smartSubmenuClose);
     }
-    function detectViewportChange () {
-        window.addEventListener('resize', function(){
+    function detectViewportChange() {
+        window.addEventListener('resize', function () {
             let oldSidebarOn = sidebarOn;
             sidebarOn = checkScreenWidthSmall($navigationBr);
-            if(oldSidebarOn != sidebarOn) {
-                if(!sidebarOn) {
+            if (oldSidebarOn != sidebarOn) {
+                if (!sidebarOn) {
                     $defaultOffset = $defaultOffset + $topbar_height;
                 }
                 disableActiveSubmenu();
@@ -148,14 +151,14 @@ export function Navigation() {
             }, 300);
             navigateDebouceOn = true;
             const target = selectId(dataset.targetId);
-            if(sidebarOn) {
+            if (sidebarOn) {
                 disableSmartTopbar();
                 this.disableNavigation();
                 hideTopbar();
                 scrollToElement(target, $defaultOffset).then(() => {
                     enableSmartTopbar();
                 });
-                
+
             } else {
                 disableSmartSubmenuClose();
                 disableActiveSubmenu();
@@ -163,7 +166,7 @@ export function Navigation() {
                     enableSmartSubmenuClose();
                 });
             }
-        } else if(dataset[targetSubmenuListDatasetKey]) {
+        } else if (dataset[targetSubmenuListDatasetKey]) {
             let submenu = navigation.querySelector(submenuListNumberSelector + dataset.targetToggleSubmenu);
             let submenuBtn = navigation.querySelector(dropdownIconNumberSelector + dataset.targetToggleSubmenu);
             toggleSubmenu(submenu, submenuBtn);
@@ -172,7 +175,7 @@ export function Navigation() {
     //Main Function to enable functionality
     showTopbar();
     sidebarOn = checkScreenWidthSmall($navigationBr);
-    if(!sidebarOn) {
+    if (!sidebarOn) {
         $defaultOffset = $defaultOffset + $topbar_height
     }
     // Add eventlistener to mobile-toggle
@@ -180,9 +183,10 @@ export function Navigation() {
         .addEventListener("click", () => toggleNavigation());
 
     // Hide navigation when scrolling
-    if(sidebarOn) {
+    if (sidebarOn) {
         enableSmartTopbar();
     } else {
+        fixAriaLabelAndDataVisibility();
         enableSmartSubmenuClose();
     }
     detectViewportChange();
@@ -196,7 +200,7 @@ export function Navigation() {
         element.addEventListener("click", (e) => {
             this.navigate(findDataset(e));
         });
-        if(hash && element.href == href) {
+        if (hash && element.href == href) {
             element.click();
             hash = null;
         }

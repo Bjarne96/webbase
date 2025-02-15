@@ -2,7 +2,7 @@
 {% if type|length %}
     {% if type == "svg" %}
         {% set svg = "logo" %}
-        <a class="logo" href="/">
+        <a class="logo" aria-label="Base URL von Tiefschlafen.de" href="/">
             {% include "svg.njk" %}
         </a>
     {% elif type == "png" or type == "jpg" %}

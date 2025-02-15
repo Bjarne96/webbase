@@ -10,7 +10,7 @@
 
     @include maxmq(extralarge) {
         >*+* {
-            margin-top: $gaps;
+            margin-top: var(--gaps);
             display: block;
         }
     }
@@ -18,7 +18,7 @@
     @include minmq(extralarge) {
 
         >*+* {
-            margin-top: $gaps;
+            margin-top: var(--gaps);
             display: block;
         }
     }

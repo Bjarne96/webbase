@@ -22,6 +22,6 @@ images:
         class: hero-image-large
 image_transition:
     image_src: runder_uebergang.png
-    image_alt: " "
+    image_alt: "Runder Übergang."
     image_loading: eager
 ---

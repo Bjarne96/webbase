@@ -13,13 +13,13 @@
     }
 
     @include minmq(small) {
-        margin: calc($topbar_height + calc($gaps)) 0;
+        margin: calc($topbar_height + calc(var(--gaps))) 0;
     }
 
     .article-content {
         // background-color: var(--bg-sec-color);
         max-width: 800px;
-        padding: $gaps;
-        margin: 0 $gaps;
+        padding: var(--gaps);
+        margin: 0 var(--gaps);
     }
 }

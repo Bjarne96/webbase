@@ -14,7 +14,7 @@ $slideshow_transition_time: .2s;
 
     .slider-btn-icon {
         grid-row: 2;
-        padding: $gaps;
+        padding: var(--gaps);
         margin-top: auto;
         margin-bottom: auto;
     }

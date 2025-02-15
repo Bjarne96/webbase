@@ -10,8 +10,8 @@
     svg {
         width: $topbar_height * .5;
         height: $topbar_height * .5;
-        margin: $gaps * .2 0;
-        margin-right: $gaps;
+        margin: calc(var(--gaps) * .2) 0;
+        margin-right: var(--gaps);
         cursor: pointer;
     }
 }

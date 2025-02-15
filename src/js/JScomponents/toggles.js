@@ -1,11 +1,12 @@
 export function toggleVisibility(element) {
     let state = element.getAttribute("data-visible");
-    if(state == "false") {
+    if (state == "false") {
         state = "true";
-    } else if(state == "true") {
+    } else if (state == "true") {
         state = "false";
     }
     element.setAttribute("aria-expanded", state);
+    element.setAttribute("aria-hidden", (!state));
     element.setAttribute("data-visible", state);
     return state;
 }

@@ -9,7 +9,7 @@
 
 
     svg {
-        max-height: calc($gaps * 2);
+        max-height: calc(var(--gaps) * 2);
         width: 100vw;
     }
 }

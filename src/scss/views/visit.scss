@@ -3,14 +3,14 @@
 .visit {
     display: flex;
     flex-direction: column;
-    gap: $gaps;
-    margin: $gaps;
+    gap: var(--gaps);
+    margin: var(--gaps);
     margin: auto;
     min-height: 90vh;
 
     .visit-con {
         background-color: var(--secondary);
-        padding: $gaps;
+        padding: var(--gaps);
         border-radius: $border_radius;
         min-width: 320px;
         height: 320px;
@@ -18,7 +18,7 @@
     }
 
     h1 {
-        margin-bottom: $gaps;
+        margin-bottom: var(--gaps);
     }
 
     @include minmq(extralarge) {

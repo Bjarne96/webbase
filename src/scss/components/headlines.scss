@@ -5,23 +5,23 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr;
-    padding-top: $gaps;
-    padding-bottom: $gaps;
+    padding-top: var(--gaps);
+    padding-bottom: var(--gaps);
 
     @include maxmq(medium) {
-        padding-top: $gaps;
-        padding-bottom: $gaps;
+        padding-top: var(--gaps);
+        padding-bottom: var(--gaps);
     }
 
     @include minmq(medium) {
-        padding-top: $gaps * 4;
-        padding-bottom: calc($gaps * 2);
+        padding-top: calc(var(--gaps) * 4);
+        padding-bottom: calc(var(--gaps) * 2);
     }
 
     h1 {
         background-color: var(--bg-pri-color);
         white-space: nowrap;
-        padding: 0 $gaps;
+        padding: 0 var(--gaps);
         text-align: center;
         letter-spacing: var(--ls-h1);
     }

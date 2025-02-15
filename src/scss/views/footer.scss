@@ -101,7 +101,7 @@
 
     .footer-btn-container {
         width: 100%;
-        padding-top: $gaps;
+        padding-top: var(--gaps);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -124,7 +124,7 @@
     }
 
     .footer-created-by {
-        padding: 0 $gaps $gaps $gaps;
+        padding: 0 var(--gaps) var(--gaps) var(--gaps);
         text-align: center;
         color: var(--foo-color);
         background-color: var(--foo-bg-color);

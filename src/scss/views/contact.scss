@@ -7,7 +7,7 @@
 }
 
 .contact-wraper {
-    padding: $gaps;
+    padding: var(--gaps);
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -24,11 +24,11 @@
     form {
         width: 100%;
         display: grid;
-        gap: $gaps;
+        gap: var(--gaps);
         grid-template-columns: 1fr;
 
         h2 {
-            margin-top: $gaps;
+            margin-top: var(--gaps);
             width: 100%;
         }
 
@@ -92,12 +92,12 @@
 
 .gesendet-wraper {
     height: 100vh;
-    width: calc(100vw - calc($gaps));
+    width: calc(100vw - calc(var(--gaps)));
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: $gaps * .5;
+    padding: calc(var(--gaps) * .5);
 
     h1 {
         font-size: var(--fs-h1);
@@ -108,7 +108,7 @@
 
     p {
         font-size: 22px;
-        margin-top: $gaps * 2;
+        margin-top: calc(var(--gaps) * 2);
         text-align: center;
         font-weight: 400;
     }
