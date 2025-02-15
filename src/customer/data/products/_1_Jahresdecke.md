@@ -4,6 +4,8 @@ h2 : Jahresdecke aus BIO-Schurwolle
 image_src : schurwolldecke_mit_schurwollkisssen_leinen_schatten.png
 image_alt : Eine Schurwolldecke für das gesamte Jahr.
 image_loading : eager
+width: 4000
+height: 4000
 btnUrl : https://shop.tiefschlafen.de/products/jahresdecke-aus-bio-schurwolle
 btnText : Zum Shop
 btnExternal : true

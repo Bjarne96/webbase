@@ -1,9 +1,9 @@
-<div id="modal-wraper" data-visible="false" aria-hidden="true">
+<div id="modal-wraper" data-visible="false" hidden="true">
     {%- for element in collections.modal|sort(attribute="data.order") -%}
         {% set id = element.data.id %}
         {% set headline = element.data.headline %}
         {% set contents = element.data.contents %}
-        <div id="{{ id }}" class="modal" data-visible="false" aria-hidden="true">
+        <div id="{{ id }}" class="modal" data-visible="false" hidden="true">
             <div data-modal-id="#{{ id }}" class="modal-btn modal-btn-close btn-icon-close btn-icon-primary">
                 {% set svg = collections.config[0].data.close %}
                 {% include 'svg.njk' %}

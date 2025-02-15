@@ -32,6 +32,7 @@ export function Navigation() {
     let activeSubmenu = {};
     let smartbarDebounceOn = false;
     var navigation = select(navigationSelector);
+    var toggleButton = select(toggleSelector);
 
     let toggleNavigation = function () {
         if (toggleNavigationDebouceOn) return;
@@ -40,7 +41,7 @@ export function Navigation() {
         }, 300);
         toggleNavigationDebouceOn = true;
         const state = toggleClassName(topbar, toggleTopbarIconOpenClass)
-        toggleVisibility(navigation)
+        toggleVisibility(navigation, toggleButton)
         if (state == false) {
             //Hides it from user (animation delay)
             setTimeout(() => {
@@ -119,7 +120,7 @@ export function Navigation() {
         window.addEventListener("scroll", smartTopbar);
     }
     function fixAriaLabelAndDataVisibility() {
-        toggleVisibility(navigation)
+        toggleVisibility(navigation, toggleButton)
     }
     function disableSmartTopbar() {
         window.removeEventListener("scroll", smartTopbar);
@@ -185,8 +186,8 @@ export function Navigation() {
     // Hide navigation when scrolling
     if (sidebarOn) {
         enableSmartTopbar();
-    } else {
         fixAriaLabelAndDataVisibility();
+    } else {
         enableSmartSubmenuClose();
     }
     detectViewportChange();

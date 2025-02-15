@@ -4,6 +4,8 @@ h2 : Winterdecke aus BIO-Schurwolle
 image_src : schurwolldecke_mit_schurwollkissen_mit_schatten.png
 image_alt : Eine Schurwolldecke für den Winter.
 image_loading : eager
+width: 4200
+height: 4200
 btnUrl : https://shop.tiefschlafen.de/products/winterdecke-aus-bio-schurwolle
 btnText : Zum Shop
 btnExternal : true

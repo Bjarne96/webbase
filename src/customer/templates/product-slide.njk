@@ -30,7 +30,7 @@
             {% set svg = collections.config[0].data.arrow_left %}
             {% include 'svg.njk' %}
         {% elif switch == "img" %}
-            {% set image = {image_src: left_img, image_alt: " "} %}
+            {% set image = {width: "4000", height: "4000", image_src: left_img, image_alt: "Linker Pfeil um den Slider zu bedienen."} %}
             {% include 'image.njk' %}
         {% endif %}
     </div>
@@ -39,7 +39,7 @@
             {% set svg = collections.config[0].data.arrow_right %}
             {% include 'svg.njk' %}
         {% elif switch == "img" %}
-            {% set image = {image_src: right_img, image_alt: " "} %}
+            {% set image = {width: "4000", height: "4000", image_src: right_img, image_alt: "Rechter Pfeil um den Slider zu bedienen."} %}
             {% include 'image.njk' %}
         {% endif %}
     </div>

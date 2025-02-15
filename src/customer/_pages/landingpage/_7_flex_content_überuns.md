@@ -4,7 +4,9 @@ order: 70
 id: ueber_uns
 h2: Über Uns
 image_src: logo.png
-image_alt: Ein tolles Handwerk.
+image_alt: "Unser Logo: Ein Schafskopf."
+width: 1314
+height: 997
 reverse: true
 color: "ter"
 ---

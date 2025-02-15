@@ -2,6 +2,8 @@
 {% set image_src = image.image_src %}
 {% set image_format = image.image_format %}
 {% set image_loading = image.image_loading %}
+{% set image_width = image.width %}
+{% set image_height = image.height %}
 {% if not image_loading|length %}
     {% set image_loading = "lazy" %}
 {% endif %}
@@ -12,7 +14,10 @@
 {% set srcset = "" %}
 {% set webp_src = image_src %}
 {% for width in widths %}
-    {% set srcset = srcset + "/assets/" + image_src + "-" + width + ".webp " + width + "w, " %}
+    {% set srcset = srcset + "/assets/" + image_src + "-" + width + ".webp " + width + "w" %}
+    {% if not loop.last %}
+        {% set srcset = srcset + ", " %}
+    {% endif %}
     {% if loop.index == 1 %}
         {% set webp_src = image_src + "-" + width + ".webp" %}
     {% endif %}
@@ -20,10 +25,10 @@
 {% if image_format|length and image_alt|length and image_src|length %}
     {% set image_style = "height: 100%;height: calc(calc(1vw / "+ image_format +") * 100);max-height: calc(600px  / "+ image_format +");overflow: hidden;" %}
     <div style="{{ image_style }}">
-        <img class="img-center" title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
+        <img class="img-center" title="{{ image_alt }}" width="{{ image_width }}" height="{{ image_height }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
     </div>
 {% elif image_alt|length and image_src|length %}
-    <img title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
+    <img width="{{ image_width }}" height="{{ image_height }}" title="{{ image_alt }}" alt="{{ image_alt }}" src="{{ "/assets/" + webp_src }}" srcset="{{ srcset }}" loading="{{ image_loading }}"/>
 {% endif %}
 {# Build the image into webp images with different sizes #}
 {# {% img src=image_src, widths=widths %} #}

@@ -21,6 +21,18 @@
         background-color: var(--secondary) !important;
     }
 
+    .uebergang {
+        max-width: 100vw;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
     .hero-image {
         display: flex;
         flex-direction: column;

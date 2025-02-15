@@ -1,14 +1,14 @@
-export function toggleVisibility(element) {
-    let state = element.getAttribute("data-visible");
-    if (state == "false") {
-        state = "true";
-    } else if (state == "true") {
-        state = "false";
+// I added the "button". That will break the submenu logic, if used.
+export function toggleVisibility(element, button) {
+    let isHidden = element.hasAttribute("hidden");
+    if (isHidden) {
+        element.removeAttribute("hidden"); // Show navigation
+        button.setAttribute("aria-expanded", "true");
+    } else {
+        element.setAttribute("hidden", ""); // Hide navigation
+        button.setAttribute("aria-expanded", "false");
     }
-    element.setAttribute("aria-expanded", state);
-    element.setAttribute("aria-hidden", (!state));
-    element.setAttribute("data-visible", state);
-    return state;
+    return isHidden;
 }
 
 export function toggleClassName(element, className) {

@@ -4,6 +4,8 @@ h2 : Kissen aus BIO-Schurwolle
 image_src : schurwollkissen_mit_schatten.png
 image_alt : Ein Schurwollkissen.
 image_loading : eager
+width: 4000
+height: 4000
 btnUrl : https://shop.tiefschlafen.de/products/kissen-aus-bio-schurwolle
 btnText : Zum Shop
 btnExternal : true

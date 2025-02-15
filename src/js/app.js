@@ -18,7 +18,7 @@ const hydrate = async () => {
     const navigation = new Navigation();
     // Hydrate Animations based on Observer
     // await hydrateObserver();
-    
+
     // Hydrate Modals
     new Modal(navigation.disableNavigation);
 
